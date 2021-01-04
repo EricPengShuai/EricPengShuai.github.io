@@ -6,7 +6,7 @@
   <link href="https://ericpengshuai.github.io/atom.xml" rel="self"/>
   
   <link href="https://ericpengshuai.github.io/"/>
-  <updated>2021-01-03T08:13:54.970Z</updated>
+  <updated>2021-01-04T06:30:10.523Z</updated>
   <id>https://ericpengshuai.github.io/</id>
   
   <author>
@@ -17,28 +17,27 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>我的博客</title>
-    <link href="https://ericpengshuai.github.io/tech/wo-de-bo-ke/"/>
-    <id>https://ericpengshuai.github.io/tech/wo-de-bo-ke/</id>
+    <title>python类中函数相互调用方法</title>
+    <link href="https://ericpengshuai.github.io/bian-cheng-bei-wang/python-lei-zhong-han-shu-xiang-hu-diao-yong-fang-fa/"/>
+    <id>https://ericpengshuai.github.io/bian-cheng-bei-wang/python-lei-zhong-han-shu-xiang-hu-diao-yong-fang-fa/</id>
     <published>2020-12-30T03:27:15.000Z</published>
-    <updated>2021-01-03T08:13:54.970Z</updated>
+    <updated>2021-01-04T06:30:10.523Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;我的博客&quot;&gt;&lt;a href=&quot;#我的博客&quot; class=&quot;headerlink&quot; title=&quot;我的博客&quot;&gt;&lt;/a&gt;我的博客&lt;/h2&gt;&lt;p&gt;我是test&lt;/p&gt;
-&lt;h3 id=&quot;C&quot;&gt;&lt;a href=&quot;#C&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h4 id=&quot;方法一：self-方法（参数列表），注意参数列表不需要self&quot;&gt;&lt;a href=&quot;#方法一：self-方法（参数列表），注意参数列表不需要self&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="tech" scheme="https://ericpengshuai.github.io/categories/tech/"/>
+    <category term="编程备忘" scheme="https://ericpengshuai.github.io/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/"/>
     
     
-    <category term="language" scheme="https://ericpengshuai.github.io/tags/language/"/>
+    <category term="python" scheme="https://ericpengshuai.github.io/tags/python/"/>
     
   </entry>
   
@@ -47,7 +46,7 @@
     <link href="https://ericpengshuai.github.io/sheng-huo-sui-bi/2020-zong-jie/"/>
     <id>https://ericpengshuai.github.io/sheng-huo-sui-bi/2020-zong-jie/</id>
     <published>2020-12-28T03:27:15.000Z</published>
-    <updated>2021-01-03T08:12:44.709Z</updated>
+    <updated>2021-01-04T06:12:27.957Z</updated>
     
     
       
@@ -68,27 +67,27 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://ericpengshuai.github.io/tech/hello-world/"/>
-    <id>https://ericpengshuai.github.io/tech/hello-world/</id>
+    <title>无法找到Qt5network.dll等</title>
+    <link href="https://ericpengshuai.github.io/jie-jue-chang-jian-bao-cuo/wu-fa-zhao-dao-qt5network.dll-deng-zu-jian/"/>
+    <id>https://ericpengshuai.github.io/jie-jue-chang-jian-bao-cuo/wu-fa-zhao-dao-qt5network.dll-deng-zu-jian/</id>
     <published>2020-12-25T03:27:15.000Z</published>
-    <updated>2021-01-03T08:13:04.860Z</updated>
+    <updated>2021-01-04T06:32:56.182Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;运行qt生成的-exe文件报“无法找到Qt5network-dll等组件”“无法找到入口”的问题&quot;&gt;&lt;a href=&quot;#运行qt生成的-exe文件报“无法找到Qt5network-dll等组件”“无法找到入口”的问题&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="tech" scheme="https://ericpengshuai.github.io/categories/tech/"/>
+    <category term="解决常见报错" scheme="https://ericpengshuai.github.io/categories/%E8%A7%A3%E5%86%B3%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/"/>
     
     
-    <category term="hexo" scheme="https://ericpengshuai.github.io/tags/hexo/"/>
+    <category term="Qt" scheme="https://ericpengshuai.github.io/tags/Qt/"/>
     
   </entry>
   
