@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="PengShuai,Programmer,Myblog">
+    <meta name="keywords" content="friends, PengShuai,Programmer,Myblog">
     <meta name="description" content="A lyinger，a someone like me.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>像我这样的人</title>
+    <title>friends | 像我这样的人</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,56 +309,9 @@
 
 </header>
 
-    
-<style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color: rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    
-
-    <div class="carousel-item red white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
@@ -401,333 +354,566 @@
 </script>
 
 
-
-            <div class="cover-btns">
-                <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
-
-                
-                    <a href="https://github.com/ericpengshuai" class="waves-effect waves-light btn" target="_blank">
-                        <i class="fab fa-github-alt"></i>Github
-                    </a>
-                
-            </div>
-            <div class="cover-social-link">
-    <a href="https://github.com/ericpengshuai" class="tooltipped" target="_blank" data-tooltip="GitHub" data-position="top" data-delay="50">
-        <i class="fab fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:1499273524@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件" data-position="top" data-delay="50">
-        <i class="fas fa-envelope-open"></i>
-    </a>
-
-
-
-
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1499273524" class="tooltipped" target="_blank" data-tooltip="QQ " data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
-
-
-
-    <a href="https://weibo.com/6326797884" class="tooltipped" target="_blank" data-tooltip="微博" data-position="top" data-delay="50">
-        <i class="fab fa-weibo"></i>
-    </a>
-
-
-
-    <a href="https://www.zhihu.com/people/zhi-mo-cha-hu" class="tooltipped" target="_blank" data-tooltip="知乎" data-position="top" data-delay="50">
-        <i class="fab fa-zhihu1">知</i>
-    </a>
-
-
-
-    <a href="https://blog.csdn.net/Miracle_ps" class="tooltipped" target="_blank" data-tooltip="CSDN" data-position="top" data-delay="50">
-        <i class="fab fa-csdn">C</i>
-    </a>
-
-
-
-</div>
-        </div>
     </div>
-
-    
 </div>
+<style>
+    .friends-container {
+        margin-top: -100px;
+        margin-bottom: 30px;
+    }
 
-<script>
-    $(function () {
-        let coverSlider = $('.carousel');
+    .friends-container .tag-title {
+        margin-bottom: 10px;
+        color: #3C4858;
+        font-size: 1.75rem;
+        font-weight: 400;
+    }
 
-        //用户触摸轮播自动 restartPlay 是否生效
-        let initUserPressedOrDraggedActive = false
+    .frind-ship img {
+        border-radius: 50%;
+    }
 
-        //用户触摸轮播自动 restartPlay
-        function initUserPressedOrDragged(instance) {
-            setInterval(() => {
-                if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
-                    restartPlay()
-                }
-            }, 1000)
+    /* 一下是按钮样式 */
+
+    .frind-ship {
+        padding: 10px 20px;
+    }
+
+    .frind-ship .title {
+        display: flex;
+        align-items: center;
+    }
+
+    .frind-ship .title div {
+        color: #fff;
+        padding-left: 10px;
+    }
+
+    .frind-ship .title img {
+        width: 100px;
+        height: 100px;
+        flex-shrink: 0;
+    }
+
+    .frind-ship .title h1 {
+        padding-bottom: 5px;
+        border-bottom: 2px solid #fff;
+        position: relative;
+        top:-15px;
+        left: 3px;
+    }
+
+    .friend-button {
+        display: flex;
+        justify-content: center;
+        margin-bottom: -27px;
+    }
+
+    .friend-button a {
+        border-radius: 40px;
+    }
+
+    .friend-all .tag-post {
+        margin-bottom: 30px;
+    }
+
+    .button-caution {
+        background-color: #FF4351;
+        border-color: #FF4351;
+        color: #FFF;
+    }
+
+    .button {
+        font-weight: 300;
+        font-size: 16px;
+        font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        text-decoration: none;
+        text-align: center;
+        line-height: 40px;
+        height: 40px;
+        padding: 0 40px;
+        margin: 0;
+        display: inline-block;
+        appearance: none;
+        cursor: pointer;
+        border: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transition-property: all;
+        transition-property: all;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
+    }
+
+    .title {
+        margin-bottom: 0rem !important;
+    }
+
+    .card {
+        margin: 3rem 0 1rem 0 !important;
+    }
+
+    .button-glow.button-caution {
+        -webkit-animation-name: glowing-caution;
+        animation-name: glowing-caution;
+    }
+
+    @-webkit-keyframes glowing-caution {
+        from {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
         }
 
-        coverSlider.carousel({
-            duration: Number('120'),
-            fullWidth: true,
-            indicators: 'true' === 'true',
-            onCycleTo() {
-                if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
-                    initUserPressedOrDragged(this)
-                    initUserPressedOrDraggedActive = true
-                }
-            },
-        })
+        50% {
+            -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+            box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+        }
 
-        let carouselIntervalId;
-        
-        // Loop to call the next cover article picture.
-        let autoCarousel = function () {
-            carouselIntervalId = setInterval(function () {
-                coverSlider.carousel('next');
-            }, 5000);
-        };
-        autoCarousel();
+        to {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+        }
+    }
+
+    @keyframes glowing-caution {
+        from {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+        }
+
+        50% {
+            -webkit-box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+            box-shadow: 0 0 20px rgba(255, 67, 81, 0.8);
+        }
+
+        to {
+            -webkit-box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+            box-shadow: 0 0 0 rgba(255, 67, 81, 0.3);
+        }
+    }
+
+    .button-caution:hover {
+        background-color: #ff7680;
+        border-color: #ff7680;
+        color: #FFF;
+        text-decoration: none;
+    }
+
+    .frind-card1 {
+        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    }
+
+    .frind-card2 {
+        background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .frind-card3 {
+        background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+    }
+
+    .frind-card4 {
+        background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    }
+
+    .frind-card5 {
+        background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+    }
+
+    .frind-card6 {
+        background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    }
+
+    .frind-card7 {
+        background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+    }
+
+    .frind-card8 {
+        background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+    }
+
+    .frind-card9 {
+        background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+    }
+
+    .frind-card10 {
+        background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    }
+
+    article .card {
+        overflow: visible !important;
+    }
+</style>
+
+<main class="content">
+    <div class="container friends-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="tag-title center-align">
+                    <i class="fas fa-address-book"></i>&nbsp;&nbsp;友情链接
+                </div>
+                <article id="friends-link">
+                    
+                    
+                    <div class="row tags-posts friend-all">
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card1">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="http://image.luokangyuan.com/4027734.jpeg" alt="img">
+                                        <div>
+                                            <h1 class="friend-name">闪烁之狐</h1>
+                                            <p style="position: relative;top: -35px;">编程界大佬，hexo-theme-matery作者</p>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://blinkfox.github.io/" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前往主页
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card2">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://avatars3.githubusercontent.com/u/15247067?s=460&u=b2311d45bca976d076fe994b2cd87dab12c3c92b&v=4" alt="img">
+                                        <div>
+                                            <h1 class="friend-name">CodeSheep</h1>
+                                            <p style="position: relative;top: -35px;">B站UP主CodeSheep，程序🐑很牛逼</p>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://space.bilibili.com/384068749?from=search&seid=13424988374961543082" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前往主页
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col s12 m6 l4 friend-div" data-aos="zoom-in-up">
+                            <div class="card frind-card3">
+                                <div class="frind-ship">
+                                    <div class="title">
+                                        <img src="https://avatars2.githubusercontent.com/u/59549218?s=460&u=46032974ced506d7385f22cf2cd7f436d6ac2ae1&v=4" alt="img">
+                                        <div>
+                                            <h1 class="friend-name">一荤配一素</h1>
+                                            <p style="position: relative;top: -35px;">我是菜鸡，正在追寻大佬的脚步</p>
+                                        </div>
+                                    </div>
+                                    <div class="friend-button">
+                                        <a href="https://blog.csdn.net/Miracle_ps?spm=1001.2101.3001.5343" target="_blank"
+                                            class="button button-glow button-rounded button-caution">
+                                            前往主页
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </article>
+            </div>
+        </div>
+
         
 
-        function restartPlay() {
+        <div class="card">
+
             
-            clearInterval(carouselIntervalId);
-            autoCarousel();
-            
-        };
 
-        
-        // prev and next cover post.
-        $('#prev-cover').click(function () {
-            coverSlider.carousel('prev');
-            restartPlay();
-        });
-        $('#next-cover').click(function () {
-            coverSlider.carousel('next');
-            restartPlay();
-        });
-        
+            
+
+            
+
+            
+
+            
+            <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'M2g5zhP6ALuGuTvuFWNzlvvj-gzGzoHsz',
+        appKey: 'Kvvr4xJw8CwIdg4nosJGyMit',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
     });
 </script>
 
+            
 
-
-<main class="content">
-
-    
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
-                        <div class="dream">
-    
-    <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;像我这样的人
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            像我这样优秀的人，本该灿烂过一生，怎么二十多年到头来，还在人海里浮沉； 像我这样聪明的人，早就告别了单纯，怎么还是用了一段情，去换一身伤痕； 像我这样迷茫的人，像我这样寻找的人，像我这样碌碌无为的人，你还见过多少人； 像我这样孤单的人，像我这样傻的人，像我这样不甘平凡的人，世界上有多少人； 像我这样莫名其妙的人，会不会有人心疼。————毛不易《像我这样的人》
         </div>
     </div>
-</div>
-
-                    
-
-                    
-
-                    
-
-                    
-                    <div id="recommend-sections" class="recommend">
-                        
-
-
-
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-    
-
-    <!-- 所有文章卡片 -->
-    <article id="articles" class="container articles">
-        <div class="row article-row">
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/tech/wo-de-bo-ke/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="我的博客">
-                            
-                            <span class="card-title">我的博客</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                我的博客我是test
-C++#include &lt;iostream&gt;
-using namespace std;
-int main()
-{
-    
-}
-Pythonprint("hello world!")
-
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-30
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/tech/" class="post-category">
-                                    tech
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/language/">
-                            <span class="chip bg-color">language</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/sheng-huo-sui-bi/2020-zong-jie/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="2020总结">
-                            
-                            <span class="card-title">2020总结</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                2020总结这一年真的是过的很忐忑了，从上半年居家学习只为“争抢”那一点的保研分，到下半年在起初复习准备考研到最终保研，再到保研还是退学工作之间的无比就纠结，那一个多月时间过的真的很煎熬。
-上半年：争抢一点保研分，只为保研~考研~有学上说到
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-28
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    生活随笔
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/%E6%80%BB%E7%BB%93/">
-                            <span class="chip bg-color">总结</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/tech/hello-world/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                            
-                            <span class="card-title">Hello World</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-25
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/tech/" class="post-category">
-                                    tech
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/hexo/">
-                            <span class="chip bg-color">hexo</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-        </div>
-    </article>
-
 </main>
 
-
+<script>
+    $(function () {
+        $('#friends-link').masonry({
+            itemSelector: '.friend-div'
+        });
+    });
+</script>
 
 
     <footer class="page-footer bg-color">

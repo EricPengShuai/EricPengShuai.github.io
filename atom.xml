@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>像我这样的人</title>
+  
+  <subtitle>岁月可逝|乏善可陈</subtitle>
+  <link href="https://ericpengshuai.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://ericpengshuai.github.io/"/>
+  <updated>2021-01-03T08:13:54.970Z</updated>
+  <id>https://ericpengshuai.github.io/</id>
+  
+  <author>
+    <name>PengShuai</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的博客</title>
+    <link href="https://ericpengshuai.github.io/tech/wo-de-bo-ke/"/>
+    <id>https://ericpengshuai.github.io/tech/wo-de-bo-ke/</id>
+    <published>2020-12-30T03:27:15.000Z</published>
+    <updated>2021-01-03T08:13:54.970Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;我的博客&quot;&gt;&lt;a href=&quot;#我的博客&quot; class=&quot;headerlink&quot; title=&quot;我的博客&quot;&gt;&lt;/a&gt;我的博客&lt;/h2&gt;&lt;p&gt;我是test&lt;/p&gt;
+&lt;h3 id=&quot;C&quot;&gt;&lt;a href=&quot;#C&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="tech" scheme="https://ericpengshuai.github.io/categories/tech/"/>
+    
+    
+    <category term="language" scheme="https://ericpengshuai.github.io/tags/language/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020总结</title>
+    <link href="https://ericpengshuai.github.io/sheng-huo-sui-bi/2020-zong-jie/"/>
+    <id>https://ericpengshuai.github.io/sheng-huo-sui-bi/2020-zong-jie/</id>
+    <published>2020-12-28T03:27:15.000Z</published>
+    <updated>2021-01-03T08:12:44.709Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;2020总结&quot;&gt;&lt;a href=&quot;#2020总结&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活随笔" scheme="https://ericpengshuai.github.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="总结" scheme="https://ericpengshuai.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://ericpengshuai.github.io/tech/hello-world/"/>
+    <id>https://ericpengshuai.github.io/tech/hello-world/</id>
+    <published>2020-12-25T03:27:15.000Z</published>
+    <updated>2021-01-03T08:13:04.860Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="tech" scheme="https://ericpengshuai.github.io/categories/tech/"/>
+    
+    
+    <category term="hexo" scheme="https://ericpengshuai.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>
