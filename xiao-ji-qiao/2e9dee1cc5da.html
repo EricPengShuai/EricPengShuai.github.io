@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="python类中函数相互调用方法, PengShuai,Programmer,Myblog">
+    <meta name="keywords" content="更新github指定文件以及git创建分支操作, PengShuai,Programmer,Myblog">
     <meta name="description" content="A lyinger，a someone like me.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>python类中函数相互调用方法 | 像我这样的人</title>
+    <title>更新github指定文件以及git创建分支操作 | 像我这样的人</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="像我这样的人" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="像我这样的人" type="application/atom+xml">
 </head>
 
 
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">python类中函数相互调用方法</h1>
+                    <h1 class="description center-align post-title">更新github指定文件以及git创建分支操作</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/git/">
+                                <span class="chip bg-color">git</span>
+                            </a>
+                        
+                            <a href="/tags/github/">
+                                <span class="chip bg-color">github</span>
                             </a>
                         
                     </div>
@@ -446,8 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/" class="post-category">
-                                编程备忘
+                            <a href="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="post-category">
+                                小技巧
                             </a>
                         
                     </div>
@@ -459,7 +463,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-30
+                    2021-01-05
                 </div>
                 
 
@@ -468,7 +472,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    212
+                    404
                 </div>
                 
 
@@ -490,36 +494,50 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="方法一：self-方法（参数列表），注意参数列表不需要self"><a href="#方法一：self-方法（参数列表），注意参数列表不需要self" class="headerlink" title="方法一：self.方法（参数列表），注意参数列表不需要self"></a><strong>方法一：self.方法（参数列表），注意参数列表不需要self</strong></h4><h4 id="方法二：类名-方法（self，参数列表）"><a href="#方法二：类名-方法（self，参数列表）" class="headerlink" title="方法二：类名.方法（self，参数列表）"></a><strong>方法二：类名.方法（self，参数列表）</strong></h4><p>具体代码例子如下：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 利用测试次数和鸡蛋个数的关系变化带来的确定的楼层数来解题</span>
-<span class="token keyword">class</span> <span class="token class-name">dropeggs</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">superEggDrop</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> K<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> N<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">int</span><span class="token punctuation">:</span>
-        remainTestCount <span class="token operator">=</span> <span class="token number">1</span>
-        <span class="token comment"># 方法一</span>
-        <span class="token comment"># while self.getConfirmFloors(remainTestCount, K) &lt; N:</span>
-        <span class="token comment">#     remainTestCount += 1</span>
-        <span class="token comment"># return remainTestCount</span>
-        
-        <span class="token comment"># 方法二</span>
-        <span class="token keyword">while</span> dropeggs<span class="token punctuation">.</span>getConfirmFloors<span class="token punctuation">(</span>self<span class="token punctuation">,</span> remainTestCount<span class="token punctuation">,</span> K<span class="token punctuation">)</span> <span class="token operator">&lt;</span> N<span class="token punctuation">:</span>
-            remainTestCount <span class="token operator">+=</span> <span class="token number">1</span>
-        <span class="token keyword">return</span> remainTestCount
+                <h2 id="更新github指定文件"><a href="#更新github指定文件" class="headerlink" title="更新github指定文件"></a>更新github指定文件</h2><p>首先在先前提交的文件中，更新要提交的文件</p>
+<ol>
+<li><code>git add filename</code>（要更新的文件名）</li>
+<li><code>git commit -m 'Update filename'</code></li>
+<li><code>git remote rm origin</code></li>
+<li><code>git remote add origin 地址</code></li>
+<li><code>git pull origin main</code>     // 没有这一步容易出错</li>
+<li><code>git push origin main</code></li>
+</ol>
+<p>参考：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44046355/article/details/91984584">更新github项目</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/gongqinglin/article/details/79752398?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2.control">git推送更新出错</a><blockquote>
+<p>为什么<code>git push / push </code>不需要加 <code>-u </code>选项，可以参<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600/898732864121440">考廖雪峰老师</a>说的：”由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令” ，大致意思就是刚开始创建仓库的时候是空的就需要加，现在我是修改已经存在仓库中的文件就不需要加了</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="git创建分支基本操作"><a href="#git创建分支基本操作" class="headerlink" title="git创建分支基本操作"></a>git创建分支基本操作</h2><pre><code class="bash"># 创建一个新的分支newbranch，并且切换到这个分支上
+git checkout -b `newbranch`
+# 注意这个checkout命令如果后面加了`--`之后是撤销修改的意思，例如撤销对readme文件的修改
+git checkout -- README.md
+# 所以推荐使用switch方法，创建并且切换分支
+git switch -c new branch
 
-    <span class="token comment"># 在remainTestCount个测试机会、eggsCount个鸡蛋可以确定的楼层数量</span>
-    <span class="token keyword">def</span> <span class="token function">getConfirmFloors</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> remainTestCount<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> eggsCount<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">int</span><span class="token punctuation">:</span>
-        <span class="token comment"># 如果remainTestCount=1，只能移动一次可以确定楼层0（在一楼扔鸡蛋碎了）</span>
-        <span class="token comment"># 如果eggsCount=1，只能从一楼开始往上面测试扔鸡蛋最多确定remainTestCount个楼层</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>remainTestCount <span class="token operator">==</span> <span class="token number">1</span> <span class="token keyword">or</span> eggsCount <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">return</span> remainTestCount
-        <span class="token keyword">return</span> self<span class="token punctuation">.</span>getConfirmFloors<span class="token punctuation">(</span>remainTestCount<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> eggsCount<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>getConfirmFloors<span class="token punctuation">(</span>remainTestCount<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> eggsCount<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+# 如果分为两步骤 1.创建新分支 2.切换
+git branch `newbranch`
+git checkout `newbranch`
+# 通过switch切换
+git switch `newbranch`
+
+# 查看当前分支：会列出所有分支，当前分支前面有一个*号
+git branch
+
+# 合并新分支到主分支main上面
+git merge newbranch
+
+# 删除分支
+git branch -d `newbranch`</code></pre>
+
                 
             </div>
             <hr/>
@@ -545,7 +563,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ericpengshuai.github.io/bian-cheng-bei-wang/python-lei-zhong-han-shu-xiang-hu-diao-yong-fang-fa/">https://ericpengshuai.github.io/bian-cheng-bei-wang/python-lei-zhong-han-shu-xiang-hu-diao-yong-fang-fa/</a>
+                    <a href="https://ericpengshuai.github.io/xiao-ji-qiao/2e9dee1cc5da.html">https://ericpengshuai.github.io/xiao-ji-qiao/2e9dee1cc5da.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -583,8 +601,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/git/">
+                                    <span class="chip bg-color">git</span>
+                                </a>
+                            
+                                <a href="/tags/github/">
+                                    <span class="chip bg-color">github</span>
                                 </a>
                             
                         </div>
@@ -1022,13 +1044,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/bian-cheng-bei-wang/python-lei-zhong-han-shu-xiang-hu-diao-yong-fang-fa/">
+                <a href="/xiao-ji-qiao/2e9dee1cc5da.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="python类中函数相互调用方法">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="更新github指定文件以及git创建分支操作">
                         
-                        <span class="card-title">python类中函数相互调用方法</span>
+                        <span class="card-title">更新github指定文件以及git创建分支操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1039,14 +1061,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/" class="post-category">
-                                    编程备忘
+                            <a href="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="post-category">
+                                    小技巧
                                 </a>
                             
                             
@@ -1057,8 +1079,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
                     </a>
                     
                 </div>
@@ -1072,13 +1098,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/sheng-huo-sui-bi/2020-zong-jie/">
+                <a href="/yi-cuo-zhi-shi/dc41ddf2ff64.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="2020总结">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="【linux shell】while read line几种方法以及区别">
                         
-                        <span class="card-title">2020总结</span>
+                        <span class="card-title">【linux shell】while read line几种方法以及区别</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1089,14 +1115,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    生活随笔
+                            <a href="/categories/%E6%98%93%E9%94%99%E7%9F%A5%E8%AF%86/" class="post-category">
+                                    易错知识
                                 </a>
                             
                             
@@ -1106,8 +1132,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%80%BB%E7%BB%93/">
-                        <span class="chip bg-color">总结</span>
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
                     </a>
                     
                 </div>
@@ -1310,7 +1336,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.9k</span>&nbsp;字
+                class="white-color">7.3k</span>&nbsp;字
             
             
             

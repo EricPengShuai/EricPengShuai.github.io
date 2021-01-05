@@ -4,11 +4,167 @@
   
     
     <entry>
-      <title>python类中函数相互调用方法</title>
-      <link href="bian-cheng-bei-wang/python-lei-zhong-han-shu-xiang-hu-diao-yong-fang-fa/"/>
-      <url>bian-cheng-bei-wang/python-lei-zhong-han-shu-xiang-hu-diao-yong-fang-fa/</url>
+      <title>更新github指定文件以及git创建分支操作</title>
+      <link href="xiao-ji-qiao/2e9dee1cc5da.html"/>
+      <url>xiao-ji-qiao/2e9dee1cc5da.html</url>
       
-        <content type="html"><![CDATA[<h4 id="方法一：self-方法（参数列表），注意参数列表不需要self"><a href="#方法一：self-方法（参数列表），注意参数列表不需要self" class="headerlink" title="方法一：self.方法（参数列表），注意参数列表不需要self"></a><strong>方法一：self.方法（参数列表），注意参数列表不需要self</strong></h4><h4 id="方法二：类名-方法（self，参数列表）"><a href="#方法二：类名-方法（self，参数列表）" class="headerlink" title="方法二：类名.方法（self，参数列表）"></a><strong>方法二：类名.方法（self，参数列表）</strong></h4><p>具体代码例子如下：</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 利用测试次数和鸡蛋个数的关系变化带来的确定的楼层数来解题</span><span class="token keyword">class</span> <span class="token class-name">dropeggs</span><span class="token punctuation">:</span>    <span class="token keyword">def</span> <span class="token function">superEggDrop</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> K<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> N<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">int</span><span class="token punctuation">:</span>        remainTestCount <span class="token operator">=</span> <span class="token number">1</span>        <span class="token comment"># 方法一</span>        <span class="token comment"># while self.getConfirmFloors(remainTestCount, K) &lt; N:</span>        <span class="token comment">#     remainTestCount += 1</span>        <span class="token comment"># return remainTestCount</span>                <span class="token comment"># 方法二</span>        <span class="token keyword">while</span> dropeggs<span class="token punctuation">.</span>getConfirmFloors<span class="token punctuation">(</span>self<span class="token punctuation">,</span> remainTestCount<span class="token punctuation">,</span> K<span class="token punctuation">)</span> <span class="token operator">&lt;</span> N<span class="token punctuation">:</span>            remainTestCount <span class="token operator">+=</span> <span class="token number">1</span>        <span class="token keyword">return</span> remainTestCount    <span class="token comment"># 在remainTestCount个测试机会、eggsCount个鸡蛋可以确定的楼层数量</span>    <span class="token keyword">def</span> <span class="token function">getConfirmFloors</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> remainTestCount<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> eggsCount<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">int</span><span class="token punctuation">:</span>        <span class="token comment"># 如果remainTestCount=1，只能移动一次可以确定楼层0（在一楼扔鸡蛋碎了）</span>        <span class="token comment"># 如果eggsCount=1，只能从一楼开始往上面测试扔鸡蛋最多确定remainTestCount个楼层</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>remainTestCount <span class="token operator">==</span> <span class="token number">1</span> <span class="token keyword">or</span> eggsCount <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>            <span class="token keyword">return</span> remainTestCount        <span class="token keyword">return</span> self<span class="token punctuation">.</span>getConfirmFloors<span class="token punctuation">(</span>remainTestCount<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> eggsCount<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>getConfirmFloors<span class="token punctuation">(</span>remainTestCount<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> eggsCount<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 id="更新github指定文件"><a href="#更新github指定文件" class="headerlink" title="更新github指定文件"></a>更新github指定文件</h2><p>首先在先前提交的文件中，更新要提交的文件</p><ol><li><code>git add filename</code>（要更新的文件名）</li><li><code>git commit -m 'Update filename'</code></li><li><code>git remote rm origin</code></li><li><code>git remote add origin 地址</code></li><li><code>git pull origin main</code>     // 没有这一步容易出错</li><li><code>git push origin main</code></li></ol><p>参考：</p><ul><li><a href="https://blog.csdn.net/weixin_44046355/article/details/91984584">更新github项目</a></li><li><a href="https://blog.csdn.net/gongqinglin/article/details/79752398?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromBaidu-2.control">git推送更新出错</a><blockquote><p>为什么<code>git push / push </code>不需要加 <code>-u </code>选项，可以参<a href="https://www.liaoxuefeng.com/wiki/896043488029600/898732864121440">考廖雪峰老师</a>说的：”由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令” ，大致意思就是刚开始创建仓库的时候是空的就需要加，现在我是修改已经存在仓库中的文件就不需要加了</p></blockquote></li></ul><h2 id="git创建分支基本操作"><a href="#git创建分支基本操作" class="headerlink" title="git创建分支基本操作"></a>git创建分支基本操作</h2><pre><code class="bash"># 创建一个新的分支newbranch，并且切换到这个分支上git checkout -b `newbranch`# 注意这个checkout命令如果后面加了`--`之后是撤销修改的意思，例如撤销对readme文件的修改git checkout -- README.md# 所以推荐使用switch方法，创建并且切换分支git switch -c new branch# 如果分为两步骤 1.创建新分支 2.切换git branch `newbranch`git checkout `newbranch`# 通过switch切换git switch `newbranch`# 查看当前分支：会列出所有分支，当前分支前面有一个*号git branch# 合并新分支到主分支main上面git merge newbranch# 删除分支git branch -d `newbranch`</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 小技巧 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【linux shell】while read line几种方法以及区别</title>
+      <link href="yi-cuo-zhi-shi/dc41ddf2ff64.html"/>
+      <url>yi-cuo-zhi-shi/dc41ddf2ff64.html</url>
+      
+        <content type="html"><![CDATA[<p><strong>引言</strong>：开始时自己的写的一个下载<a href="https://bing.ioliu.cn/?p=">某个bing网站</a>上面的图片的脚本程序中需要使用while read line读取自己提取出来的图片信息，刚开始没有用临时文件存放信息，而是直接使用管道机制重定向，结果……坑了我一个小时<br>==然后自己查了一些资料，比较一下三种while read line方法的区别==<br>首先自己的test文件如下：（就简单是三行数据）<br><img src="https://img-blog.csdnimg.cn/20200508145856694.png" alt="test文件内容"></p><h2 id="while-read-line三种方法"><a href="#while-read-line三种方法" class="headerlink" title="while-read-line三种方法"></a>while-read-line三种方法</h2><h3 id="1-形如cat-test-while-read-line-do-echo-line-done"><a href="#1-形如cat-test-while-read-line-do-echo-line-done" class="headerlink" title="1. 形如cat test | while read line;do echo $line;done"></a>1. 形如cat test | while read line;do echo $line;done</h3><ul><li>代码如下<pre><code class="bash">name1="xiaowang"date1="2020-05-08"cat test | while read datedo read url read name name1="$name" date1="$date" echo "$date1 $name1 $url" echo "$date $name $url"done</code></pre></li></ul><p>echo “888888 $date1 777 $name1 666  $url”</p><pre><code>- 结果输出```bash2020-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force=download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州2020-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force=download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州888888 2020-05-08 777 xiaowang 666</code></pre><p><strong>我想的是使用while read line读取文件之后赋值给name1和date1，结果并没赋值。刚开始很疑惑，明明在while循环中的name1和date1都赋值了为啥退出之后没了呢，结果发现是管道的机制，这个使用管道之后while read line是在子shell中进行的，所以在退出while之后其中的操作都是无效的</strong></p><p>另外，参考一片博客中说的：cat test会一次性将test文件所有数据装入内存，如果test文件足够大，会直接占用巨量内存</p><h3 id="2-形如-while-read-line-lt-test-do-echo-line-done"><a href="#2-形如-while-read-line-lt-test-do-echo-line-done" class="headerlink" title="2.形如 while read line <test;do echo $line;done"></a>2.形如 while read line &lt;test;do echo $line;done</h3><ul><li><p>代码如下</p><pre><code class="bash">name1="xiaowang"date1="2020-05-08"while read date &lt; testdo    read url    read name    name1="$name"    date1="$date"    echo "$date1 $name1 $url"    echo "$date $name $url"doneecho "888888 $date1 777 $name1 666  $url"</code></pre></li><li><p>结果如下</p><pre><code class="bash"></code></pre></li></ul><p>  2020-05-07<br>  2020-05-07  </p><p>  2020-05-07<br>  2020-05-07  </p><p>  2020-05-07<br>  2020-05-07<br>  …</p><pre><code>**首先我看不懂这个输出结果（其中的空行全是我自己按的回车，也就是按了两次回车之后才出现结果，然后这个while循环一直不结束...）查说法就是：它会在每次循环的时候都重新打开test文件，使得每次都从头开始读数据，而不是每次从上一次标记的地方继续读数据。**### 3.【最佳】形如while read line;do echo $line;done &lt;test- 代码如下```bashname1="xiaowang"date1="2020-05-08"while read datedo    read url    read name    name1="$name"    date1="$date"    echo "$date1 $name1 $url"    echo "$date $name $url"done &lt; testecho "888888 $date1 777 $name1 666  $url"</code></pre><ul><li><p>结果如下（正常了耶）</p><pre><code class="bash">2020-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force=download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州2020-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force=download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州888888 2020-05-07 777 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force=download 666  印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州</code></pre></li></ul><p><strong>这个不就是我想要的结果吗，使用输入重定向的方式则每次只占用一行数据的内存，而且是在当前shell环境下执行的，while内的变量赋值、数组赋值在退出while后仍然有效。</strong></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol><li>以上三种方法中，大家在选取的时候最好选择第三那种方法，别问为什么问。</li><li>其实读取文件内容的方法有很多，比如使用形如：for line in $(&lt;file); do echo ​$line; done的方法，据说这种方法效率最高，具体可以参考<a href="https://blog.csdn.net/u014650722/article/details/51563823">这篇博客</a>，这个说了几种while read和for的比较。</li><li>另外如果想要了解我那个下载图片的脚本程序可以访问<a href="https://github.com/EricPengShuai/Linux-Shell-netstat--s-And-download-photos">我的github</a></li></ol><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.cnblogs.com/xl-892694298/p/11017168.html">https://www.cnblogs.com/xl-892694298/p/11017168.html</a><br><a href="https://blog.csdn.net/u014650722/article/details/51563823">https://blog.csdn.net/u014650722/article/details/51563823</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 易错知识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【成功解决】WireShark没有发现端口，Win10pcap和Npcap安装失败</title>
+      <link href="chang-jian-bao-cuo/a2fced913357.html"/>
+      <url>chang-jian-bao-cuo/a2fced913357.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="问题重现"><a href="#问题重现" class="headerlink" title="问题重现"></a>问题重现</h2><h3 id="引言："><a href="#引言：" class="headerlink" title="引言："></a><strong>引言</strong>：</h3><p>wireshark是去年安装的，大约一年没用了，现在一打开发现<strong>“没有发现接口”</strong>，本来是要通过抓包了解IPV6分组机制（分片扩展首部），结果蒙了…下面说一下整个解决过程</p><h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a><strong>原因</strong>：</h3><p>没有<a href="https://www.cnblogs.com/cc1840/p/10074686.html">Npcap或者Winpcap</a>，这里大家可能想知道这两个有啥区别，总体上是Npcap是现在的新型Windows网络数据包截获软件，替代了Winpcap，现在安装wireshark的时候一般都会安装Npcap的，具体区别<a href="https://blog.csdn.net/hsluoyc/article/details/46483151">传送门</a></p><ol><li><p>首先<strong>卸载你电脑中的Npcap或者Winpcap</strong>（这个已经不完整了），具体清理过程<a href="https://blog.csdn.net/hs_err_log/article/details/79646455">传送门</a></p></li><li><p>开始我查CSDN上面的说法是<strong>下载Win10pcap</strong>，这里<a href="http://www.win10pcap.org/download/">附链接</a>，不知道为什么我总是安装失败（可能自己环境确实有点问题，不过你们可以试试）</p></li><li><p>然后我又尝试<strong>安装Npcap</strong>（一般的wireshark文件夹中都会有这个的安装程序）<br><img src="https://img-blog.csdnimg.cn/20200403185450956.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="wireshark安装目录"><br>如果你安装成功，那么恭喜你，你欧气爆棚，但是我是没有安装上的，总是提示<br><img src="https://img-blog.csdnimg.cn/20200403185619214.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="安装Npcap失败"></p></li></ol><p> <strong>关于这个错误网上说法很多：有可能是自己的Npcap没有卸载干净、还有可能你改变了路径、另外就是他自己说的版本太低……</strong><br> 前两个我试了还是不行<br> 然后我又<strong>下载了最新版本的Npcap</strong>，这里附上<a href="https://nmap.org/download.html">官网</a>，然后重新安装，结果还是报错，气得我…..直接把wireshark卸载了（以为我去年这个版本已经不行了，然后去<a href="https://www.wireshark.org/download.html">官网</a>下载最新的版本），然后把之前的工作又重新做了一遍，所以结果还是一样不行！！！！心态崩了</p><ol start="4"><li>将之前安装的Npcap重新卸载之后，<strong>百度了一下WinPcap，结果发现了新大陆</strong>，在<a href="https://www.winpcap.org/install/default.htm">WinPcap官网下载</a>了WinPcap，傻瓜式下载安装竟然ok了，然后打开<strong>wireshark竟然看到了接口</strong>，我人没了【具体为什么之前的Win10Pcap不行而这个可以我也不知道，注意这个我用的是WinPcap】<br><img src="https://img-blog.csdnimg.cn/20200403191932344.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="WinPcap主页"></li></ol><h3 id="结束："><a href="#结束：" class="headerlink" title="结束："></a><strong>结束</strong>：</h3><p>然后我又可以快乐的用wireshark抓包了</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 常见报错 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> WireShark </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【腾讯微信后端实习面试题】去除驼峰字符串</title>
+      <link href="suan-fa/1bc2199224a4.html"/>
+      <url>suan-fa/1bc2199224a4.html</url>
+      
+        <content type="html"><![CDATA[<p>今天面试了一个腾讯微信后台，说了几句就说弄一个题做一下，结果一脸懵逼，给定字符串，去除其中的驼峰字符串（例如：将“AaAdfAAaAaA”变成“df”）。</p><p>说实话对于<strong>驼峰串</strong>这个定义就有点模糊，本来当时有点紧张，有时在牛客网上做题，他别是那个面试官看着你做题，我当时脑子真的就是一片空白，这个驼峰串仅仅是两个大写字母中间夹一个小字母吗？能不能是两个小字母夹一个大写字母呢？（毕竟这个<strong>aAa</strong>也像驼峰）总之面试是gg了，之后网上看了一些解答，自己总结一下。</p><ul><li>首先对于第一种情况：驼峰串仅仅是两个大写字母中间夹一个小字母，形如AaA<pre><code class="python">str = 'AaAdfaAaAaAaAaB'len = len(str)print("%s字符串长度：" % str, len)i = 0while i &lt; len - 2: # 遇到驼峰 if(str[i] == str[i+2] and str[i] != str[i+1] and str[i].isupper()):     j = i + 2     i += 1 # 如果没有驼峰并且不是之前识别驼峰的最后一个字母就打印 elif i != j:     print(i, str[i], end='  ') i += 1 print(i)</code></pre></li></ul><p>if i == len - 2:<br>    # 对于像’AaAdfAaAaAaAaA’这样的串处理最后两个字符不要打印<br>    if(str[i+1] == str[i-1] and str[i] != str[i+1] and str[i+1].isupper()):<br>        pass<br>    # 对于像”AaAdfAaAaAaAaB”、”AaAdfaAaAaAaAaB”这样的串特殊处理最后两个字符<br>    else:<br>        print(i, str[i])<br>        print(i+1, str[i+1])</p><pre><code>调试结果如下：![在这里插入图片描述](https://img-blog.csdnimg.cn/20200331225824935.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70)![在这里插入图片描述](https://img-blog.csdnimg.cn/2020033122565815.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70) - 其次对于第二种情况：形如AaA、aAa都可以当成驼峰串```pythonstr = 'AaAdfAaAaAaAaA'len = len(str)print("字符串长度：", len)i = 0while i &lt; len - 2:    # 遇到驼峰    if(str[i] == str[i+2] and str[i] != str[i+1]):        j = i + 2        i += 1    # 如果没有驼峰并且不是之前识别驼峰的最后一个字母就打印    elif i != j:        print(i,str[i], end='  ')    i += 1    print(i)if i == len - 2:    # 对于像'AaAdfAaAaAaAaA'这样的串处理最后两个字符不要打印    if(str[i+1] == str[i-1] and str[i] != str[i+1]):        pass    # 对于像"AaAdfaAaAaAaAaB"这样的字符串特殊处理最后一个字符    elif(str[i] == str[i-2] and str[i] != str[i-1]):        print(i+1, str[i+1])    # 对于像'AaAdfAaAaAaAaaa'这样的串特殊处理最后两个字符,另外对于这种情况是不是有点问题    else:        print(i, str[i])        print(i+1, str[i+1])</code></pre><p>调试结果如下：<br><img src="https://img-blog.csdnimg.cn/20200331223036784.png" alt="测试结果1"><br><img src="https://img-blog.csdnimg.cn/20200331222927502.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="测试结果2"><br><img src="https://img-blog.csdnimg.cn/20200331223319160.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="测试结果3"></p><p><strong>总结</strong>：其实这个算法的核心就是<strong>while循环</strong>部分：其中j的作用很巧妙，配合i的增加做到了对每个驼峰串的识别</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> 字符串 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【分治法】解决循环赛问题（n分为奇数和偶数）</title>
+      <link href="suan-fa/d842de59de86.html"/>
+      <url>suan-fa/d842de59de86.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>设有N个运动员要进行网球循环赛，设计一个满足以下要求的比赛日程表</p><ol><li>每个选手必须与其他n-1个选手各赛一次；</li><li>每个选手一天只能赛一次；</li><li>当n 是偶数，循环赛进行n-1简单天，当n是奇数，循环赛进行n天。</li></ol><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><h3 id="1-首先考虑简单问题（n-2-k）"><a href="#1-首先考虑简单问题（n-2-k）" class="headerlink" title="1. 首先考虑简单问题（n = 2^k）"></a>1. 首先考虑简单问题（n = 2^k）</h3><p>这个我先上一个图大家应该就可以明白：</p><p><img src="https://img-blog.csdnimg.cn/20191024222342845.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="第1列为选手，第2-8列为赛程，8个选手赛7天"></p><p>应该很容易想到分治法，有如下规律：对于任意一个正方形区域（包括4、16……个小方块）左上角和右下角相等，右上角和左下角相等（<strong>如果懒得看汉字就直接看上面几种颜色的方块吧</strong>）</p><p><img src="/suan-fa/d842de59de86/1.jpg" alt="n=8"></p><blockquote><p>按分治策略，我们可以将所有的选手分为两半，则n个选手的比赛日程表可以通过n/2个选手的比赛日程表来决定。递归地用这种一分为二的策略对选手进行划分，直到只剩下两个选手时，比赛日程表的制定就变得很简单。这时只要让这两个选手进行比赛就可以了。如上图，所列出的正方形表是8个选手的比赛日程表。其中左上角与左下角的两小块分别为选手1至选手4和选手5至选手8前3天的比赛日程。据此，将左上角小块中的所有数字按其相对位置抄到右下角，又将左下角小块中的所有数字按其相对位置抄到右上角，这样我们就分别安排好了选手1至选手4和选手5至选手8在后4天的比赛日程。</p></blockquote><p>然后这个代码也很容易：</p><ul><li><input disabled="" type="checkbox"> 非递归（k是2上面的次数）<pre><code class="cpp">void SetTable(int **a, int k){ //初始化左上角数 a[0][0] = 1; a[0][1] = 2; a[1][0] = 2; a[1][1] = 1; //然后分治安排 for(int i = 2; i &lt;= k; i++) {     int len = 1 &lt;&lt; i;   //len = 2^i     int half = len / 2;      //左下角子表就是左上角子表加上half     for(int row = half; row &lt; len; row ++)     {         for(int col = 0; col &lt; half; col ++)         {             a[row][col] = a[row - half][col] + half;          }     }     //右上角子表就是左下角子表     for(int row = 0; row &lt; half; row ++)     {         for(int col = half; col &lt; len; col ++)         {             a[row][col] = a[row + half][col - half];         }     }     //右下角子表就是左上角子表     for(int row = half; row &lt; len; row ++)     {         for(int col = half; col &lt; len; col ++)         {             a[row][col] = a[row - half][col - half];         }     } }}</code></pre></li><li><input disabled="" type="checkbox"> 递归（n是比赛总人数，这里先考虑简单的n = 2^k）<pre><code class="cpp">void tourna(int n, int **a){ if(n == 1) {     a[0][0] = 1;     return; } tourna(n/2, a); copy(n, a);}void copy(int n, int **a){ int m = n / 2; for(int i = 0; i &lt; m; i++) {     for(int j = 0; j &lt; m; j++)     {         a[i + m][j + m] = a[i][j];  //右下角         a[i + m][j] = a[i][j] + m;  //左下角         a[i][j + m] = a[i + m][j];  //右上角     } }}</code></pre></li></ul><h3 id="2-衍生到一般的偶数（如果n不是2的次方）"><a href="#2-衍生到一般的偶数（如果n不是2的次方）" class="headerlink" title="2. 衍生到一般的偶数（如果n不是2的次方）"></a>2. 衍生到一般的偶数（如果n不是2的次方）</h3><p>举一个例子（n=6），既然是分治法，按照大的思路，我们把tourna(6, a)问题转换成tourna(3, a)【这里的你们就先看成是上面的tourna函数】，那么问题又来了，n=3怎么解决呢？（自然引出了奇数的问题，那我们直接考虑下面的奇数问题，这里大家可以直接跳到第三种情况看，看完之后回看这一点）</p><p>我们可以将6分为（1 2 3）和（4 5 6）我们且看两者单独考虑的赛程：<br><img src="https://img-blog.csdnimg.cn/2019102423094673.PNG" alt="（1 2 3）赛程"> <img src="https://img-blog.csdnimg.cn/20191024231411687.PNG" alt="（4  5  6）赛程">  </p><ul><li>考虑到（1 2 3）（4 5  6）“1和4”的第四列（第三天），只有一号选手和四号选手没比赛，那就让他们比，同理还有2和5，3和6，推出如下图【左图】</li><li>再来分析【右图】，第一行由于（1 5）（1 6）没比赛，后面就填他们，对应的也有（5 1）（6 1），再看第二行可以是（2 4）（2 6），由于6在第五天和1比赛了，所以应该是先填（2 6）然后（2 4），对应的也有（6 2）（4 2）；后面同理。</li></ul><blockquote><p>其实我感觉这个就是找规律好吗，<del>和分治法有“桃子”关系</del> </p></blockquote><p><img src="https://img-blog.csdnimg.cn/20191024232029757.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="找规律"></p><h3 id="3-n为奇数"><a href="#3-n为奇数" class="headerlink" title="3. n为奇数"></a>3. n为奇数</h3><ul><li>考虑到题目中有n天时间比赛，自然想到n = 4 的情况（看下图）</li></ul><blockquote><p> 这个是4个人比赛3天的情况，现在如果只有3个人，那么岂不是正好是3天，我们仅仅需要将其中的4改变为0（看下图），代表选手那天空闲就可</p></blockquote><p><img src="https://img-blog.csdnimg.cn/20191024224244591.PNG" alt="n = 4">                            <img src="https://img-blog.csdnimg.cn/20191024225923228.PNG" alt="n = 3"></p><ul><li>其实对于一般的奇数，我们都可以转换成相应的n + 1，变成偶数再分治求解，最终递归到尽头就是n = 3（然后我们回到第二问）</li></ul><h2 id="最终代码"><a href="#最终代码" class="headerlink" title="最终代码"></a>最终代码</h2><pre><code class="cpp"># include &lt;iostream&gt;using namespace std;void output(int **a, int n){    if(n % 2 == 1)  //n为奇数时候的输出        for (int i = 0; i &lt; n; i++)        {            for (int j = 0; j &lt; n + 1; j++)            {                if(a[i][j] == n + 1)                    cout &lt;&lt; 0;                else  cout &lt;&lt; a[i][j];                if (j == n)                    cout &lt;&lt; endl;                else                    cout &lt;&lt; ' ';            }        }    else    //n为偶数时候的输出        for (int i = 0; i &lt; n; i++)        {            for (int j = 0; j &lt; n; j++)            {                cout &lt;&lt; a[i][j];                if (j == n - 1)                    cout &lt;&lt; endl;                else                    cout &lt;&lt; ' ';            }        }}void copy(int n, int **a){    int m = n / 2;    //cout &lt;&lt; m &lt;&lt; endl;    for(int i = 0; i &lt; m; i++)    {        for(int j = 0; j &lt; m; j++)        {            a[i + m][j + m] = a[i][j];  //右下角            a[i + m][j] = a[i][j] + m;  //左下角            a[i][j + m] = a[i + m][j];  //右上角        }    }}void copyodd(int n, int **a){    int m = n / 2;    int *b = new int[n];    for(int i = 0; i &lt; m; i++)    {        b[i] = m + i + 1;   // 4 5 6        b[m + i] = b[i];    // 4 5 6    }    for(int i = 0; i &lt; m; i ++)    {        for(int j = 0; j &lt; m+1; j ++)   //改写左上角和填写右下角        {   //这里如果你硬要说什么解释的话，我也说不出啥来，我看来就是找规律            if(a[i][j] &gt; m)             {                a[i][j] = b[i];                a[m + i][j] = (b[i] + m) % n;            }            else a[m +i][j] = a[i][j] + m;        }        for(int j = 1; j &lt; m; j++)  //填写右上角和对应的右下角        {   //这里我当时是把 n = 6作为特例带进去一个一个是试出规律来的            a[i][m + j] = b[i + j];            a[b[i + j] - 1][m + j] = i + 1;        }    }}void makecopy(int n, int **a){    if((n/2 &gt; 1) &amp;&amp; ((n/2)%2 == 1)) copyodd(n, a);    else copy(n, a);}void tourna(int n, int **a){    if(n == 1)    {        a[0][0] = 1;        return;    }    if(n % 2 == 1)     {        tourna(n+1, a); //奇数+1变成偶数        return;    }    tourna(n/2, a); //分治    makecopy(n, a);}int main(){    int n;    cin &gt;&gt;n;    int **a = new int *[2*n];    for(int i = 0; i &lt; 2*n; i++)    //分配空间        a[i] = new int[2*n];    tourna(n, a);    output(a, n);    for(int i = 0; i &lt; 2*n; i ++)    //delete空间        delete []a[i];    delete []a;    return 0;}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C/C++ </tag>
+            
+            <tag> 分治法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python将列表转字符串</title>
+      <link href="bian-cheng-bei-wang/0effa8492d6b.html"/>
+      <url>bian-cheng-bei-wang/0effa8492d6b.html</url>
+      
+        <content type="html"><![CDATA[<p><strong>前提条件：列表中的元素全部是字符串</strong></p><pre><code class="python">list = ['a', 1, 'b', 4, 'c', 5]# 首先需要将列表的元素全部转换为str，以下两种方法# 使用for循环list1 = [str(i) for i in list]# 使用map函数list2 = map(str, list)# 使用join将列表中的元素串起来res1 = ''.join(list1)res2 = ''.join(list2)print(res1, res2)</code></pre><p>输出如下：</p><p><img src="https://img-blog.csdnimg.cn/20200403182820156.png" alt="res1和res2结果如下"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 编程备忘 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python类中函数相互调用方法</title>
+      <link href="bian-cheng-bei-wang/dbafef0e5f51.html"/>
+      <url>bian-cheng-bei-wang/dbafef0e5f51.html</url>
+      
+        <content type="html"><![CDATA[<h4 id="方法一：self-方法（参数列表），注意参数列表不需要self"><a href="#方法一：self-方法（参数列表），注意参数列表不需要self" class="headerlink" title="方法一：self.方法（参数列表），注意参数列表不需要self"></a><strong>方法一：self.方法（参数列表），注意参数列表不需要self</strong></h4><h4 id="方法二：类名-方法（self，参数列表）"><a href="#方法二：类名-方法（self，参数列表）" class="headerlink" title="方法二：类名.方法（self，参数列表）"></a><strong>方法二：类名.方法（self，参数列表）</strong></h4><p>具体代码例子如下：</p><pre><code class="python"># 利用测试次数和鸡蛋个数的关系变化带来的确定的楼层数来解题class dropeggs:    def superEggDrop(self, K: int, N: int) -&gt; int:        remainTestCount = 1        # 方法一        # while self.getConfirmFloors(remainTestCount, K) &lt; N:        #     remainTestCount += 1        # return remainTestCount        # 方法二        while dropeggs.getConfirmFloors(self, remainTestCount, K) &lt; N:            remainTestCount += 1        return remainTestCount    # 在remainTestCount个测试机会、eggsCount个鸡蛋可以确定的楼层数量    def getConfirmFloors(self, remainTestCount: int, eggsCount: int) -&gt; int:        # 如果remainTestCount=1，只能移动一次可以确定楼层0（在一楼扔鸡蛋碎了）        # 如果eggsCount=1，只能从一楼开始往上面测试扔鸡蛋最多确定remainTestCount个楼层        if (remainTestCount == 1 or eggsCount == 1):            return remainTestCount        return self.getConfirmFloors(remainTestCount-1, eggsCount-1) + self.getConfirmFloors(remainTestCount-1, eggsCount) + 1</code></pre>]]></content>
       
       
       <categories>
@@ -30,8 +186,8 @@
     
     <entry>
       <title>2020总结</title>
-      <link href="sheng-huo-sui-bi/2020-zong-jie/"/>
-      <url>sheng-huo-sui-bi/2020-zong-jie/</url>
+      <link href="sheng-huo-sui-bi/6c249f289724.html"/>
+      <url>sheng-huo-sui-bi/6c249f289724.html</url>
       
         <content type="html"><![CDATA[<h2 id="2020总结"><a href="#2020总结" class="headerlink" title="2020总结"></a>2020总结</h2><p>这一年真的是过的很忐忑了，从上半年居家学习只为“争抢”那一点的保研分，到下半年在起初复习准备考研到最终保研，再到保研还是退学工作之间的无比就纠结，那一个多月时间过的真的很煎熬。</p><h3 id="上半年"><a href="#上半年" class="headerlink" title="上半年"></a>上半年</h3><blockquote><p>争抢一点保研分，只为保研~考研~有学上</p></blockquote><p>说到上半年真的感觉居家学习对于我来说真的是很好（因为在学校每天还要去找一个有插座的地方，不得不说真的很不好找），而且在家还不需要自己洗衣服，学废了就躺~躺爽了就学，而且可以有大把时间做自己的事：提前刷刷题、找找实习（当时只是为了能在保研面试的时候为自己加加分之类的，并没有考虑到真正工作的事）、玩玩游戏……</p><p>每天的学习生活很简单，上完学校的课程之后我都会把那天的作业任务之类的完成（今日事今夜毕的那种），当时自己还参加一个“手拉手，共战疫”线上志愿（当时是想搏一搏自己的志愿时长，毕业德育分啊，总之一切为了德育分，不过这个志愿过程还是比较愉悦的），辅导陶陶学习，总的来说这是一段不错的经历。然后到了晚上做完之后放松放松：唱唱歌玩玩游戏之类的（当时还有一个开黑小分队呢~）、另外还有放肆自己。当然主要的时间还是用来学习的，当时为了保研还是想XM咨询了很多问题的（毕业人家中科院直博了），当时她说3~4月份就可以提前联系导师了，但是当时我自己也没有确定什么研究方向，只是在我们计院的官网上看看老师们的简介，上一页下一页翻来翻去，最终看了几个导师：袁彩霞、鄂海红、王小捷（当时XM找过的NLP方向的导师）、王浩宇…（还有几个忘了，但是听说都是不错的老师，呵呵，说来可笑，最终拿到保研资格的我没去其中的一个老师，最后后悔莫及），当时XM说她在3/~4月时候在准备论文（保研时候帮了不少忙），我当时还看了看搜了搜如何发论文，感觉自己是没有可能的。</p><p>最后我寻思着找一个实习可能对自己保研会有点帮助，当时就随便准备了一份自己的简历（搬了一点大作业的项目和自己一些考的比较好的课程在上面）“自以为是”的投了微信WXG事业群-后台开发（有点忘了好像叫这个名字(⊙o⊙)…）、字节（这个没有回应）、阿里（当时好像做了测试题之后打电话过来约面试我拒绝了，但是想保研考研之类的就没管实习了）……然后面试微信后台开发实习的时候，简单自我介绍之后问我用什么语言，然后就是一个<a href="https://blog.csdn.net/Miracle_ps/article/details/105233689">代码题：驼峰字符串</a>，直接懵逼（当时根本没有刷题，一两道的样子，就想试试水，是我太年轻），挂了；然后过来几天被WXG的测试开发捞了，当时好像问了很多计网的知识点以及大作业的细节，另外还有自己对于测试开发的理解，没有代码题，当时以为自己还可以，没想到这个回复一直等不到啊（后来想了想自己一点最基本的计网知识点错了），挂了……这之后好像就没把实习这个事挂在心上了，课程上的任务也有点重了，毕竟还有德育分</p><p>5~6月份就是搞定学校课程，记得当时自己电脑有一天忽然连不上学校的VPN，这让我大数据的实验没法做，最终还是去猴子家做了，当时差点心态都崩了，不过还好算是完成了。也正是电脑有点问题，爷爷奶奶让我换一个，另外6.18的时候看看Mac有点香（说实话不是很香，只是自己很香体验一下Apple，加上iPad体验极好，之后11月苹果发布的M1芯片真的是香的不行），所以最终成为了Mac用户。另外关于德育分自己真的是拼了，什么平板支撑录像、盛夏音韵好句分享、录歌发布等等都是很关注的~~</p><h3 id="暑假"><a href="#暑假" class="headerlink" title="暑假"></a>暑假</h3><blockquote><p>幺幺家“放松”，复习数据结构、OS等，保研面试</p></blockquote><p>当时听了计院研究生招生的宣讲，自己也大致投了几个老师（几乎每个邮件里面都说自己是保研边缘了，现在回忆起来是真的后悔，为什么就不能机智一点，就是说有很大可能保研不行吗，况且最后的排名也没有那么靠后，😌只能说自己有点“呆”吧😭），有鄂海红（说是保研边缘就先给我推了，看看九推还有没有机会）、王小捷（没有名额了直接拒了）、袁彩霞（欢迎）、石川（约到面试，这个也是自己9推时候的遗憾的开始吧）……</p><p>当时在幺幺家呆了一个月，懒懒散散复习一遍数据结构和计网，7月底到8月初石川组面试，做了几道数据挖掘的题目（说实话之前没有接触过，现学现做，不过听过石川组估计是最牛逼了），结束之后石川打了电话问我能不能拿到保研资格（当时我还是说保研边缘「现在想来，我TM当时怎么不去😡呢，真的是越想越气」），这期间接送妹妹上学（高中时代，压力也没那么大「当时自己高二高三以为“最大”的就是高考了」，现在想来，😔年轻真好🥴）。回家之后还有二十天就上学了，这期间看了看OS，放肆了自己，跳了跳绳……</p><h3 id="下半年"><a href="#下半年" class="headerlink" title="下半年"></a>下半年</h3><blockquote><p>准备复习考研–&gt;保研–&gt;想退学找工作–&gt;面试–&gt;努力平静自己–&gt;回家</p></blockquote><p>9月初以为自己是要考研的时，但是还买了王道、英语真题之类的，复习了差不多一个星期，感觉「嗯，很充实」，之后9月17号最初版本的保研排名公布了，心中有点窃喜看到自己排名67，应该稳了。当天就问了石川，结果没名额了（说是名额减少「我反正是将信将疑的」），但是第二天石川竟然给我发邮件说给我推荐网研院的许长桥（也是我“噩梦”的开始），但是以为是看在「我们都是湖北人」外加上那次『比赛打得还可以』的份上给我推荐的，当时满脸幸福答应了（但是还没有给老师发邮件，因为我看了看许长桥的研究方向还是有点犹豫的），但是晚上石川又wx我推荐许长桥说“许老师人很好，可以各方面了解一下，许老师做的很牛的”，当时脑袋一热直接发邮件了并且还是很相信的那种（我当时也发了一个5组明安龙老师的邮件，约的是周六14：00面试）。第二天许老师回复邮件也是周六16：00面试，当时由于是很相信石川说的许长桥怎么怎么的话（一定可以进许老师那个组，现在想来虽然没有特别坑，但是不是那么好），我直接果断结束了自己在明安龙这里的面试（具体看看就知道我当时的心态是有多崩了，都到某乎上<a href="https://www.zhihu.com/question/422990979">提问</a>的程度了），好了不想复现心态了。</p><p>最后进到这个组之后，对比自己同学实验室情况，感觉自己不妙啊（老师放养，没有组会）这都不说，感觉自己之后也只能做开发方向，项目都是横向的，以后做算法的可能性也不大。（自学自学自学，我时常这样提醒自己，但是……😑），每次看石川发的朋友圈就有那感觉（当时的自己真的是太“蠢”了，明明有机会进到更好的实验室）。</p><p>说到开发，我真的是想直接工作了，其实开发的话自己工作三年根本没有必要读研（虽然也有人读研之后选择开发，读研之后拿到争取SSP，年龄大了之后转到国企会好一点，我只能这样安慰自己）。最近迷上了逛论坛，当初为啥就没太关注呢，逛论坛看到有些大佬很早就明确自己的方向（出国读研还是工作），看到那些明确工作的大佬们准备的真的很羡慕，大三就各种实习，GitHub项目琳琅满目，样式好看……看到这些就觉得自己根本没有找到自己想要的方向，其实自己在大三的时候就能做一些这方面的准备，至少可以做好两手准备，虽然累一点，但是眼光真的要看的远一点。所以我们“既要埋头拉车，又要抬头看路”，因为“选择比努力更重要”。</p><p>现在是2020年12月28日晚上23：50分，越写越难受（又看到了人家的朋友圈），不想写了，不为别的，只为留个纪念。</p><p>可能之后会很大可能读研，可能会自学算法、可能会熟练掌握开发，可能……一切都不好说，就交给时间来判别吧！</p>]]></content>
       
@@ -54,16 +210,16 @@
     
     
     <entry>
-      <title>无法找到Qt5network.dll等</title>
-      <link href="jie-jue-chang-jian-bao-cuo/wu-fa-zhao-dao-qt5network.dll-deng-zu-jian/"/>
-      <url>jie-jue-chang-jian-bao-cuo/wu-fa-zhao-dao-qt5network.dll-deng-zu-jian/</url>
+      <title>【成功解决】运行qt生成的exe文件报“无法找到Qt5network.dll等组件”“无法找到入口”的问题</title>
+      <link href="chang-jian-bao-cuo/35defd8e84c1.html"/>
+      <url>chang-jian-bao-cuo/35defd8e84c1.html</url>
       
-        <content type="html"><![CDATA[<h2 id="运行qt生成的-exe文件报“无法找到Qt5network-dll等组件”“无法找到入口”的问题"><a href="#运行qt生成的-exe文件报“无法找到Qt5network-dll等组件”“无法找到入口”的问题" class="headerlink" title="运行qt生成的.exe文件报“无法找到Qt5network.dll等组件”“无法找到入口”的问题"></a>运行qt生成的.exe文件报“无法找到Qt5network.dll等组件”“无法找到入口”的问题</h2><p>我在Qt creator上面构建好项目之后生成了exe文件（在debug中），我想直接在qt creator之外运行时候就报“什么缺少一些插件的错误”，我查了一些资料，说是要设置什么环境变量path，然后我也设置了好了，如下：<br><img src="https://img-blog.csdnimg.cn/20190502175006195.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="添加环境变量path"><br> 然后我就运行，也是报错什么“无法找到入口”：如下（有几个错误，弄一个）<br> <img src="https://img-blog.csdnimg.cn/20190502175307908.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="无法找到入口"><br>然后查了一些资料之后说是要把那个环境变量放到上面几个（为了一次成功，<strong>我直接把那个环境变量置顶</strong>）<br><img src="https://img-blog.csdnimg.cn/20190502175634356.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="🔝环境变量"><br>然后保存好设置之后就可以运行了。</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="问题重现"><a href="#问题重现" class="headerlink" title="问题重现"></a>问题重现</h2><p>我在Qt creator上面构建好项目之后生成了exe文件（在debug中），我想直接在qt creator之外运行时候就报“什么缺少一些插件的错误”，我查了一些资料，说是要设置什么环境变量path，然后我也设置了好了，如下：<br><img src="https://img-blog.csdnimg.cn/20190502175006195.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="添加环境变量path"><br> 然后我就运行，也是报错什么“无法找到入口”：如下（有几个错误，弄一个）<br> <img src="https://img-blog.csdnimg.cn/20190502175307908.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="无法找到入口"><br>然后查了一些资料之后说是要把那个环境变量放到上面几个（为了一次成功，<strong>我直接把那个环境变量置顶</strong>）<br><img src="https://img-blog.csdnimg.cn/20190502175634356.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="🔝环境变量"><br>然后保存好设置之后就可以运行了。</p>]]></content>
       
       
       <categories>
           
-          <category> 解决常见报错 </category>
+          <category> 常见报错 </category>
           
       </categories>
       

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="无法找到Qt5network.dll等, PengShuai,Programmer,Myblog">
+    <meta name="keywords" content="【linux shell】while read line几种方法以及区别, PengShuai,Programmer,Myblog">
     <meta name="description" content="A lyinger，a someone like me.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>无法找到Qt5network.dll等 | 像我这样的人</title>
+    <title>【linux shell】while read line几种方法以及区别 | 像我这样的人</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="像我这样的人" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="像我这样的人" type="application/atom+xml">
 </head>
 
 
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">无法找到Qt5network.dll等</h1>
+                    <h1 class="description center-align post-title">【linux shell】while read line几种方法以及区别</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Qt/">
-                                <span class="chip bg-color">Qt</span>
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
                             </a>
                         
                     </div>
@@ -446,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%A7%A3%E5%86%B3%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/" class="post-category">
-                                解决常见报错
+                            <a href="/categories/%E6%98%93%E9%94%99%E7%9F%A5%E8%AF%86/" class="post-category">
+                                易错知识
                             </a>
                         
                     </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-25
+                    2021-01-05
                 </div>
                 
 
@@ -468,14 +468,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    192
+                    969
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -490,15 +490,93 @@
         <hr class="clearfix">
 
         
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
-        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="运行qt生成的-exe文件报“无法找到Qt5network-dll等组件”“无法找到入口”的问题"><a href="#运行qt生成的-exe文件报“无法找到Qt5network-dll等组件”“无法找到入口”的问题" class="headerlink" title="运行qt生成的.exe文件报“无法找到Qt5network.dll等组件”“无法找到入口”的问题"></a>运行qt生成的.exe文件报“无法找到Qt5network.dll等组件”“无法找到入口”的问题</h2><p>我在Qt creator上面构建好项目之后生成了exe文件（在debug中），我想直接在qt creator之外运行时候就报“什么缺少一些插件的错误”，我查了一些资料，说是要设置什么环境变量path，然后我也设置了好了，如下：<br><img src="https://img-blog.csdnimg.cn/20190502175006195.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="添加环境变量path"><br> 然后我就运行，也是报错什么“无法找到入口”：如下（有几个错误，弄一个）<br> <img src="https://img-blog.csdnimg.cn/20190502175307908.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="无法找到入口"><br>然后查了一些资料之后说是要把那个环境变量放到上面几个（为了一次成功，<strong>我直接把那个环境变量置顶</strong>）<br><img src="https://img-blog.csdnimg.cn/20190502175634356.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="🔝环境变量"><br>然后保存好设置之后就可以运行了。</p>
+                <p><strong>引言</strong>：开始时自己的写的一个下载<a target="_blank" rel="noopener" href="https://bing.ioliu.cn/?p=">某个bing网站</a>上面的图片的脚本程序中需要使用while read line读取自己提取出来的图片信息，刚开始没有用临时文件存放信息，而是直接使用管道机制重定向，结果……坑了我一个小时<br>==然后自己查了一些资料，比较一下三种while read line方法的区别==<br>首先自己的test文件如下：（就简单是三行数据）<br><img src="https://img-blog.csdnimg.cn/20200508145856694.png" alt="test文件内容"></p>
+<h2 id="while-read-line三种方法"><a href="#while-read-line三种方法" class="headerlink" title="while-read-line三种方法"></a>while-read-line三种方法</h2><h3 id="1-形如cat-test-while-read-line-do-echo-line-done"><a href="#1-形如cat-test-while-read-line-do-echo-line-done" class="headerlink" title="1. 形如cat test | while read line;do echo $line;done"></a>1. 形如cat test | while read line;do echo $line;done</h3><ul>
+<li>代码如下<pre><code class="bash">name1="xiaowang"
+date1="2020-05-08"
+cat test | while read date
+do
+ read url
+ read name
+ name1="$name"
+ date1="$date"
+ echo "$date1 $name1 $url"
+ echo "$date $name $url"
+done
+</code></pre>
+</li>
+</ul>
+<p>echo “888888 $date1 777 $name1 666  $url”</p>
+<pre><code>- 结果输出
+```bash
+2020-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force=download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州
+2020-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force=download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州
+888888 2020-05-08 777 xiaowang 666</code></pre>
+<p><strong>我想的是使用while read line读取文件之后赋值给name1和date1，结果并没赋值。刚开始很疑惑，明明在while循环中的name1和date1都赋值了为啥退出之后没了呢，结果发现是管道的机制，这个使用管道之后while read line是在子shell中进行的，所以在退出while之后其中的操作都是无效的</strong></p>
+<p>另外，参考一片博客中说的：cat test会一次性将test文件所有数据装入内存，如果test文件足够大，会直接占用巨量内存</p>
+<h3 id="2-形如-while-read-line-lt-test-do-echo-line-done"><a href="#2-形如-while-read-line-lt-test-do-echo-line-done" class="headerlink" title="2.形如 while read line <test;do echo $line;done"></a>2.形如 while read line &lt;test;do echo $line;done</h3><ul>
+<li><p>代码如下</p>
+<pre><code class="bash">name1="xiaowang"
+date1="2020-05-08"
+while read date &lt; test
+do
+    read url
+    read name
+    name1="$name"
+    date1="$date"
+    echo "$date1 $name1 $url"
+    echo "$date $name $url"
+done
+
+echo "888888 $date1 777 $name1 666  $url"</code></pre>
+</li>
+<li><p>结果如下</p>
+<pre><code class="bash">
+</code></pre>
+</li>
+</ul>
+<p>  2020-05-07<br>  2020-05-07  </p>
+<p>  2020-05-07<br>  2020-05-07  </p>
+<p>  2020-05-07<br>  2020-05-07<br>  …</p>
+<pre><code>
+**首先我看不懂这个输出结果（其中的空行全是我自己按的回车，也就是按了两次回车之后才出现结果，然后这个while循环一直不结束...）查说法就是：它会在每次循环的时候都重新打开test文件，使得每次都从头开始读数据，而不是每次从上一次标记的地方继续读数据。**
+
+### 3.【最佳】形如while read line;do echo $line;done &lt;test
+- 代码如下
+
+```bash
+name1="xiaowang"
+date1="2020-05-08"
+while read date
+do
+    read url
+    read name
+    name1="$name"
+    date1="$date"
+    echo "$date1 $name1 $url"
+    echo "$date $name $url"
+done &lt; test
+
+echo "888888 $date1 777 $name1 666  $url"</code></pre>
+<ul>
+<li><p>结果如下（正常了耶）</p>
+<pre><code class="bash">2020-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force=download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州
+2020-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force=download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州
+888888 2020-05-07 777 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force=download 666  印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州</code></pre>
+</li>
+</ul>
+<p><strong>这个不就是我想要的结果吗，使用输入重定向的方式则每次只占用一行数据的内存，而且是在当前shell环境下执行的，while内的变量赋值、数组赋值在退出while后仍然有效。</strong></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>以上三种方法中，大家在选取的时候最好选择第三那种方法，别问为什么问。</li>
+<li>其实读取文件内容的方法有很多，比如使用形如：for line in $(&lt;file); do echo ​$line; done的方法，据说这种方法效率最高，具体可以参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/u014650722/article/details/51563823">这篇博客</a>，这个说了几种while read和for的比较。</li>
+<li>另外如果想要了解我那个下载图片的脚本程序可以访问<a target="_blank" rel="noopener" href="https://github.com/EricPengShuai/Linux-Shell-netstat--s-And-download-photos">我的github</a></li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xl-892694298/p/11017168.html">https://www.cnblogs.com/xl-892694298/p/11017168.html</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014650722/article/details/51563823">https://blog.csdn.net/u014650722/article/details/51563823</a></p>
 
                 
             </div>
@@ -525,7 +603,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ericpengshuai.github.io/jie-jue-chang-jian-bao-cuo/wu-fa-zhao-dao-qt5network.dll-deng-zu-jian/">https://ericpengshuai.github.io/jie-jue-chang-jian-bao-cuo/wu-fa-zhao-dao-qt5network.dll-deng-zu-jian/</a>
+                    <a href="https://ericpengshuai.github.io/yi-cuo-zhi-shi/dc41ddf2ff64.html">https://ericpengshuai.github.io/yi-cuo-zhi-shi/dc41ddf2ff64.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -563,8 +641,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Qt/">
-                                    <span class="chip bg-color">Qt</span>
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
                                 </a>
                             
                         </div>
@@ -1001,13 +1079,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/sheng-huo-sui-bi/2020-zong-jie/">
+                <a href="/xiao-ji-qiao/2e9dee1cc5da.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="2020总结">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="更新github指定文件以及git创建分支操作">
                         
-                        <span class="card-title">2020总结</span>
+                        <span class="card-title">更新github指定文件以及git创建分支操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1018,14 +1096,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-28
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    生活随笔
+                            <a href="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="post-category">
+                                    小技巧
                                 </a>
                             
                             
@@ -1035,8 +1113,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%80%BB%E7%BB%93/">
-                        <span class="chip bg-color">总结</span>
+                    <a href="/tags/git/">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                    <a href="/tags/github/">
+                        <span class="chip bg-color">github</span>
                     </a>
                     
                 </div>
@@ -1047,16 +1129,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/jie-jue-chang-jian-bao-cuo/wu-fa-zhao-dao-qt5network.dll-deng-zu-jian/">
+                <a href="/chang-jian-bao-cuo/a2fced913357.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="无法找到Qt5network.dll等">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="【成功解决】WireShark没有发现端口，Win10pcap和Npcap安装失败">
                         
-                        <span class="card-title">无法找到Qt5network.dll等</span>
+                        <span class="card-title">【成功解决】WireShark没有发现端口，Win10pcap和Npcap安装失败</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1067,26 +1149,25 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%A7%A3%E5%86%B3%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/" class="post-category">
-                                    解决常见报错
+                            <a href="/categories/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/" class="post-category">
+                                    常见报错
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Qt/">
-                        <span class="chip bg-color">Qt</span>
+                    <a href="/tags/WireShark/">
+                        <span class="chip bg-color">WireShark</span>
                     </a>
                     
                 </div>
@@ -1289,7 +1370,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">2.9k</span>&nbsp;字
+                class="white-color">7.3k</span>&nbsp;字
             
             
             

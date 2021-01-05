@@ -6,7 +6,7 @@
   <link href="https://ericpengshuai.github.io/atom.xml" rel="self"/>
   
   <link href="https://ericpengshuai.github.io/"/>
-  <updated>2021-01-04T06:30:10.523Z</updated>
+  <updated>2021-01-05T09:36:49.209Z</updated>
   <id>https://ericpengshuai.github.io/</id>
   
   <author>
@@ -17,11 +17,172 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>python类中函数相互调用方法</title>
-    <link href="https://ericpengshuai.github.io/bian-cheng-bei-wang/python-lei-zhong-han-shu-xiang-hu-diao-yong-fang-fa/"/>
-    <id>https://ericpengshuai.github.io/bian-cheng-bei-wang/python-lei-zhong-han-shu-xiang-hu-diao-yong-fang-fa/</id>
+    <title>更新github指定文件以及git创建分支操作</title>
+    <link href="https://ericpengshuai.github.io/xiao-ji-qiao/2e9dee1cc5da.html"/>
+    <id>https://ericpengshuai.github.io/xiao-ji-qiao/2e9dee1cc5da.html</id>
+    <published>2021-01-05T09:36:02.000Z</published>
+    <updated>2021-01-05T09:36:49.209Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;更新github指定文件&quot;&gt;&lt;a href=&quot;#更新github指定文件&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="小技巧" scheme="https://ericpengshuai.github.io/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="git" scheme="https://ericpengshuai.github.io/tags/git/"/>
+    
+    <category term="github" scheme="https://ericpengshuai.github.io/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【linux shell】while read line几种方法以及区别</title>
+    <link href="https://ericpengshuai.github.io/yi-cuo-zhi-shi/dc41ddf2ff64.html"/>
+    <id>https://ericpengshuai.github.io/yi-cuo-zhi-shi/dc41ddf2ff64.html</id>
+    <published>2021-01-05T09:26:15.000Z</published>
+    <updated>2021-01-05T09:49:33.739Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;引言&lt;/strong&gt;：开始时自己的写的一个下载&lt;a href=&quot;https://bing.ioliu.cn/?p=&quot;&gt;某个bing网站&lt;/a&gt;上面的图片的脚本程序中需要使用while read</summary>
+        
+      
+    
+    
+    
+    <category term="易错知识" scheme="https://ericpengshuai.github.io/categories/%E6%98%93%E9%94%99%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="linux" scheme="https://ericpengshuai.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成功解决】WireShark没有发现端口，Win10pcap和Npcap安装失败</title>
+    <link href="https://ericpengshuai.github.io/chang-jian-bao-cuo/a2fced913357.html"/>
+    <id>https://ericpengshuai.github.io/chang-jian-bao-cuo/a2fced913357.html</id>
+    <published>2021-01-05T09:18:48.000Z</published>
+    <updated>2021-01-05T09:24:07.723Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题重现&quot;&gt;&lt;a href=&quot;#问题重现&quot; class=&quot;headerlink&quot; title=&quot;问题重现&quot;&gt;&lt;/a&gt;问题重现&lt;/h2&gt;&lt;h3 id=&quot;引言：&quot;&gt;&lt;a href=&quot;#引言：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="常见报错" scheme="https://ericpengshuai.github.io/categories/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/"/>
+    
+    
+    <category term="WireShark" scheme="https://ericpengshuai.github.io/tags/WireShark/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【腾讯微信后端实习面试题】去除驼峰字符串</title>
+    <link href="https://ericpengshuai.github.io/suan-fa/1bc2199224a4.html"/>
+    <id>https://ericpengshuai.github.io/suan-fa/1bc2199224a4.html</id>
+    <published>2021-01-05T09:11:52.000Z</published>
+    <updated>2021-01-05T09:16:27.408Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天面试了一个腾讯微信后台，说了几句就说弄一个题做一下，结果一脸懵逼，给定字符串，去除其中的驼峰字符串（例如：将“AaAdfAAaAaA”变成“df”）。&lt;/p&gt;
+&lt;p&gt;说实话对于&lt;strong&gt;驼峰串&lt;/strong&gt;这个定义就有点模糊，本来当时有点紧张，有时在牛客网上做</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Python" scheme="https://ericpengshuai.github.io/tags/Python/"/>
+    
+    <category term="字符串" scheme="https://ericpengshuai.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【分治法】解决循环赛问题（n分为奇数和偶数）</title>
+    <link href="https://ericpengshuai.github.io/suan-fa/d842de59de86.html"/>
+    <id>https://ericpengshuai.github.io/suan-fa/d842de59de86.html</id>
+    <published>2021-01-05T07:37:55.000Z</published>
+    <updated>2021-01-05T10:09:25.190Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="C/C++" scheme="https://ericpengshuai.github.io/tags/C-C/"/>
+    
+    <category term="分治法" scheme="https://ericpengshuai.github.io/tags/%E5%88%86%E6%B2%BB%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python将列表转字符串</title>
+    <link href="https://ericpengshuai.github.io/bian-cheng-bei-wang/0effa8492d6b.html"/>
+    <id>https://ericpengshuai.github.io/bian-cheng-bei-wang/0effa8492d6b.html</id>
+    <published>2021-01-05T06:47:24.000Z</published>
+    <updated>2021-01-05T06:53:31.242Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;前提条件：列表中的元素全部是字符串&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;list = [&#39;a&#39;, 1, &#39;b&#39;, 4, &#39;c&#39;, 5]
+# 首先需要将列表的元素全部转换为str，以下两种方法
+
+#</summary>
+        
+      
+    
+    
+    
+    <category term="编程备忘" scheme="https://ericpengshuai.github.io/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/"/>
+    
+    
+    <category term="Python" scheme="https://ericpengshuai.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python类中函数相互调用方法</title>
+    <link href="https://ericpengshuai.github.io/bian-cheng-bei-wang/dbafef0e5f51.html"/>
+    <id>https://ericpengshuai.github.io/bian-cheng-bei-wang/dbafef0e5f51.html</id>
     <published>2020-12-30T03:27:15.000Z</published>
-    <updated>2021-01-04T06:30:10.523Z</updated>
+    <updated>2021-01-05T06:53:57.533Z</updated>
     
     
       
@@ -43,8 +204,8 @@
   
   <entry>
     <title>2020总结</title>
-    <link href="https://ericpengshuai.github.io/sheng-huo-sui-bi/2020-zong-jie/"/>
-    <id>https://ericpengshuai.github.io/sheng-huo-sui-bi/2020-zong-jie/</id>
+    <link href="https://ericpengshuai.github.io/sheng-huo-sui-bi/6c249f289724.html"/>
+    <id>https://ericpengshuai.github.io/sheng-huo-sui-bi/6c249f289724.html</id>
     <published>2020-12-28T03:27:15.000Z</published>
     <updated>2021-01-04T06:12:27.957Z</updated>
     
@@ -67,24 +228,24 @@
   </entry>
   
   <entry>
-    <title>无法找到Qt5network.dll等</title>
-    <link href="https://ericpengshuai.github.io/jie-jue-chang-jian-bao-cuo/wu-fa-zhao-dao-qt5network.dll-deng-zu-jian/"/>
-    <id>https://ericpengshuai.github.io/jie-jue-chang-jian-bao-cuo/wu-fa-zhao-dao-qt5network.dll-deng-zu-jian/</id>
+    <title>【成功解决】运行qt生成的exe文件报“无法找到Qt5network.dll等组件”“无法找到入口”的问题</title>
+    <link href="https://ericpengshuai.github.io/chang-jian-bao-cuo/35defd8e84c1.html"/>
+    <id>https://ericpengshuai.github.io/chang-jian-bao-cuo/35defd8e84c1.html</id>
     <published>2020-12-25T03:27:15.000Z</published>
-    <updated>2021-01-04T06:32:56.182Z</updated>
+    <updated>2021-01-05T09:23:48.994Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;运行qt生成的-exe文件报“无法找到Qt5network-dll等组件”“无法找到入口”的问题&quot;&gt;&lt;a href=&quot;#运行qt生成的-exe文件报“无法找到Qt5network-dll等组件”“无法找到入口”的问题&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;问题重现&quot;&gt;&lt;a href=&quot;#问题重现&quot; class=&quot;headerlink&quot; title=&quot;问题重现&quot;&gt;&lt;/a&gt;问题重现&lt;/h2&gt;&lt;p&gt;我在Qt creator上面构建好项目之后生成了exe文件（在debug中），我想直接在qt</summary>
         
       
     
     
     
-    <category term="解决常见报错" scheme="https://ericpengshuai.github.io/categories/%E8%A7%A3%E5%86%B3%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/"/>
+    <category term="常见报错" scheme="https://ericpengshuai.github.io/categories/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/"/>
     
     
     <category term="Qt" scheme="https://ericpengshuai.github.io/tags/Qt/"/>

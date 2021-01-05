@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类: 编程备忘, PengShuai,Programmer,Myblog">
+    <meta name="keywords" content="分类: 算法, PengShuai,Programmer,Myblog">
     <meta name="description" content="A lyinger，a someone like me.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类: 编程备忘 | 像我这样的人</title>
+    <title>分类: 算法 | 像我这样的人</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -382,7 +382,7 @@
                 
                 <a href="/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/" title="编程备忘: 2">
                     <span class="chip center-align waves-effect waves-light
-                             chip-active "
+                             chip-default "
                             style="background-color: #F5EEF8;">编程备忘
                         <span class="tag-length">2</span>
                     </span>
@@ -391,7 +391,7 @@
                 
                 <a href="/categories/%E7%AE%97%E6%B3%95/" title="算法: 2">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
+                             chip-active "
                             style="background-color: #D5F5E3;">算法
                         <span class="tag-length">2</span>
                     </span>
@@ -438,25 +438,20 @@
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/bian-cheng-bei-wang/0effa8492d6b.html">
+                    <a href="/suan-fa/1bc2199224a4.html">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Python将列表转字符串">
+                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="【腾讯微信后端实习面试题】去除驼峰字符串">
                             
-                            <span class="card-title">Python将列表转字符串</span>
+                            <span class="card-title">【腾讯微信后端实习面试题】去除驼峰字符串</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                前提条件：列表中的元素全部是字符串
-list = ['a', 1, 'b', 4, 'c', 5]
-# 首先需要将列表的元素全部转换为str，以下两种方法
-
-# 使用for循环
-list1 = [str(i) for i in list]
-
+                                今天面试了一个腾讯微信后台，说了几句就说弄一个题做一下，结果一脸懵逼，给定字符串，去除其中的驼峰字符串（例如：将“AaAdfAAaAaA”变成“df”）。
+说实话对于驼峰串这个定义就有点模糊，本来当时有点紧张，有时在牛客网上做题，他别是那个
                             
                         </div>
                         <div class="publish-info">
@@ -467,8 +462,8 @@ list1 = [str(i) for i in list]
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/" class="post-category">
-                                    编程备忘
+                                <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                                 
                                 
@@ -483,6 +478,10 @@ list1 = [str(i) for i in list]
                             <span class="chip bg-color">Python</span>
                         </a>
                         
+                        <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                            <span class="chip bg-color">字符串</span>
+                        </a>
+                        
                     </div>
                     
                 </div>
@@ -490,34 +489,37 @@ list1 = [str(i) for i in list]
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/bian-cheng-bei-wang/dbafef0e5f51.html">
+                    <a href="/suan-fa/d842de59de86.html">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Python类中函数相互调用方法">
+                            <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="【分治法】解决循环赛问题（n分为奇数和偶数）">
                             
-                            <span class="card-title">Python类中函数相互调用方法</span>
+                            <span class="card-title">【分治法】解决循环赛问题（n分为奇数和偶数）</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                方法一：self.方法（参数列表），注意参数列表不需要self方法二：类名.方法（self，参数列表）具体代码例子如下：
-# 利用测试次数和鸡蛋个数的关系变化带来的确定的楼层数来解题
-class dropeggs:
-    def supe
+                                题目设有N个运动员要进行网球循环赛，设计一个满足以下要求的比赛日程表
+
+每个选手必须与其他n-1个选手各赛一次；
+每个选手一天只能赛一次；
+当n 是偶数，循环赛进行n-1简单天，当n是奇数，循环赛进行n天。
+
+分析1. 首先考虑简单问题（n
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/" class="post-category">
-                                    编程备忘
+                                <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                                 
                                 
@@ -528,8 +530,12 @@ class dropeggs:
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/python/">
-                            <span class="chip bg-color">python</span>
+                        <a href="/tags/C-C/">
+                            <span class="chip bg-color">C/C++</span>
+                        </a>
+                        
+                        <a href="/tags/%E5%88%86%E6%B2%BB%E6%B3%95/">
+                            <span class="chip bg-color">分治法</span>
                         </a>
                         
                     </div>
