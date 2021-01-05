@@ -161,10 +161,7 @@
         
         
     <summary type="html">&lt;p&gt;&lt;strong&gt;前提条件：列表中的元素全部是字符串&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;python&quot;&gt;list = [&#39;a&#39;, 1, &#39;b&#39;, 4, &#39;c&#39;, 5]
-# 首先需要将列表的元素全部转换为str，以下两种方法
-
-#</summary>
+&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
         
       
     

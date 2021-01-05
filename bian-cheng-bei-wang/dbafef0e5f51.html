@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="像我这样的人" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="像我这样的人" type="application/atom+xml">
 </head>
 
 
@@ -490,34 +490,36 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h4 id="方法一：self-方法（参数列表），注意参数列表不需要self"><a href="#方法一：self-方法（参数列表），注意参数列表不需要self" class="headerlink" title="方法一：self.方法（参数列表），注意参数列表不需要self"></a><strong>方法一：self.方法（参数列表），注意参数列表不需要self</strong></h4><h4 id="方法二：类名-方法（self，参数列表）"><a href="#方法二：类名-方法（self，参数列表）" class="headerlink" title="方法二：类名.方法（self，参数列表）"></a><strong>方法二：类名.方法（self，参数列表）</strong></h4><p>具体代码例子如下：</p>
-<pre><code class="python"># 利用测试次数和鸡蛋个数的关系变化带来的确定的楼层数来解题
-class dropeggs:
-    def superEggDrop(self, K: int, N: int) -&gt; int:
-        remainTestCount = 1
-        # 方法一
-        # while self.getConfirmFloors(remainTestCount, K) &lt; N:
-        #     remainTestCount += 1
-        # return remainTestCount
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 利用测试次数和鸡蛋个数的关系变化带来的确定的楼层数来解题</span>
+<span class="token keyword">class</span> <span class="token class-name">dropeggs</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">superEggDrop</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> K<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> N<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        remainTestCount <span class="token operator">=</span> <span class="token number">1</span>
+        <span class="token comment"># 方法一</span>
+        <span class="token comment"># while self.getConfirmFloors(remainTestCount, K) &lt; N:</span>
+        <span class="token comment">#     remainTestCount += 1</span>
+        <span class="token comment"># return remainTestCount</span>
+        
+        <span class="token comment"># 方法二</span>
+        <span class="token keyword">while</span> dropeggs<span class="token punctuation">.</span>getConfirmFloors<span class="token punctuation">(</span>self<span class="token punctuation">,</span> remainTestCount<span class="token punctuation">,</span> K<span class="token punctuation">)</span> <span class="token operator">&lt;</span> N<span class="token punctuation">:</span>
+            remainTestCount <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">return</span> remainTestCount
 
-        # 方法二
-        while dropeggs.getConfirmFloors(self, remainTestCount, K) &lt; N:
-            remainTestCount += 1
-        return remainTestCount
-
-    # 在remainTestCount个测试机会、eggsCount个鸡蛋可以确定的楼层数量
-    def getConfirmFloors(self, remainTestCount: int, eggsCount: int) -&gt; int:
-        # 如果remainTestCount=1，只能移动一次可以确定楼层0（在一楼扔鸡蛋碎了）
-        # 如果eggsCount=1，只能从一楼开始往上面测试扔鸡蛋最多确定remainTestCount个楼层
-        if (remainTestCount == 1 or eggsCount == 1):
-            return remainTestCount
-        return self.getConfirmFloors(remainTestCount-1, eggsCount-1) + self.getConfirmFloors(remainTestCount-1, eggsCount) + 1</code></pre>
-
+    <span class="token comment"># 在remainTestCount个测试机会、eggsCount个鸡蛋可以确定的楼层数量</span>
+    <span class="token keyword">def</span> <span class="token function">getConfirmFloors</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> remainTestCount<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> eggsCount<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        <span class="token comment"># 如果remainTestCount=1，只能移动一次可以确定楼层0（在一楼扔鸡蛋碎了）</span>
+        <span class="token comment"># 如果eggsCount=1，只能从一楼开始往上面测试扔鸡蛋最多确定remainTestCount个楼层</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>remainTestCount <span class="token operator">==</span> <span class="token number">1</span> <span class="token keyword">or</span> eggsCount <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> remainTestCount
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>getConfirmFloors<span class="token punctuation">(</span>remainTestCount<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> eggsCount<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>getConfirmFloors<span class="token punctuation">(</span>remainTestCount<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> eggsCount<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -1306,7 +1308,7 @@ class dropeggs:
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">7.3k</span>&nbsp;字
+                class="white-color">7.2k</span>&nbsp;字
             
             
             

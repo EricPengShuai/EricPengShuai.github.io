@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="像我这样的人" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="像我这样的人" type="application/atom+xml">
 </head>
 
 
@@ -494,6 +494,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
@@ -516,28 +519,27 @@
 </blockquote>
 </li>
 </ul>
-<h2 id="git创建分支基本操作"><a href="#git创建分支基本操作" class="headerlink" title="git创建分支基本操作"></a>git创建分支基本操作</h2><pre><code class="bash"># 创建一个新的分支newbranch，并且切换到这个分支上
-git checkout -b `newbranch`
-# 注意这个checkout命令如果后面加了`--`之后是撤销修改的意思，例如撤销对readme文件的修改
-git checkout -- README.md
-# 所以推荐使用switch方法，创建并且切换分支
-git switch -c new branch
+<h2 id="git创建分支基本操作"><a href="#git创建分支基本操作" class="headerlink" title="git创建分支基本操作"></a>git创建分支基本操作</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 创建一个新的分支newbranch，并且切换到这个分支上</span>
+<span class="token function">git</span> checkout -b <span class="token variable"><span class="token variable">`</span>newbranch<span class="token variable">`</span></span>
+<span class="token comment"># 注意这个checkout命令如果后面加了`--`之后是撤销修改的意思，例如撤销对readme文件的修改</span>
+<span class="token function">git</span> checkout -- README.md
+<span class="token comment"># 所以推荐使用switch方法，创建并且切换分支</span>
+<span class="token function">git</span> switch -c new branch
 
-# 如果分为两步骤 1.创建新分支 2.切换
-git branch `newbranch`
-git checkout `newbranch`
-# 通过switch切换
-git switch `newbranch`
+<span class="token comment"># 如果分为两步骤 1.创建新分支 2.切换</span>
+<span class="token function">git</span> branch <span class="token variable"><span class="token variable">`</span>newbranch<span class="token variable">`</span></span>
+<span class="token function">git</span> checkout <span class="token variable"><span class="token variable">`</span>newbranch<span class="token variable">`</span></span>
+<span class="token comment"># 通过switch切换</span>
+<span class="token function">git</span> switch <span class="token variable"><span class="token variable">`</span>newbranch<span class="token variable">`</span></span>
 
-# 查看当前分支：会列出所有分支，当前分支前面有一个*号
-git branch
+<span class="token comment"># 查看当前分支：会列出所有分支，当前分支前面有一个*号</span>
+<span class="token function">git</span> branch
 
-# 合并新分支到主分支main上面
-git merge newbranch
+<span class="token comment"># 合并新分支到主分支main上面</span>
+<span class="token function">git</span> merge newbranch
 
-# 删除分支
-git branch -d `newbranch`</code></pre>
-
+<span class="token comment"># 删除分支</span>
+<span class="token function">git</span> branch -d <span class="token variable"><span class="token variable">`</span>newbranch<span class="token variable">`</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -1336,7 +1338,7 @@ git branch -d `newbranch`</code></pre>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">7.3k</span>&nbsp;字
+                class="white-color">7.2k</span>&nbsp;字
             
             
             
