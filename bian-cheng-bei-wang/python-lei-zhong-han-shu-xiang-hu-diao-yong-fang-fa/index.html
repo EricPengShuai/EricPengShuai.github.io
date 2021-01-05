@@ -17,17 +17,17 @@
 
 
     <title>python类中函数相互调用方法 | 像我这样的人</title>
-    <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/favicon.ico">
+    <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/css/my.css">
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
 
-    <script src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/jquery/jquery.min.js"></script>
+    <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
@@ -44,7 +44,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">像我这样的人</span>
                 </a>
@@ -143,7 +143,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">像我这样的人</div>
         <div class="logo-desc">
@@ -313,7 +313,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -331,7 +331,7 @@
 <main class="post-container content">
 
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -468,7 +468,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    213
+                    212
                 </div>
                 
 
@@ -490,13 +490,36 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h4 id="方法一：self-方法（参数列表），注意参数列表不需要self"><a href="#方法一：self-方法（参数列表），注意参数列表不需要self" class="headerlink" title="方法一：self.方法（参数列表），注意参数列表不需要self"></a><strong>方法一：self.方法（参数列表），注意参数列表不需要self</strong></h4><h4 id="方法二：类名-方法（self，参数列表）"><a href="#方法二：类名-方法（self，参数列表）" class="headerlink" title="方法二：类名.方法（self，参数列表）"></a><strong>方法二：类名.方法（self，参数列表）</strong></h4><p>具体代码例子如下：</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 利用测试次数和鸡蛋个数的关系变化带来的确定的楼层数来解题</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">dropeggs</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">superEggDrop</span>(<span class="params">self, K: <span class="built_in">int</span>, N: <span class="built_in">int</span></span>) -&gt; int:</span></span><br><span class="line">        remainTestCount = <span class="number">1</span></span><br><span class="line">        <span class="comment"># 方法一</span></span><br><span class="line">        <span class="comment"># while self.getConfirmFloors(remainTestCount, K) &lt; N:</span></span><br><span class="line">        <span class="comment">#     remainTestCount += 1</span></span><br><span class="line">        <span class="comment"># return remainTestCount</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 方法二</span></span><br><span class="line">        <span class="keyword">while</span> dropeggs.getConfirmFloors(self, remainTestCount, K) &lt; N:</span><br><span class="line">            remainTestCount += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> remainTestCount</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 在remainTestCount个测试机会、eggsCount个鸡蛋可以确定的楼层数量</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getConfirmFloors</span>(<span class="params">self, remainTestCount: <span class="built_in">int</span>, eggsCount: <span class="built_in">int</span></span>) -&gt; int:</span></span><br><span class="line">        <span class="comment"># 如果remainTestCount=1，只能移动一次可以确定楼层0（在一楼扔鸡蛋碎了）</span></span><br><span class="line">        <span class="comment"># 如果eggsCount=1，只能从一楼开始往上面测试扔鸡蛋最多确定remainTestCount个楼层</span></span><br><span class="line">        <span class="keyword">if</span> (remainTestCount == <span class="number">1</span> <span class="keyword">or</span> eggsCount == <span class="number">1</span>):</span><br><span class="line">            <span class="keyword">return</span> remainTestCount</span><br><span class="line">        <span class="keyword">return</span> self.getConfirmFloors(remainTestCount-<span class="number">1</span>, eggsCount-<span class="number">1</span>) + self.getConfirmFloors(remainTestCount-<span class="number">1</span>, eggsCount) + <span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 利用测试次数和鸡蛋个数的关系变化带来的确定的楼层数来解题</span>
+<span class="token keyword">class</span> <span class="token class-name">dropeggs</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">superEggDrop</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> K<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> N<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        remainTestCount <span class="token operator">=</span> <span class="token number">1</span>
+        <span class="token comment"># 方法一</span>
+        <span class="token comment"># while self.getConfirmFloors(remainTestCount, K) &lt; N:</span>
+        <span class="token comment">#     remainTestCount += 1</span>
+        <span class="token comment"># return remainTestCount</span>
+        
+        <span class="token comment"># 方法二</span>
+        <span class="token keyword">while</span> dropeggs<span class="token punctuation">.</span>getConfirmFloors<span class="token punctuation">(</span>self<span class="token punctuation">,</span> remainTestCount<span class="token punctuation">,</span> K<span class="token punctuation">)</span> <span class="token operator">&lt;</span> N<span class="token punctuation">:</span>
+            remainTestCount <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">return</span> remainTestCount
+
+    <span class="token comment"># 在remainTestCount个测试机会、eggsCount个鸡蛋可以确定的楼层数量</span>
+    <span class="token keyword">def</span> <span class="token function">getConfirmFloors</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> remainTestCount<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> eggsCount<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        <span class="token comment"># 如果remainTestCount=1，只能移动一次可以确定楼层0（在一楼扔鸡蛋碎了）</span>
+        <span class="token comment"># 如果eggsCount=1，只能从一楼开始往上面测试扔鸡蛋最多确定remainTestCount个楼层</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>remainTestCount <span class="token operator">==</span> <span class="token number">1</span> <span class="token keyword">or</span> eggsCount <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> remainTestCount
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>getConfirmFloors<span class="token punctuation">(</span>remainTestCount<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> eggsCount<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>getConfirmFloors<span class="token punctuation">(</span>remainTestCount<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> eggsCount<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -568,12 +591,12 @@
                     
                 </div>
                 <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/share/css/share.min.css">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
 <div id="article-share">
 
     
     <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/share/js/social-share.min.js"></script>
+    <script src="/libs/share/js/social-share.min.js"></script>
     
 
     
@@ -691,10 +714,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -966,8 +989,8 @@
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/valine/av-min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/valine/Valine.min.js"></script>
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
 <script>
     new Valine({
         el: '#vcomments',
@@ -1003,7 +1026,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/medias/featureimages/20.jpg" class="responsive-img" alt="python类中函数相互调用方法">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="python类中函数相互调用方法">
                         
                         <span class="card-title">python类中函数相互调用方法</span>
                     </div>
@@ -1053,7 +1076,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/medias/featureimages/4.jpg" class="responsive-img" alt="2020总结">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="2020总结">
                         
                         <span class="card-title">2020总结</span>
                     </div>
@@ -1100,21 +1123,21 @@
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
 <!-- 代码语言 -->
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/codeBlock/codeLang.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
 
 
 <!-- 代码块复制 -->
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
 
 
 <!-- 代码块收缩 -->
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/codeBlock/codeShrink.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
 
     </div>
@@ -1135,7 +1158,7 @@
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/tocbot/tocbot.min.js"></script>
+<script src="/libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -1220,7 +1243,7 @@
 
     <footer class="page-footer bg-color">
     
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/aplayer/APlayer.min.css">
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
 <style>
     .aplayer .aplayer-lrc p {
         
@@ -1270,7 +1293,7 @@
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/APlayer.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
     
@@ -1514,12 +1537,12 @@ $(function () {
 </div>
 
 
-    <script src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/materialize/materialize.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/aos/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/js/matery.js"></script>
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
 
     <!-- Baidu Analytics -->
 
@@ -1540,10 +1563,10 @@ $(function () {
 </script>
 
     
-    <script src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/others/clicklove.js" async="async"></script>
+    <script src="/libs/others/clicklove.js" async="async"></script>
     
     
-    <script async src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/others/busuanzi.pure.mini.js"></script>
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
     
@@ -1559,7 +1582,7 @@ $(function () {
     
 
     
-    <script src="https://cdn.jsdelivr.net/gh/ericpengshuai/ericpengshuai.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
 </body>
