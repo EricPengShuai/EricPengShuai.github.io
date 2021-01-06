@@ -3,11 +3,11 @@
   <title>像我这样的人</title>
   
   <subtitle>岁月可逝|乏善可陈</subtitle>
-  <link href="https://ericpengshuai.github.io/atom.xml" rel="self"/>
+  <link href="https://ericpengshuai.gitee.io/atom.xml" rel="self"/>
   
-  <link href="https://ericpengshuai.github.io/"/>
+  <link href="https://ericpengshuai.gitee.io/"/>
   <updated>2021-01-05T09:36:49.209Z</updated>
-  <id>https://ericpengshuai.github.io/</id>
+  <id>https://ericpengshuai.gitee.io/</id>
   
   <author>
     <name>PengShuai</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>更新github指定文件以及git创建分支操作</title>
-    <link href="https://ericpengshuai.github.io/xiao-ji-qiao/2e9dee1cc5da.html"/>
-    <id>https://ericpengshuai.github.io/xiao-ji-qiao/2e9dee1cc5da.html</id>
+    <link href="https://ericpengshuai.gitee.io/xiao-ji-qiao/2e9dee1cc5da.html"/>
+    <id>https://ericpengshuai.gitee.io/xiao-ji-qiao/2e9dee1cc5da.html</id>
     <published>2021-01-05T09:36:02.000Z</published>
     <updated>2021-01-05T09:36:49.209Z</updated>
     
@@ -34,19 +34,19 @@
     
     
     
-    <category term="小技巧" scheme="https://ericpengshuai.github.io/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    <category term="小技巧" scheme="https://ericpengshuai.gitee.io/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
     
     
-    <category term="git" scheme="https://ericpengshuai.github.io/tags/git/"/>
+    <category term="git" scheme="https://ericpengshuai.gitee.io/tags/git/"/>
     
-    <category term="github" scheme="https://ericpengshuai.github.io/tags/github/"/>
+    <category term="github" scheme="https://ericpengshuai.gitee.io/tags/github/"/>
     
   </entry>
   
   <entry>
     <title>【linux shell】while read line几种方法以及区别</title>
-    <link href="https://ericpengshuai.github.io/yi-cuo-zhi-shi/dc41ddf2ff64.html"/>
-    <id>https://ericpengshuai.github.io/yi-cuo-zhi-shi/dc41ddf2ff64.html</id>
+    <link href="https://ericpengshuai.gitee.io/yi-cuo-zhi-shi/dc41ddf2ff64.html"/>
+    <id>https://ericpengshuai.gitee.io/yi-cuo-zhi-shi/dc41ddf2ff64.html</id>
     <published>2021-01-05T09:26:15.000Z</published>
     <updated>2021-01-05T09:49:33.739Z</updated>
     
@@ -61,17 +61,17 @@
     
     
     
-    <category term="易错知识" scheme="https://ericpengshuai.github.io/categories/%E6%98%93%E9%94%99%E7%9F%A5%E8%AF%86/"/>
+    <category term="易错知识" scheme="https://ericpengshuai.gitee.io/categories/%E6%98%93%E9%94%99%E7%9F%A5%E8%AF%86/"/>
     
     
-    <category term="linux" scheme="https://ericpengshuai.github.io/tags/linux/"/>
+    <category term="linux" scheme="https://ericpengshuai.gitee.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>【成功解决】WireShark没有发现端口，Win10pcap和Npcap安装失败</title>
-    <link href="https://ericpengshuai.github.io/chang-jian-bao-cuo/a2fced913357.html"/>
-    <id>https://ericpengshuai.github.io/chang-jian-bao-cuo/a2fced913357.html</id>
+    <link href="https://ericpengshuai.gitee.io/chang-jian-bao-cuo/a2fced913357.html"/>
+    <id>https://ericpengshuai.gitee.io/chang-jian-bao-cuo/a2fced913357.html</id>
     <published>2021-01-05T09:18:48.000Z</published>
     <updated>2021-01-05T09:24:07.723Z</updated>
     
@@ -86,17 +86,17 @@
     
     
     
-    <category term="常见报错" scheme="https://ericpengshuai.github.io/categories/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/"/>
+    <category term="常见报错" scheme="https://ericpengshuai.gitee.io/categories/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/"/>
     
     
-    <category term="WireShark" scheme="https://ericpengshuai.github.io/tags/WireShark/"/>
+    <category term="WireShark" scheme="https://ericpengshuai.gitee.io/tags/WireShark/"/>
     
   </entry>
   
   <entry>
     <title>【腾讯微信后端实习面试题】去除驼峰字符串</title>
-    <link href="https://ericpengshuai.github.io/suan-fa/1bc2199224a4.html"/>
-    <id>https://ericpengshuai.github.io/suan-fa/1bc2199224a4.html</id>
+    <link href="https://ericpengshuai.gitee.io/suan-fa/1bc2199224a4.html"/>
+    <id>https://ericpengshuai.gitee.io/suan-fa/1bc2199224a4.html</id>
     <published>2021-01-05T09:11:52.000Z</published>
     <updated>2021-01-05T09:16:27.408Z</updated>
     
@@ -112,19 +112,19 @@
     
     
     
-    <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://ericpengshuai.gitee.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="Python" scheme="https://ericpengshuai.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://ericpengshuai.gitee.io/tags/Python/"/>
     
-    <category term="字符串" scheme="https://ericpengshuai.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <category term="字符串" scheme="https://ericpengshuai.gitee.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
   <entry>
     <title>【分治法】解决循环赛问题（n分为奇数和偶数）</title>
-    <link href="https://ericpengshuai.github.io/suan-fa/d842de59de86.html"/>
-    <id>https://ericpengshuai.github.io/suan-fa/d842de59de86.html</id>
+    <link href="https://ericpengshuai.gitee.io/suan-fa/d842de59de86.html"/>
+    <id>https://ericpengshuai.gitee.io/suan-fa/d842de59de86.html</id>
     <published>2021-01-05T07:37:55.000Z</published>
     <updated>2021-01-05T10:09:25.190Z</updated>
     
@@ -139,19 +139,19 @@
     
     
     
-    <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    <category term="算法" scheme="https://ericpengshuai.gitee.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="C/C++" scheme="https://ericpengshuai.github.io/tags/C-C/"/>
+    <category term="C/C++" scheme="https://ericpengshuai.gitee.io/tags/C-C/"/>
     
-    <category term="分治法" scheme="https://ericpengshuai.github.io/tags/%E5%88%86%E6%B2%BB%E6%B3%95/"/>
+    <category term="分治法" scheme="https://ericpengshuai.gitee.io/tags/%E5%88%86%E6%B2%BB%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>Python将列表转字符串</title>
-    <link href="https://ericpengshuai.github.io/bian-cheng-bei-wang/0effa8492d6b.html"/>
-    <id>https://ericpengshuai.github.io/bian-cheng-bei-wang/0effa8492d6b.html</id>
+    <link href="https://ericpengshuai.gitee.io/bian-cheng-bei-wang/0effa8492d6b.html"/>
+    <id>https://ericpengshuai.gitee.io/bian-cheng-bei-wang/0effa8492d6b.html</id>
     <published>2021-01-05T06:47:24.000Z</published>
     <updated>2021-01-05T06:53:31.242Z</updated>
     
@@ -161,23 +161,23 @@
         
         
     <summary type="html">&lt;p&gt;&lt;strong&gt;前提条件：列表中的元素全部是字符串&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&quot;language-python&quot; data-language=&quot;python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span</summary>
+&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
         
       
     
     
     
-    <category term="编程备忘" scheme="https://ericpengshuai.github.io/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/"/>
+    <category term="编程备忘" scheme="https://ericpengshuai.gitee.io/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/"/>
     
     
-    <category term="Python" scheme="https://ericpengshuai.github.io/tags/Python/"/>
+    <category term="Python" scheme="https://ericpengshuai.gitee.io/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Python类中函数相互调用方法</title>
-    <link href="https://ericpengshuai.github.io/bian-cheng-bei-wang/dbafef0e5f51.html"/>
-    <id>https://ericpengshuai.github.io/bian-cheng-bei-wang/dbafef0e5f51.html</id>
+    <link href="https://ericpengshuai.gitee.io/bian-cheng-bei-wang/dbafef0e5f51.html"/>
+    <id>https://ericpengshuai.gitee.io/bian-cheng-bei-wang/dbafef0e5f51.html</id>
     <published>2020-12-30T03:27:15.000Z</published>
     <updated>2021-01-05T06:53:57.533Z</updated>
     
@@ -192,17 +192,17 @@
     
     
     
-    <category term="编程备忘" scheme="https://ericpengshuai.github.io/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/"/>
+    <category term="编程备忘" scheme="https://ericpengshuai.gitee.io/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/"/>
     
     
-    <category term="python" scheme="https://ericpengshuai.github.io/tags/python/"/>
+    <category term="python" scheme="https://ericpengshuai.gitee.io/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>2020总结</title>
-    <link href="https://ericpengshuai.github.io/sheng-huo-sui-bi/6c249f289724.html"/>
-    <id>https://ericpengshuai.github.io/sheng-huo-sui-bi/6c249f289724.html</id>
+    <link href="https://ericpengshuai.gitee.io/sheng-huo-sui-bi/6c249f289724.html"/>
+    <id>https://ericpengshuai.gitee.io/sheng-huo-sui-bi/6c249f289724.html</id>
     <published>2020-12-28T03:27:15.000Z</published>
     <updated>2021-01-04T06:12:27.957Z</updated>
     
@@ -217,17 +217,17 @@
     
     
     
-    <category term="生活随笔" scheme="https://ericpengshuai.github.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+    <category term="生活随笔" scheme="https://ericpengshuai.gitee.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
     
     
-    <category term="总结" scheme="https://ericpengshuai.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    <category term="总结" scheme="https://ericpengshuai.gitee.io/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>【成功解决】运行qt生成的exe文件报“无法找到Qt5network.dll等组件”“无法找到入口”的问题</title>
-    <link href="https://ericpengshuai.github.io/chang-jian-bao-cuo/35defd8e84c1.html"/>
-    <id>https://ericpengshuai.github.io/chang-jian-bao-cuo/35defd8e84c1.html</id>
+    <link href="https://ericpengshuai.gitee.io/chang-jian-bao-cuo/35defd8e84c1.html"/>
+    <id>https://ericpengshuai.gitee.io/chang-jian-bao-cuo/35defd8e84c1.html</id>
     <published>2020-12-25T03:27:15.000Z</published>
     <updated>2021-01-05T09:23:48.994Z</updated>
     
@@ -242,10 +242,10 @@
     
     
     
-    <category term="常见报错" scheme="https://ericpengshuai.github.io/categories/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/"/>
+    <category term="常见报错" scheme="https://ericpengshuai.gitee.io/categories/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/"/>
     
     
-    <category term="Qt" scheme="https://ericpengshuai.github.io/tags/Qt/"/>
+    <category term="Qt" scheme="https://ericpengshuai.gitee.io/tags/Qt/"/>
     
   </entry>
   

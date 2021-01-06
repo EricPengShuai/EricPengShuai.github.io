@@ -495,7 +495,7 @@
 
         
         <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.css">
+        <link rel="stylesheet" href="/libs/prism/prism2.css">
         
 
         
@@ -505,7 +505,7 @@
                 <p>今天面试了一个腾讯微信后台，说了几句就说弄一个题做一下，结果一脸懵逼，给定字符串，去除其中的驼峰字符串（例如：将“AaAdfAAaAaA”变成“df”）。</p>
 <p>说实话对于<strong>驼峰串</strong>这个定义就有点模糊，本来当时有点紧张，有时在牛客网上做题，他别是那个面试官看着你做题，我当时脑子真的就是一片空白，这个驼峰串仅仅是两个大写字母中间夹一个小字母吗？能不能是两个小字母夹一个大写字母呢？（毕竟这个<strong>aAa</strong>也像驼峰）总之面试是gg了，之后网上看了一些解答，自己总结一下。</p>
 <ul>
-<li>首先对于第一种情况：驼峰串仅仅是两个大写字母中间夹一个小字母，形如AaA<pre class="language-python" data-language="python"><code class="language-python"><span class="token builtin">str</span> <span class="token operator">=</span> <span class="token string">'AaAdfaAaAaAaAaB'</span>
+<li>首先对于第一种情况：驼峰串仅仅是两个大写字母中间夹一个小字母，形如AaA<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">str</span> <span class="token operator">=</span> <span class="token string">'AaAdfaAaAaAaAaB'</span>
 <span class="token builtin">len</span> <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%s字符串长度："</span> <span class="token operator">%</span> <span class="token builtin">str</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">)</span>
 i <span class="token operator">=</span> <span class="token number">0</span>
@@ -527,9 +527,9 @@ i <span class="token operator">=</span> <span class="token number">0</span>
     <span class="token comment"># 对于像"AaAdfAaAaAaAaB"、"AaAdfaAaAaAaAaB"这样的串特殊处理最后两个字符</span>
     <span class="token keyword">else</span><span class="token punctuation">:</span>
         <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 调试结果如下：<br><img src="https://img-blog.csdnimg.cn/20200331225824935.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020033122565815.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
-<li>其次对于第二种情况：形如AaA、aAa都可以当成驼峰串<pre class="language-python" data-language="python"><code class="language-python"><span class="token builtin">str</span> <span class="token operator">=</span> <span class="token string">'AaAdfAaAaAaAaA'</span>
+<li>其次对于第二种情况：形如AaA、aAa都可以当成驼峰串<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">str</span> <span class="token operator">=</span> <span class="token string">'AaAdfAaAaAaAaA'</span>
 <span class="token builtin">len</span> <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"字符串长度："</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">)</span>
 i <span class="token operator">=</span> <span class="token number">0</span>
@@ -554,7 +554,7 @@ i <span class="token operator">=</span> <span class="token number">0</span>
     <span class="token comment"># 对于像'AaAdfAaAaAaAaaa'这样的串特殊处理最后两个字符,另外对于这种情况是不是有点问题</span>
     <span class="token keyword">else</span><span class="token punctuation">:</span>
         <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 调试结果如下：<br><img src="https://img-blog.csdnimg.cn/20200331223036784.png" alt="测试结果1"><br><img src="https://img-blog.csdnimg.cn/20200331222927502.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="测试结果2"><br><img src="https://img-blog.csdnimg.cn/20200331223319160.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="测试结果3"></li>
 </ul>
 <p><strong>总结</strong>：其实这个算法的核心就是<strong>while循环</strong>部分：其中j的作用很巧妙，配合i的增加做到了对每个驼峰串的识别</p>
@@ -584,7 +584,7 @@ i <span class="token operator">=</span> <span class="token number">0</span>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ericpengshuai.github.io/suan-fa/1bc2199224a4.html">https://ericpengshuai.github.io/suan-fa/1bc2199224a4.html</a>
+                    <a href="https://ericpengshuai.gitee.io/suan-fa/1bc2199224a4.html">https://ericpengshuai.gitee.io/suan-fa/1bc2199224a4.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
