@@ -6,7 +6,7 @@
   <link href="https://ericpengshuai.github.io/atom.xml" rel="self"/>
   
   <link href="https://ericpengshuai.github.io/"/>
-  <updated>2021-01-05T09:36:49.209Z</updated>
+  <updated>2021-01-26T05:32:19.731Z</updated>
   <id>https://ericpengshuai.github.io/</id>
   
   <author>
@@ -17,96 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>更新github指定文件以及git创建分支操作</title>
-    <link href="https://ericpengshuai.github.io/xiao-ji-qiao/2e9dee1cc5da.html"/>
-    <id>https://ericpengshuai.github.io/xiao-ji-qiao/2e9dee1cc5da.html</id>
-    <published>2021-01-05T09:36:02.000Z</published>
-    <updated>2021-01-05T09:36:49.209Z</updated>
+    <title>LeetCode并查集</title>
+    <link href="https://ericpengshuai.github.io/suan-fa/a9860ec9227d.html"/>
+    <id>https://ericpengshuai.github.io/suan-fa/a9860ec9227d.html</id>
+    <published>2021-01-26T04:39:20.000Z</published>
+    <updated>2021-01-26T05:32:19.731Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;更新github指定文件&quot;&gt;&lt;a href=&quot;#更新github指定文件&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="小技巧" scheme="https://ericpengshuai.github.io/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="git" scheme="https://ericpengshuai.github.io/tags/git/"/>
-    
-    <category term="github" scheme="https://ericpengshuai.github.io/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【linux shell】while read line几种方法以及区别</title>
-    <link href="https://ericpengshuai.github.io/yi-cuo-zhi-shi/dc41ddf2ff64.html"/>
-    <id>https://ericpengshuai.github.io/yi-cuo-zhi-shi/dc41ddf2ff64.html</id>
-    <published>2021-01-05T09:26:15.000Z</published>
-    <updated>2021-01-05T09:49:33.739Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;引言&lt;/strong&gt;：开始时自己的写的一个下载&lt;a href=&quot;https://bing.ioliu.cn/?p=&quot;&gt;某个bing网站&lt;/a&gt;上面的图片的脚本程序中需要使用while read</summary>
-        
-      
-    
-    
-    
-    <category term="易错知识" scheme="https://ericpengshuai.github.io/categories/%E6%98%93%E9%94%99%E7%9F%A5%E8%AF%86/"/>
-    
-    
-    <category term="linux" scheme="https://ericpengshuai.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【成功解决】WireShark没有发现端口，Win10pcap和Npcap安装失败</title>
-    <link href="https://ericpengshuai.github.io/chang-jian-bao-cuo/a2fced913357.html"/>
-    <id>https://ericpengshuai.github.io/chang-jian-bao-cuo/a2fced913357.html</id>
-    <published>2021-01-05T09:18:48.000Z</published>
-    <updated>2021-01-05T09:24:07.723Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;问题重现&quot;&gt;&lt;a href=&quot;#问题重现&quot; class=&quot;headerlink&quot; title=&quot;问题重现&quot;&gt;&lt;/a&gt;问题重现&lt;/h2&gt;&lt;h3 id=&quot;引言：&quot;&gt;&lt;a href=&quot;#引言：&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="常见报错" scheme="https://ericpengshuai.github.io/categories/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/"/>
-    
-    
-    <category term="WireShark" scheme="https://ericpengshuai.github.io/tags/WireShark/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【腾讯微信后端实习面试题】去除驼峰字符串</title>
-    <link href="https://ericpengshuai.github.io/suan-fa/1bc2199224a4.html"/>
-    <id>https://ericpengshuai.github.io/suan-fa/1bc2199224a4.html</id>
-    <published>2021-01-05T09:11:52.000Z</published>
-    <updated>2021-01-05T09:16:27.408Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天面试了一个腾讯微信后台，说了几句就说弄一个题做一下，结果一脸懵逼，给定字符串，去除其中的驼峰字符串（例如：将“AaAdfAAaAaA”变成“df”）。&lt;/p&gt;
-&lt;p&gt;说实话对于&lt;strong&gt;驼峰串&lt;/strong&gt;这个定义就有点模糊，本来当时有点紧张，有时在牛客网上做</summary>
+    <summary type="html">&lt;h1 id=&quot;并查集&quot;&gt;&lt;a href=&quot;#并查集&quot; class=&quot;headerlink&quot; title=&quot;并查集&quot;&gt;&lt;/a&gt;并查集&lt;/h1&gt;&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -115,36 +37,9 @@
     <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="Python" scheme="https://ericpengshuai.github.io/tags/Python/"/>
+    <category term="并查集" scheme="https://ericpengshuai.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
     
-    <category term="字符串" scheme="https://ericpengshuai.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【分治法】解决循环赛问题（n分为奇数和偶数）</title>
-    <link href="https://ericpengshuai.github.io/suan-fa/d842de59de86.html"/>
-    <id>https://ericpengshuai.github.io/suan-fa/d842de59de86.html</id>
-    <published>2021-01-05T07:37:55.000Z</published>
-    <updated>2021-01-05T10:09:25.190Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="C/C++" scheme="https://ericpengshuai.github.io/tags/C-C/"/>
-    
-    <category term="分治法" scheme="https://ericpengshuai.github.io/tags/%E5%88%86%E6%B2%BB%E6%B3%95/"/>
+    <category term="LeetCode" scheme="https://ericpengshuai.github.io/tags/LeetCode/"/>
     
   </entry>
   
@@ -225,11 +120,143 @@
   </entry>
   
   <entry>
+    <title>更新github指定文件以及git创建分支操作</title>
+    <link href="https://ericpengshuai.github.io/xiao-ji-qiao/331ed029fe5c.html"/>
+    <id>https://ericpengshuai.github.io/xiao-ji-qiao/331ed029fe5c.html</id>
+    <published>2020-12-18T09:36:02.000Z</published>
+    <updated>2021-01-26T04:44:14.622Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;更新github指定文件&quot;&gt;&lt;a href=&quot;#更新github指定文件&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="小技巧" scheme="https://ericpengshuai.github.io/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="git" scheme="https://ericpengshuai.github.io/tags/git/"/>
+    
+    <category term="github" scheme="https://ericpengshuai.github.io/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【linux shell】while read line几种方法以及区别</title>
+    <link href="https://ericpengshuai.github.io/yi-cuo-zhi-shi/4f911a623550.html"/>
+    <id>https://ericpengshuai.github.io/yi-cuo-zhi-shi/4f911a623550.html</id>
+    <published>2020-05-08T09:26:15.000Z</published>
+    <updated>2021-01-26T04:43:42.633Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;引言&lt;/strong&gt;：开始时自己的写的一个下载&lt;a href=&quot;https://bing.ioliu.cn/?p=&quot;&gt;某个bing网站&lt;/a&gt;上面的图片的脚本程序中需要使用while read</summary>
+        
+      
+    
+    
+    
+    <category term="易错知识" scheme="https://ericpengshuai.github.io/categories/%E6%98%93%E9%94%99%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="linux" scheme="https://ericpengshuai.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成功解决】WireShark没有发现端口，Win10pcap和Npcap安装失败</title>
+    <link href="https://ericpengshuai.github.io/chang-jian-bao-cuo/8ca096bed1df.html"/>
+    <id>https://ericpengshuai.github.io/chang-jian-bao-cuo/8ca096bed1df.html</id>
+    <published>2020-04-03T09:18:48.000Z</published>
+    <updated>2021-01-26T04:42:17.560Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题重现&quot;&gt;&lt;a href=&quot;#问题重现&quot; class=&quot;headerlink&quot; title=&quot;问题重现&quot;&gt;&lt;/a&gt;问题重现&lt;/h2&gt;&lt;h3 id=&quot;引言：&quot;&gt;&lt;a href=&quot;#引言：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="常见报错" scheme="https://ericpengshuai.github.io/categories/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/"/>
+    
+    
+    <category term="WireShark" scheme="https://ericpengshuai.github.io/tags/WireShark/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【腾讯微信后端实习面试题】去除驼峰字符串</title>
+    <link href="https://ericpengshuai.github.io/suan-fa/cd89a9df8760.html"/>
+    <id>https://ericpengshuai.github.io/suan-fa/cd89a9df8760.html</id>
+    <published>2020-03-31T09:11:52.000Z</published>
+    <updated>2021-01-26T04:41:41.501Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天面试了一个腾讯微信后台，说了几句就说弄一个题做一下，结果一脸懵逼，给定字符串，去除其中的驼峰字符串（例如：将“AaAdfAAaAaA”变成“df”）。&lt;/p&gt;
+&lt;p&gt;说实话对于&lt;strong&gt;驼峰串&lt;/strong&gt;这个定义就有点模糊，本来当时有点紧张，有时在牛客网上做</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="Python" scheme="https://ericpengshuai.github.io/tags/Python/"/>
+    
+    <category term="字符串" scheme="https://ericpengshuai.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【分治法】解决循环赛问题（n分为奇数和偶数）</title>
+    <link href="https://ericpengshuai.github.io/suan-fa/cd0cd01e2295.html"/>
+    <id>https://ericpengshuai.github.io/suan-fa/cd0cd01e2295.html</id>
+    <published>2019-11-04T07:37:55.000Z</published>
+    <updated>2021-01-26T04:43:01.601Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="C/C++" scheme="https://ericpengshuai.github.io/tags/C-C/"/>
+    
+    <category term="分治法" scheme="https://ericpengshuai.github.io/tags/%E5%88%86%E6%B2%BB%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【成功解决】运行qt生成的exe文件报“无法找到Qt5network.dll等组件”“无法找到入口”的问题</title>
-    <link href="https://ericpengshuai.github.io/chang-jian-bao-cuo/35defd8e84c1.html"/>
-    <id>https://ericpengshuai.github.io/chang-jian-bao-cuo/35defd8e84c1.html</id>
-    <published>2020-12-25T03:27:15.000Z</published>
-    <updated>2021-01-05T09:23:48.994Z</updated>
+    <link href="https://ericpengshuai.github.io/chang-jian-bao-cuo/361612ddefd6.html"/>
+    <id>https://ericpengshuai.github.io/chang-jian-bao-cuo/361612ddefd6.html</id>
+    <published>2019-05-02T03:27:15.000Z</published>
+    <updated>2021-01-26T04:44:52.807Z</updated>
     
     
       

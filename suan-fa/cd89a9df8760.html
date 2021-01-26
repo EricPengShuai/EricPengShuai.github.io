@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【linux shell】while read line几种方法以及区别, PengShuai,Programmer,Myblog">
+    <meta name="keywords" content="【腾讯微信后端实习面试题】去除驼峰字符串, PengShuai,Programmer,Myblog">
     <meta name="description" content="A lyinger，a someone like me.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>【linux shell】while read line几种方法以及区别 | 像我这样的人</title>
+    <title>【腾讯微信后端实习面试题】去除驼峰字符串 | 像我这样的人</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【linux shell】while read line几种方法以及区别</h1>
+                    <h1 class="description center-align post-title">【腾讯微信后端实习面试题】去除驼峰字符串</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/linux/">
-                                <span class="chip bg-color">linux</span>
+                            <a href="/tags/Python/">
+                                <span class="chip bg-color">Python</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                                <span class="chip bg-color">字符串</span>
                             </a>
                         
                     </div>
@@ -446,8 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%98%93%E9%94%99%E7%9F%A5%E8%AF%86/" class="post-category">
-                                易错知识
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -459,7 +463,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-05
+                    2020-03-31
                 </div>
                 
 
@@ -468,14 +472,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    967
+                    649
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    2 分
                 </div>
                 
 
@@ -498,89 +502,62 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>引言</strong>：开始时自己的写的一个下载<a target="_blank" rel="noopener" href="https://bing.ioliu.cn/?p=">某个bing网站</a>上面的图片的脚本程序中需要使用while read line读取自己提取出来的图片信息，刚开始没有用临时文件存放信息，而是直接使用管道机制重定向，结果……坑了我一个小时<br>==然后自己查了一些资料，比较一下三种while read line方法的区别==<br>首先自己的test文件如下：（就简单是三行数据）<br><img src="https://img-blog.csdnimg.cn/20200508145856694.png" alt="test文件内容"></p>
-<h2 id="while-read-line三种方法"><a href="#while-read-line三种方法" class="headerlink" title="while-read-line三种方法"></a>while-read-line三种方法</h2><h3 id="1-形如cat-test-while-read-line-do-echo-line-done"><a href="#1-形如cat-test-while-read-line-do-echo-line-done" class="headerlink" title="1. 形如cat test | while read line;do echo $line;done"></a>1. 形如cat test | while read line;do echo $line;done</h3><ul>
-<li>代码如下<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"xiaowang"</span>
-<span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"2020-05-08"</span>
-<span class="token function">cat</span> <span class="token builtin class-name">test</span> <span class="token operator">|</span> <span class="token keyword">while</span> <span class="token builtin class-name">read</span> <span class="token function">date</span>
-<span class="token keyword">do</span>
-    <span class="token builtin class-name">read</span> url
-    <span class="token builtin class-name">read</span> name
-    <span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$name</span>"</span>
-    <span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$date</span>"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date1</span> <span class="token variable">$name1</span> <span class="token variable">$url</span>"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date</span> <span class="token variable">$name</span> <span class="token variable">$url</span>"</span>
-<span class="token keyword">done</span>
+                <p>今天面试了一个腾讯微信后台，说了几句就说弄一个题做一下，结果一脸懵逼，给定字符串，去除其中的驼峰字符串（例如：将“AaAdfAAaAaA”变成“df”）。</p>
+<p>说实话对于<strong>驼峰串</strong>这个定义就有点模糊，本来当时有点紧张，有时在牛客网上做题，他别是那个面试官看着你做题，我当时脑子真的就是一片空白，这个驼峰串仅仅是两个大写字母中间夹一个小字母吗？能不能是两个小字母夹一个大写字母呢？（毕竟这个<strong>aAa</strong>也像驼峰）总之面试是gg了，之后网上看了一些解答，自己总结一下。</p>
+<ul>
+<li>首先对于第一种情况：驼峰串仅仅是两个大写字母中间夹一个小字母，形如AaA<pre class="language-python" data-language="python"><code class="language-python"><span class="token builtin">str</span> <span class="token operator">=</span> <span class="token string">'AaAdfaAaAaAaAaB'</span>
+<span class="token builtin">len</span> <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%s字符串长度："</span> <span class="token operator">%</span> <span class="token builtin">str</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">)</span>
+i <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> i <span class="token operator">&lt;</span> <span class="token builtin">len</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">:</span>
+    <span class="token comment"># 遇到驼峰</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token keyword">and</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">and</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>isupper<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        j <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">2</span>
+        i <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token comment"># 如果没有驼峰并且不是之前识别驼峰的最后一个字母就打印</span>
+    <span class="token keyword">elif</span> i <span class="token operator">!=</span> j<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">'  '</span><span class="token punctuation">)</span>
+    i <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
 
-<span class="token builtin class-name">echo</span> <span class="token string">"888888 <span class="token variable">$date1</span> 777 <span class="token variable">$name1</span> 666  <span class="token variable">$url</span>"</span></code></pre></li>
-<li>结果输出<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token number">2020</span>-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force<span class="token operator">=</span>download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州
-<span class="token number">2020</span>-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force<span class="token operator">=</span>download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州
-<span class="token number">888888</span> <span class="token number">2020</span>-05-08 <span class="token number">777</span> xiaowang <span class="token number">666</span></code></pre></li>
+<span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token builtin">len</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">:</span>
+    <span class="token comment"># 对于像'AaAdfAaAaAaAaA'这样的串处理最后两个字符不要打印</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">and</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">and</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>isupper<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+    <span class="token comment"># 对于像"AaAdfAaAaAaAaB"、"AaAdfaAaAaAaAaB"这样的串特殊处理最后两个字符</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+调试结果如下：<br><img src="https://img-blog.csdnimg.cn/20200331225824935.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2020033122565815.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li>其次对于第二种情况：形如AaA、aAa都可以当成驼峰串<pre class="language-python" data-language="python"><code class="language-python"><span class="token builtin">str</span> <span class="token operator">=</span> <span class="token string">'AaAdfAaAaAaAaA'</span>
+<span class="token builtin">len</span> <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"字符串长度："</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">)</span>
+i <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> i <span class="token operator">&lt;</span> <span class="token builtin">len</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">:</span>
+    <span class="token comment"># 遇到驼峰</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token keyword">and</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        j <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">2</span>
+        i <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token comment"># 如果没有驼峰并且不是之前识别驼峰的最后一个字母就打印</span>
+    <span class="token keyword">elif</span> i <span class="token operator">!=</span> j<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">'  '</span><span class="token punctuation">)</span>
+    i <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token builtin">len</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">:</span>
+    <span class="token comment"># 对于像'AaAdfAaAaAaAaA'这样的串处理最后两个字符不要打印</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">and</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+    <span class="token comment"># 对于像"AaAdfaAaAaAaAaB"这样的字符串特殊处理最后一个字符</span>
+    <span class="token keyword">elif</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token keyword">and</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token comment"># 对于像'AaAdfAaAaAaAaaa'这样的串特殊处理最后两个字符,另外对于这种情况是不是有点问题</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+调试结果如下：<br><img src="https://img-blog.csdnimg.cn/20200331223036784.png" alt="测试结果1"><br><img src="https://img-blog.csdnimg.cn/20200331222927502.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="测试结果2"><br><img src="https://img-blog.csdnimg.cn/20200331223319160.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="测试结果3"></li>
 </ul>
-<p><strong>我想的是使用while read line读取文件之后赋值给name1和date1，结果并没赋值。刚开始很疑惑，明明在while循环中的name1和date1都赋值了为啥退出之后没了呢，结果发现是管道的机制，这个使用管道之后while read line是在子shell中进行的，所以在退出while之后其中的操作都是无效的</strong></p>
-<p>另外，参考一片博客中说的：cat test会一次性将test文件所有数据装入内存，如果test文件足够大，会直接占用巨量内存</p>
-<h3 id="2-形如-while-read-line-lt-test-do-echo-line-done"><a href="#2-形如-while-read-line-lt-test-do-echo-line-done" class="headerlink" title="2.形如 while read line <test;do echo $line;done"></a>2.形如 while read line &lt;test;do echo $line;done</h3><ul>
-<li><p>代码如下</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"xiaowang"</span>
-<span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"2020-05-08"</span>
-<span class="token keyword">while</span> <span class="token builtin class-name">read</span> <span class="token function">date</span> <span class="token operator">&lt;</span> <span class="token builtin class-name">test</span>
-<span class="token keyword">do</span>
-    <span class="token builtin class-name">read</span> url
-    <span class="token builtin class-name">read</span> name
-    <span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$name</span>"</span>
-    <span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$date</span>"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date1</span> <span class="token variable">$name1</span> <span class="token variable">$url</span>"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date</span> <span class="token variable">$name</span> <span class="token variable">$url</span>"</span>
-<span class="token keyword">done</span>
-
-<span class="token builtin class-name">echo</span> <span class="token string">"888888 <span class="token variable">$date1</span> 777 <span class="token variable">$name1</span> 666  <span class="token variable">$url</span>"</span></code></pre></li>
-<li><p>结果如下</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash">   
-
-<span class="token number">2020</span>-05-07  
-<span class="token number">2020</span>-05-07  
-
-
-<span class="token number">2020</span>-05-07  
-<span class="token number">2020</span>-05-07  
-
-
-<span class="token number">2020</span>-05-07  
-<span class="token number">2020</span>-05-07  
-<span class="token punctuation">..</span>.</code></pre></li>
-</ul>
-<p><strong>首先我看不懂这个输出结果（其中的空行全是我自己按的回车，也就是按了两次回车之后才出现结果，然后这个while循环一直不结束…）查说法就是：它会在每次循环的时候都重新打开test文件，使得每次都从头开始读数据，而不是每次从上一次标记的地方继续读数据。</strong></p>
-<h3 id="3-【最佳】形如while-read-line-do-echo-line-done-lt-test"><a href="#3-【最佳】形如while-read-line-do-echo-line-done-lt-test" class="headerlink" title="3.【最佳】形如while read line;do echo $line;done <test"></a>3.【最佳】形如while read line;do echo $line;done &lt;test</h3><ul>
-<li><p>代码如下</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"xiaowang"</span>
-<span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"2020-05-08"</span>
-<span class="token keyword">while</span> <span class="token builtin class-name">read</span> <span class="token function">date</span>
-<span class="token keyword">do</span>
-    <span class="token builtin class-name">read</span> url
-    <span class="token builtin class-name">read</span> name
-    <span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$name</span>"</span>
-    <span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$date</span>"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date1</span> <span class="token variable">$name1</span> <span class="token variable">$url</span>"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date</span> <span class="token variable">$name</span> <span class="token variable">$url</span>"</span>
-<span class="token keyword">done</span> <span class="token operator">&lt;</span> <span class="token builtin class-name">test</span>
-
-<span class="token builtin class-name">echo</span> <span class="token string">"888888 <span class="token variable">$date1</span> 777 <span class="token variable">$name1</span> 666  <span class="token variable">$url</span>"</span></code></pre>
-</li>
-<li><p>结果如下（正常了耶）</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token number">2020</span>-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force<span class="token operator">=</span>download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州
-<span class="token number">2020</span>-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force<span class="token operator">=</span>download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州
-<span class="token number">888888</span> <span class="token number">2020</span>-05-07 <span class="token number">777</span> https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force<span class="token operator">=</span>download <span class="token number">666</span>  印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州</code></pre>
-
-
-</li>
-</ul>
-<p><strong>这个不就是我想要的结果吗，使用输入重定向的方式则每次只占用一行数据的内存，而且是在当前shell环境下执行的，while内的变量赋值、数组赋值在退出while后仍然有效。</strong></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
-<li>以上三种方法中，大家在选取的时候最好选择第三那种方法，别问为什么问。</li>
-<li>其实读取文件内容的方法有很多，比如使用形如：for line in $(&lt;file); do echo ​$line; done的方法，据说这种方法效率最高，具体可以参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/u014650722/article/details/51563823">这篇博客</a>，这个说了几种while read和for的比较。</li>
-<li>另外如果想要了解我那个下载图片的脚本程序可以访问<a target="_blank" rel="noopener" href="https://github.com/EricPengShuai/Linux-Shell-netstat--s-And-download-photos">我的github</a></li>
-</ol>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xl-892694298/p/11017168.html">https://www.cnblogs.com/xl-892694298/p/11017168.html</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014650722/article/details/51563823">https://blog.csdn.net/u014650722/article/details/51563823</a></p>
+<p><strong>总结</strong>：其实这个算法的核心就是<strong>while循环</strong>部分：其中j的作用很巧妙，配合i的增加做到了对每个驼峰串的识别</p>
 
                 
             </div>
@@ -607,7 +584,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ericpengshuai.github.io/yi-cuo-zhi-shi/dc41ddf2ff64.html">https://ericpengshuai.github.io/yi-cuo-zhi-shi/dc41ddf2ff64.html</a>
+                    <a href="https://ericpengshuai.github.io/suan-fa/cd89a9df8760.html">https://ericpengshuai.github.io/suan-fa/cd89a9df8760.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -645,8 +622,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/linux/">
-                                    <span class="chip bg-color">linux</span>
+                                <a href="/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                                    <span class="chip bg-color">字符串</span>
                                 </a>
                             
                         </div>
@@ -1083,60 +1064,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/xiao-ji-qiao/2e9dee1cc5da.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="更新github指定文件以及git创建分支操作">
-                        
-                        <span class="card-title">更新github指定文件以及git创建分支操作</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="post-category">
-                                    小技巧
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/git/">
-                        <span class="chip bg-color">git</span>
-                    </a>
-                    
-                    <a href="/tags/github/">
-                        <span class="chip bg-color">github</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/chang-jian-bao-cuo/a2fced913357.html">
+                <a href="/chang-jian-bao-cuo/8ca096bed1df.html">
                     <div class="card-image">
                         
                         
@@ -1152,9 +1080,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1172,6 +1100,59 @@
                     
                     <a href="/tags/WireShark/">
                         <span class="chip bg-color">WireShark</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/suan-fa/cd0cd01e2295.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="【分治法】解决循环赛问题（n分为奇数和偶数）">
+                        
+                        <span class="card-title">【分治法】解决循环赛问题（n分为奇数和偶数）</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C-C/">
+                        <span class="chip bg-color">C/C++</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%88%86%E6%B2%BB%E6%B3%95/">
+                        <span class="chip bg-color">分治法</span>
                     </a>
                     
                 </div>
@@ -1374,7 +1355,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">7.2k</span>&nbsp;字
+                class="white-color">10.2k</span>&nbsp;字
             
             
             
