@@ -6,7 +6,7 @@
   <link href="https://ericpengshuai.github.io/atom.xml" rel="self"/>
   
   <link href="https://ericpengshuai.github.io/"/>
-  <updated>2021-03-07T08:26:18.059Z</updated>
+  <updated>2021-03-08T08:41:29.175Z</updated>
   <id>https://ericpengshuai.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pytorch for RNN --高级篇</title>
+    <link href="https://ericpengshuai.github.io/shen-du-xue-xi/f6083f38645d.html"/>
+    <id>https://ericpengshuai.github.io/shen-du-xue-xi/f6083f38645d.html</id>
+    <published>2021-03-08T05:14:10.000Z</published>
+    <updated>2021-03-08T08:41:29.175Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;RNN-Classifier-model&quot;&gt;&lt;a href=&quot;#RNN-Classifier-model&quot; class=&quot;headerlink&quot; title=&quot;RNN_Classifier model&quot;&gt;&lt;/a&gt;RNN_Classifier</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ericpengshuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Pytorch" scheme="https://ericpengshuai.github.io/tags/Pytorch/"/>
+    
+    <category term="RNN" scheme="https://ericpengshuai.github.io/tags/RNN/"/>
+    
+  </entry>
   
   <entry>
     <title>Pytorch for RNN</title>
