@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="像我这样的人" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="像我这样的人" type="application/atom+xml">
 </head>
 
 
@@ -511,7 +511,7 @@
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><h3 id="1-首先考虑简单问题（n-2-k）"><a href="#1-首先考虑简单问题（n-2-k）" class="headerlink" title="1. 首先考虑简单问题（n = 2^k）"></a>1. 首先考虑简单问题（n = 2^k）</h3><p>这个我先上一个图大家应该就可以明白：</p>
 <p><img src="https://img-blog.csdnimg.cn/20191024222342845.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="第1列为选手，第2-8列为赛程，8个选手赛7天"></p>
 <p>应该很容易想到分治法，有如下规律：对于任意一个正方形区域（包括4、16……个小方块）左上角和右下角相等，右上角和左下角相等（<strong>如果懒得看汉字就直接看上面几种颜色的方块吧</strong>）</p>
-<p><img src="1.jpg" alt="n=8"></p>
+<p><img src="/pic/1.jpg" alt="n=8"></p>
 <blockquote>
 <p>按分治策略，我们可以将所有的选手分为两半，则n个选手的比赛日程表可以通过n/2个选手的比赛日程表来决定。递归地用这种一分为二的策略对选手进行划分，直到只剩下两个选手时，比赛日程表的制定就变得很简单。这时只要让这两个选手进行比赛就可以了。如上图，所列出的正方形表是8个选手的比赛日程表。其中左上角与左下角的两小块分别为选手1至选手4和选手5至选手8前3天的比赛日程。据此，将左上角小块中的所有数字按其相对位置抄到右下角，又将左下角小块中的所有数字按其相对位置抄到右上角，这样我们就分别安排好了选手1至选手4和选手5至选手8在后4天的比赛日程。</p>
 </blockquote>
