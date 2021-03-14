@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="像我这样的人" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="像我这样的人" type="application/atom+xml">
 </head>
 
 
@@ -596,7 +596,7 @@ Hidden: tensor<span class="token punctuation">(</span><span class="token punctua
 <li>首先需要将输入的单词转成向量<code>one-hot vector</code></li>
 <li>注意input_size，如下图</li>
 </ol>
-<p><img src="RNN_example.png" alt="转化成向量"></p>
+<p><img src="/pic/RNN_example.png" alt="转化成向量"></p>
 <h3 id="注意交叉熵在计算loss的时候维度关系"><a href="#注意交叉熵在计算loss的时候维度关系" class="headerlink" title="注意交叉熵在计算loss的时候维度关系"></a>注意交叉熵在计算loss的时候维度关系</h3><p><strong>这里的hidden是<code>([1, 4])</code>, label是 <code>([1])</code></strong></p>
 <h3 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h3><h4 id="数据准备"><a href="#数据准备" class="headerlink" title="数据准备"></a>数据准备</h4><pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> torch
 input_size <span class="token operator">=</span> <span class="token number">4</span>
@@ -770,8 +770,8 @@ Predicted:  ohlol, Epoch <span class="token punctuation">[</span><span class="to
 <li><p><strong>one-hot vectors hardcoded  –&gt; learn from data</strong></p>
 </li>
 </ul>
-<h3 id="Embedding"><a href="#Embedding" class="headerlink" title="Embedding"></a>Embedding</h3><p><img src="ont_hot_VS_embedding.png" alt="ont_hot_vector VS embedding"></p>
-<p><img src="embedding.png" alt="embedding"></p>
+<h3 id="Embedding"><a href="#Embedding" class="headerlink" title="Embedding"></a>Embedding</h3><p><img src="/pic/ont_hot_VS_embedding.png" alt="ont_hot_vector VS embedding"></p>
+<p><img src="/pic/embedding.png" alt="embedding"></p>
 <h3 id="源代码-2"><a href="#源代码-2" class="headerlink" title="源代码"></a>源代码</h3><h4 id="构建模型-2"><a href="#构建模型-2" class="headerlink" title="构建模型"></a>构建模型</h4><pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> torch<span class="token punctuation">.</span>nn <span class="token keyword">as</span> nn
 
 <span class="token comment"># parameters</span>

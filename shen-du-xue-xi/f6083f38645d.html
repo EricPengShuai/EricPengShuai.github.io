@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="像我这样的人" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 5.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="像我这样的人" type="application/atom+xml">
 </head>
 
 
@@ -503,11 +503,11 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><strong>来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Y7411d7Ys?t=3&amp;p=13">https://www.bilibili.com/video/BV1Y7411d7Ys?t=3&amp;p=13</a></strong></p>
-<h2 id="RNN-Classifier-model"><a href="#RNN-Classifier-model" class="headerlink" title="RNN_Classifier model"></a>RNN_Classifier model</h2><p><img src="model.png" alt="model"></p>
+<h2 id="RNN-Classifier-model"><a href="#RNN-Classifier-model" class="headerlink" title="RNN_Classifier model"></a>RNN_Classifier model</h2><p><img src="/pic/model.png" alt="model"></p>
 <h3 id="1-准备数据"><a href="#1-准备数据" class="headerlink" title="1. 准备数据"></a>1. 准备数据</h3><ol>
 <li><p>对于每个名字需要得到一个向量</p>
 </li>
-<li><p>通过ASCII对于每个名字的每个字符都得到一个<code>one-hot vector</code><br><img src="data.png" alt="data"></p>
+<li><p>通过ASCII对于每个名字的每个字符都得到一个<code>one-hot vector</code><br><img src="/pic/data.png" alt="data"></p>
 </li>
 <li><p>由于输入是矩阵所以需要<code>padding</code></p>
 </li>
@@ -577,9 +577,9 @@ N_COUNTRY <span class="token operator">=</span> trainSet<span class="token punct
 <li>hidden: (nLayers * nDirections, batchSize, hiddenSize)</li>
 </ul>
 <ol start="3">
-<li>示意图<br><img src="model-show.png" alt="model示意图"></li>
+<li>示意图<br><img src="/pic/model-show.png" alt="model示意图"></li>
 </ol>
-<h4 id="GRU处理时可以使用pack-padded-sequence提高效率"><a href="#GRU处理时可以使用pack-padded-sequence提高效率" class="headerlink" title="GRU处理时可以使用pack_padded_sequence提高效率"></a>GRU处理时可以使用<code>pack_padded_sequence</code>提高效率</h4><p><img src="pack_padded_sequence.png" alt="pack_padded"></p>
+<h4 id="GRU处理时可以使用pack-padded-sequence提高效率"><a href="#GRU处理时可以使用pack-padded-sequence提高效率" class="headerlink" title="GRU处理时可以使用pack_padded_sequence提高效率"></a>GRU处理时可以使用<code>pack_padded_sequence</code>提高效率</h4><p><img src="/pic/pack_padded_sequence.png" alt="pack_padded"></p>
 <pre class="language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">RNNClassifier</span><span class="token punctuation">(</span>torch<span class="token punctuation">.</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> input_size<span class="token punctuation">,</span> hidden_size<span class="token punctuation">,</span> output_size<span class="token punctuation">,</span> n_layers<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> bidirectional<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token builtin">super</span><span class="token punctuation">(</span>RNNClassifier<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span> 
@@ -744,7 +744,7 @@ plt<span class="token punctuation">.</span>xlabel<span class="token punctuation"
 plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'Accuracy'</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<p><img src="EPOCH_ACC.png" alt="EPOCH_ACC"></p>
+<p><img src="/pic/EPOCH_ACC.png" alt="EPOCH_ACC"></p>
 
                 
             </div>
