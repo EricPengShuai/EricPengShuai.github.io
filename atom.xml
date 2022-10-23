@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>像我这样的人</title>
+  
+  <subtitle>岁月可逝|乏善可陈</subtitle>
+  <link href="https://ericpengshuai.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://ericpengshuai.github.io/"/>
+  <updated>2022-09-04T08:16:17.892Z</updated>
+  <id>https://ericpengshuai.github.io/</id>
+  
+  <author>
+    <name>PengShuai</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>二叉树路径问题深入浅出，一文吃透！</title>
+    <link href="https://ericpengshuai.github.io/suan-fa/82d2c753db92.html"/>
+    <id>https://ericpengshuai.github.io/suan-fa/82d2c753db92.html</id>
+    <published>2022-09-04T08:13:18.000Z</published>
+    <updated>2022-09-04T08:16:17.892Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;二叉树路径问题总结&quot;&gt;&lt;a href=&quot;#二叉树路径问题总结&quot; class=&quot;headerlink&quot; title=&quot;二叉树路径问题总结&quot;&gt;&lt;/a&gt;二叉树路径问题总结&lt;/h2&gt;&lt;h3 id=&quot;0-引言&quot;&gt;&lt;a href=&quot;#0-引言&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="LeetCode" scheme="https://ericpengshuai.github.io/tags/LeetCode/"/>
+    
+    <category term="二叉树" scheme="https://ericpengshuai.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>差分数组深入浅出，一文吃透！</title>
+    <link href="https://ericpengshuai.github.io/suan-fa/09ee0060365b.html"/>
+    <id>https://ericpengshuai.github.io/suan-fa/09ee0060365b.html</id>
+    <published>2022-08-28T11:31:44.000Z</published>
+    <updated>2022-08-31T14:43:24.584Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;差分数组&quot;&gt;&lt;a href=&quot;#差分数组&quot; class=&quot;headerlink&quot; title=&quot;差分数组&quot;&gt;&lt;/a&gt;差分数组&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;原文同步在：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="LeetCode" scheme="https://ericpengshuai.github.io/tags/LeetCode/"/>
+    
+    <category term="差分数组" scheme="https://ericpengshuai.github.io/tags/%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>线段树深入浅出，一文吃透！</title>
+    <link href="https://ericpengshuai.github.io/suan-fa/4b7803f8dd04.html"/>
+    <id>https://ericpengshuai.github.io/suan-fa/4b7803f8dd04.html</id>
+    <published>2022-08-27T14:45:56.000Z</published>
+    <updated>2022-08-31T14:45:07.989Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;线段树&quot;&gt;&lt;a href=&quot;#线段树&quot; class=&quot;headerlink&quot; title=&quot;线段树&quot;&gt;&lt;/a&gt;线段树&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;本文大部分内容来自 &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="LeetCode" scheme="https://ericpengshuai.github.io/tags/LeetCode/"/>
+    
+    <category term="线段树" scheme="https://ericpengshuai.github.io/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>字典树深入浅出，一文吃透！</title>
+    <link href="https://ericpengshuai.github.io/suan-fa/15121c57acd1.html"/>
+    <id>https://ericpengshuai.github.io/suan-fa/15121c57acd1.html</id>
+    <published>2022-08-18T01:55:51.000Z</published>
+    <updated>2022-08-31T14:47:00.121Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;字典树&quot;&gt;&lt;a href=&quot;#字典树&quot; class=&quot;headerlink&quot; title=&quot;字典树&quot;&gt;&lt;/a&gt;字典树&lt;/h2&gt;&lt;p&gt;原文地址：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="LeetCode" scheme="https://ericpengshuai.github.io/tags/LeetCode/"/>
+    
+    <category term="字典树" scheme="https://ericpengshuai.github.io/tags/%E5%AD%97%E5%85%B8%E6%A0%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>二分查找深入浅出，一文吃透！</title>
+    <link href="https://ericpengshuai.github.io/suan-fa/431694e75801.html"/>
+    <id>https://ericpengshuai.github.io/suan-fa/431694e75801.html</id>
+    <published>2022-08-14T03:53:55.000Z</published>
+    <updated>2022-08-31T14:47:55.989Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;二分查找&quot;&gt;&lt;a href=&quot;#二分查找&quot; class=&quot;headerlink&quot; title=&quot;二分查找&quot;&gt;&lt;/a&gt;二分查找&lt;/h2&gt;&lt;p&gt;原文地址：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="LeetCode" scheme="https://ericpengshuai.github.io/tags/LeetCode/"/>
+    
+    <category term="二分查找" scheme="https://ericpengshuai.github.io/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++中lambda表达式</title>
+    <link href="https://ericpengshuai.github.io/bian-cheng-bei-wang/eedf7c85da84.html"/>
+    <id>https://ericpengshuai.github.io/bian-cheng-bei-wang/eedf7c85da84.html</id>
+    <published>2022-06-26T11:49:01.000Z</published>
+    <updated>2022-06-26T11:56:46.343Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;C-中-lambda-表达式&quot;&gt;&lt;a href=&quot;#C-中-lambda-表达式&quot; class=&quot;headerlink&quot; title=&quot;C++中 lambda 表达式&quot;&gt;&lt;/a&gt;C++中 lambda 表达式&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;源代码：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="编程备忘" scheme="https://ericpengshuai.github.io/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/"/>
+    
+    
+    <category term="C/C++" scheme="https://ericpengshuai.github.io/tags/C-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021总结</title>
+    <link href="https://ericpengshuai.github.io/sheng-huo-sui-bi/3ed2242071f5.html"/>
+    <id>https://ericpengshuai.github.io/sheng-huo-sui-bi/3ed2242071f5.html</id>
+    <published>2022-01-14T10:35:54.000Z</published>
+    <updated>2022-01-18T02:19:02.218Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;2021总结&quot;&gt;&lt;a href=&quot;#2021总结&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活随笔" scheme="https://ericpengshuai.github.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="总结" scheme="https://ericpengshuai.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个主机上Git同时配置两个GitHub账号</title>
+    <link href="https://ericpengshuai.github.io/xiao-ji-qiao/3aa05632913f.html"/>
+    <id>https://ericpengshuai.github.io/xiao-ji-qiao/3aa05632913f.html</id>
+    <published>2021-12-10T13:38:03.000Z</published>
+    <updated>2022-01-18T02:14:38.774Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一个主机配置多个GitHub账号（Windows，MacOS，Linux都适用）&quot;&gt;&lt;a href=&quot;#一个主机配置多个GitHub账号（Windows，MacOS，Linux都适用）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="小技巧" scheme="https://ericpengshuai.github.io/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="git" scheme="https://ericpengshuai.github.io/tags/git/"/>
+    
+    <category term="github" scheme="https://ericpengshuai.github.io/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>毕业了？</title>
+    <link href="https://ericpengshuai.github.io/sheng-huo-sui-bi/0410ac902f84.html"/>
+    <id>https://ericpengshuai.github.io/sheng-huo-sui-bi/0410ac902f84.html</id>
+    <published>2021-07-23T03:54:47.000Z</published>
+    <updated>2022-01-14T13:27:31.011Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;现在是2021年7月底，本科毕业已经一个多月了，“距离开学还有一个多月时间”，现在想总结一下我的本科生活以及现在的一些所闻所感。&lt;/p&gt;
+&lt;img src=&quot;https://i.loli.net/2021/07/23/eHlv1xKTptXNShf.jpg&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活随笔" scheme="https://ericpengshuai.github.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="总结" scheme="https://ericpengshuai.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>显著性评价指标</title>
+    <link href="https://ericpengshuai.github.io/shen-du-xue-xi/582602e12ae2.html"/>
+    <id>https://ericpengshuai.github.io/shen-du-xue-xi/582602e12ae2.html</id>
+    <published>2021-07-15T06:29:24.000Z</published>
+    <updated>2022-05-21T07:03:47.024Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;span class=&quot;github-emoji&quot;&gt;&lt;span&gt;⚠&lt;/span&gt;&lt;img src=&quot;https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ericpengshuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="saliency" scheme="https://ericpengshuai.github.io/tags/saliency/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LeetCode背包问题</title>
+    <link href="https://ericpengshuai.github.io/suan-fa/34d2a807d146.html"/>
+    <id>https://ericpengshuai.github.io/suan-fa/34d2a807d146.html</id>
+    <published>2021-04-24T10:10:53.000Z</published>
+    <updated>2021-07-23T06:58:23.570Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;0-起源&quot;&gt;&lt;a href=&quot;#0-起源&quot; class=&quot;headerlink&quot; title=&quot;0. 起源&quot;&gt;&lt;/a&gt;0. 起源&lt;/h2&gt;&lt;h3 id=&quot;0-1背包：最大最小问题&quot;&gt;&lt;a href=&quot;#0-1背包：最大最小问题&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="LeetCode" scheme="https://ericpengshuai.github.io/tags/LeetCode/"/>
+    
+    <category term="背包问题" scheme="https://ericpengshuai.github.io/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pytorch for RNN --高级篇</title>
+    <link href="https://ericpengshuai.github.io/shen-du-xue-xi/f6083f38645d.html"/>
+    <id>https://ericpengshuai.github.io/shen-du-xue-xi/f6083f38645d.html</id>
+    <published>2021-03-08T05:14:10.000Z</published>
+    <updated>2021-03-14T06:56:08.865Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;来源：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ericpengshuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Pytorch" scheme="https://ericpengshuai.github.io/tags/Pytorch/"/>
+    
+    <category term="RNN" scheme="https://ericpengshuai.github.io/tags/RNN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pytorch for RNN</title>
+    <link href="https://ericpengshuai.github.io/shen-du-xue-xi/ac81e297adc0.html"/>
+    <id>https://ericpengshuai.github.io/shen-du-xue-xi/ac81e297adc0.html</id>
+    <published>2021-03-07T05:05:05.000Z</published>
+    <updated>2021-03-14T06:55:13.319Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Pytorch-for-RNN&quot;&gt;&lt;a href=&quot;#Pytorch-for-RNN&quot; class=&quot;headerlink&quot; title=&quot;Pytorch for RNN&quot;&gt;&lt;/a&gt;Pytorch for RNN&lt;/h1&gt;&lt;p&gt;来源：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ericpengshuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Pytorch" scheme="https://ericpengshuai.github.io/tags/Pytorch/"/>
+    
+    <category term="RNN" scheme="https://ericpengshuai.github.io/tags/RNN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>并查集深入浅出，一文吃透！</title>
+    <link href="https://ericpengshuai.github.io/suan-fa/b691e3877196.html"/>
+    <id>https://ericpengshuai.github.io/suan-fa/b691e3877196.html</id>
+    <published>2021-01-26T04:39:20.000Z</published>
+    <updated>2022-10-22T15:41:45.038Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;并查集&quot;&gt;&lt;a href=&quot;#并查集&quot; class=&quot;headerlink&quot; title=&quot;并查集&quot;&gt;&lt;/a&gt;并查集&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;原文同步在：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="LeetCode" scheme="https://ericpengshuai.github.io/tags/LeetCode/"/>
+    
+    <category term="并查集" scheme="https://ericpengshuai.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python将列表转字符串</title>
+    <link href="https://ericpengshuai.github.io/bian-cheng-bei-wang/0effa8492d6b.html"/>
+    <id>https://ericpengshuai.github.io/bian-cheng-bei-wang/0effa8492d6b.html</id>
+    <published>2021-01-05T06:47:24.000Z</published>
+    <updated>2021-01-05T06:53:31.242Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;前提条件：列表中的元素全部是字符串&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-python&quot; data-language=&quot;python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="编程备忘" scheme="https://ericpengshuai.github.io/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/"/>
+    
+    
+    <category term="Python" scheme="https://ericpengshuai.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python类中函数相互调用方法</title>
+    <link href="https://ericpengshuai.github.io/bian-cheng-bei-wang/dbafef0e5f51.html"/>
+    <id>https://ericpengshuai.github.io/bian-cheng-bei-wang/dbafef0e5f51.html</id>
+    <published>2020-12-30T03:27:15.000Z</published>
+    <updated>2021-01-05T06:53:57.533Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;方法一：self-方法（参数列表），注意参数列表不需要self&quot;&gt;&lt;a href=&quot;#方法一：self-方法（参数列表），注意参数列表不需要self&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程备忘" scheme="https://ericpengshuai.github.io/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/"/>
+    
+    
+    <category term="python" scheme="https://ericpengshuai.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020总结</title>
+    <link href="https://ericpengshuai.github.io/sheng-huo-sui-bi/6c249f289724.html"/>
+    <id>https://ericpengshuai.github.io/sheng-huo-sui-bi/6c249f289724.html</id>
+    <published>2020-12-28T03:27:15.000Z</published>
+    <updated>2021-07-23T05:30:59.775Z</updated>
+    
+    
+    <summary type="html">作者的小隐私</summary>
+    
+    
+    
+    <category term="生活随笔" scheme="https://ericpengshuai.github.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="总结" scheme="https://ericpengshuai.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>更新github指定文件以及git创建分支操作</title>
+    <link href="https://ericpengshuai.github.io/xiao-ji-qiao/331ed029fe5c.html"/>
+    <id>https://ericpengshuai.github.io/xiao-ji-qiao/331ed029fe5c.html</id>
+    <published>2020-12-18T09:36:02.000Z</published>
+    <updated>2021-01-26T04:44:14.622Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;更新github指定文件&quot;&gt;&lt;a href=&quot;#更新github指定文件&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="小技巧" scheme="https://ericpengshuai.github.io/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="git" scheme="https://ericpengshuai.github.io/tags/git/"/>
+    
+    <category term="github" scheme="https://ericpengshuai.github.io/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【linux shell】while read line几种方法以及区别</title>
+    <link href="https://ericpengshuai.github.io/yi-cuo-zhi-shi/4f911a623550.html"/>
+    <id>https://ericpengshuai.github.io/yi-cuo-zhi-shi/4f911a623550.html</id>
+    <published>2020-05-08T09:26:15.000Z</published>
+    <updated>2021-01-26T04:43:42.633Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;引言&lt;/strong&gt;：开始时自己的写的一个下载&lt;a href=&quot;https://bing.ioliu.cn/?p=&quot;&gt;某个bing网站&lt;/a&gt;上面的图片的脚本程序中需要使用while read</summary>
+        
+      
+    
+    
+    
+    <category term="易错知识" scheme="https://ericpengshuai.github.io/categories/%E6%98%93%E9%94%99%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="linux" scheme="https://ericpengshuai.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【成功解决】WireShark没有发现端口，Win10pcap和Npcap安装失败</title>
+    <link href="https://ericpengshuai.github.io/chang-jian-bao-cuo/8ca096bed1df.html"/>
+    <id>https://ericpengshuai.github.io/chang-jian-bao-cuo/8ca096bed1df.html</id>
+    <published>2020-04-03T09:18:48.000Z</published>
+    <updated>2021-01-26T04:42:17.560Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;问题重现&quot;&gt;&lt;a href=&quot;#问题重现&quot; class=&quot;headerlink&quot; title=&quot;问题重现&quot;&gt;&lt;/a&gt;问题重现&lt;/h2&gt;&lt;h3 id=&quot;引言：&quot;&gt;&lt;a href=&quot;#引言：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="常见报错" scheme="https://ericpengshuai.github.io/categories/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/"/>
+    
+    
+    <category term="WireShark" scheme="https://ericpengshuai.github.io/tags/WireShark/"/>
+    
+  </entry>
+  
+</feed>
