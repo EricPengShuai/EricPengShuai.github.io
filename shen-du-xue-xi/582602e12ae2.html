@@ -468,7 +468,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.4k
                 </div>
                 
 
@@ -498,15 +498,17 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><span class="github-emoji"><span>⚠</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 如果公式不正常显示可以使用Chrome浏览器或者重新刷新试试</p>
-<p>一般分为两种显著性目标检测（salient object detection）和眼注视点显著性（eye fixation saliency）</p>
-<ul>
-<li>参考1：<a target="_blank" rel="noopener" href="https://blog.csdn.net/stupidautofan/category_7507356.html">https://blog.csdn.net/stupidautofan/category_7507356.html</a></li>
-<li>参考2：<a target="_blank" rel="noopener" href="https://www.shangmayuan.com/a/4435d87e2b7e4f538b34f7d2.html">https://www.shangmayuan.com/a/4435d87e2b7e4f538b34f7d2.html</a></li>
-</ul>
-<img src="https://resource.shangmayuan.com/droxy-blog/2020/01/31/28c9f1bfd3fb41e09786428e09b85512-1.jpg" alt="Saliency" style="zoom:80%;">
+                <blockquote>
+<p><span class="github-emoji"><span>⚠</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 如果公式不正常显示可以使用Chrome浏览器或者重新刷新试试</p>
+</blockquote>
+<p>一般分为两种显著性目标检测（salient object detection）和眼注视点显著性（eye fixation saliency），虽然两者都能展现吸引用户注意力的物体或者区域，但是侧重点不同。<strong>物体的显著性</strong>主要在于图像中各个物体轮廓的检测，例如目标检测，语义分割等等都涉及到物体的显著性；<strong>眼注视点的显著性</strong>更多是关注用户观看的区域，和用户的观看行为有联系。由于用户在观看全景视频时，往往会关注视频中比较突出的部分，所以两者也有交集。</p>
+<img src="https://img-blog.csdnimg.cn/20181219165952369.jpg" alt="Saliency" style="zoom:80%;">
 
-<h2 id="眼注视点显著性"><a href="#眼注视点显著性" class="headerlink" title="眼注视点显著性"></a>眼注视点显著性</h2><h3 id="Receiver-Operating-Characteristic-curve（ROC）"><a href="#Receiver-Operating-Characteristic-curve（ROC）" class="headerlink" title="Receiver Operating Characteristic curve（ROC）"></a>Receiver Operating Characteristic curve（ROC）</h3><h3 id="Area-Under-Curve（AUC）"><a href="#Area-Under-Curve（AUC）" class="headerlink" title="Area Under Curve（AUC）"></a>Area Under Curve（AUC）</h3><p>Viewport-based Saliency Prediction提到这个不太好？</p>
+<ul>
+<li>参考1：<a target="_blank" rel="noopener" href="https://blog.csdn.net/stupidautofan/category_7507356.html">显著性目标检测</a></li>
+<li>参考2：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u010736662/article/details/85099853">图像显著性检测算法的评价指标介绍</a></li>
+</ul>
+<h2 id="1-眼注视点显著性"><a href="#1-眼注视点显著性" class="headerlink" title="1. 眼注视点显著性"></a>1. 眼注视点显著性</h2><h3 id="Receiver-Operating-Characteristic-curve（ROC）"><a href="#Receiver-Operating-Characteristic-curve（ROC）" class="headerlink" title="Receiver Operating Characteristic curve（ROC）"></a>Receiver Operating Characteristic curve（ROC）</h3><h3 id="Area-Under-Curve（AUC）"><a href="#Area-Under-Curve（AUC）" class="headerlink" title="Area Under Curve（AUC）"></a>Area Under Curve（AUC）</h3><p>Viewport-based Saliency Prediction提到这个不太好？</p>
 <h3 id="shuffled-AUC（sAUC）"><a href="#shuffled-AUC（sAUC）" class="headerlink" title="shuffled AUC（sAUC）"></a>shuffled AUC（sAUC）</h3><p>ROC 曲线又称受试者受试者工做特征曲线，以假正例率（False Positive Rate, FPR）为横轴，真正例率（True Positive Rate, TPR）为纵轴所组成的坐标图，以0~255不一样的阈值对预测的眼注视点显著图分类描点，从而绘制成曲线图。从直观上看，曲线越接近左上角，说明该算法检测性能越好；曲线下面积称之为AUC, AUC越大说明算法检测性能越好。因为AUC会受中心误差（center bias）的影响，研究者又提出更加鲁棒的sAUC评价指标。</p>
 <h3 id="Pearsons-Linear-Correlation-Coefficient（CC）"><a href="#Pearsons-Linear-Correlation-Coefficient（CC）" class="headerlink" title="Pearsons Linear Correlation Coefficient（CC）"></a>Pearsons Linear Correlation Coefficient（CC）</h3><p><strong>CC$\uparrow$是指皮尔逊相关系数，也是线性相关系数，用来评价预测的眼关注点显著图和参考图ground truth之间的线性相关性，CC越大说明该模型性能越好</strong></p>
 <p>协方差：$Cov(X,Y)=\frac{\Sigma_{i=1}^n(x_i-E(X))(y_i-E(Y))}{n}$</p>
@@ -536,7 +538,7 @@
 <li><p>参考2：Deep Visual Attention Prediction IEEE TIP 2018</p>
 </li>
 </ul>
-<h2 id="显著性目标检测"><a href="#显著性目标检测" class="headerlink" title="显著性目标检测"></a>显著性目标检测</h2><h3 id="Mean-Absolute-Error"><a href="#Mean-Absolute-Error" class="headerlink" title="Mean Absolute Error"></a>Mean Absolute Error</h3><p>MAE是指平均绝对值偏差，用于评价预测的显著图和参考图之间的差别，MAE越小说明该算法性能越好；</p>
+<h2 id="2-显著性目标检测"><a href="#2-显著性目标检测" class="headerlink" title="2. 显著性目标检测"></a>2. 显著性目标检测</h2><h3 id="Mean-Absolute-Error"><a href="#Mean-Absolute-Error" class="headerlink" title="Mean Absolute Error"></a>Mean Absolute Error</h3><p>MAE是指平均绝对值偏差，用于评价预测的显著图和参考图之间的差别，MAE越小说明该算法性能越好；</p>
 <p>$ MAE \downarrow =\dfrac{1}{W\times H}\sum{W}<em>{x=1}\sum{H}</em>{y=1}| \overline{S}(x,y)-\overline{G}(x,y) | $</p>
 <h3 id="PR曲线"><a href="#PR曲线" class="headerlink" title="PR曲线"></a>PR曲线</h3><p>Precise是差准率，Recall是查全率，将图像二值化之后计算：</p>
 <p><img src="https://i.loli.net/2021/07/23/HUswzIFu9We3b7N.png" alt="TP"></p>
@@ -553,7 +555,7 @@
 </ul>
 <p>上述评价指标中，ROC与AUC相似于眼注视点任务，都是用不一样的阈值来肯定描点位置，而后将全部点链接起构成ROC曲线；</p>
 <p>MAP是指平均精度率，MAR是指平均召回率，MAR和MAP越大说明算法性能越好。</p>
-<h2 id="如何得到fixation-map"><a href="#如何得到fixation-map" class="headerlink" title="如何得到fixation map"></a>如何得到fixation map</h2><p>根据用户实际的注视点，统计得到（可能需要去除那些saccade场景的注视点）</p>
+<h2 id="3-如何得到fixation-map"><a href="#3-如何得到fixation-map" class="headerlink" title="3. 如何得到fixation map"></a>3. 如何得到fixation map</h2><p>根据用户实际的注视点，统计得到（可能需要去除那些saccade场景的注视点）</p>
 <p>可以参考：A Saliency Dataset for 360-Degree Videos</p>
 
                 
@@ -1355,7 +1357,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">27.5k</span>&nbsp;字
+                class="white-color">27.7k</span>&nbsp;字
             
             
             
