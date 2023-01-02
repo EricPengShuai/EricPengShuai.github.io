@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【linux shell】while read line几种方法以及区别, PengShuai,Programmer,Myblog">
+    <meta name="keywords" content="【Saliency】显著性评价指标, PengShuai,Programmer,Myblog">
     <meta name="description" content="A lyinger，a someone like me.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>【linux shell】while read line几种方法以及区别 | 像我这样的人</title>
+    <title>【Saliency】显著性评价指标 | 像我这样的人</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【linux shell】while read line几种方法以及区别</h1>
+                    <h1 class="description center-align post-title">【Saliency】显著性评价指标</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/linux/">
-                                <span class="chip bg-color">linux</span>
+                            <a href="/tags/saliency/">
+                                <span class="chip bg-color">saliency</span>
                             </a>
                         
                     </div>
@@ -446,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%98%93%E9%94%99%E7%9F%A5%E8%AF%86/" class="post-category">
-                                易错知识
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                深度学习
                             </a>
                         
                     </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-08
+                    2021-07-15
                 </div>
                 
 
@@ -468,14 +468,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    967
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -498,88 +498,65 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>引言</strong>：开始时自己的写的一个下载<a target="_blank" rel="noopener" href="https://bing.ioliu.cn/?p=">某个bing网站</a>上面的图片的脚本程序中需要使用while read line读取自己提取出来的图片信息，刚开始没有用临时文件存放信息，而是直接使用管道机制重定向，结果……坑了我一个小时<br>==然后自己查了一些资料，比较一下三种while read line方法的区别==<br>首先自己的test文件如下：（就简单是三行数据）<br><img src="https://img-blog.csdnimg.cn/20200508145856694.png" alt="test文件内容"></p>
-<h2 id="while-read-line三种方法"><a href="#while-read-line三种方法" class="headerlink" title="while-read-line三种方法"></a>while-read-line三种方法</h2><h3 id="1-形如cat-test-while-read-line-do-echo-line-done"><a href="#1-形如cat-test-while-read-line-do-echo-line-done" class="headerlink" title="1. 形如cat test | while read line;do echo $line;done"></a>1. 形如cat test | while read line;do echo $line;done</h3><ul>
-<li>代码如下<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"xiaowang"</span>
-<span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"2020-05-08"</span>
-<span class="token function">cat</span> <span class="token builtin class-name">test</span> <span class="token operator">|</span> <span class="token keyword">while</span> <span class="token builtin class-name">read</span> <span class="token function">date</span>
-<span class="token keyword">do</span>
-    <span class="token builtin class-name">read</span> url
-    <span class="token builtin class-name">read</span> name
-    <span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$name</span>"</span>
-    <span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$date</span>"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date1</span> <span class="token variable">$name1</span> <span class="token variable">$url</span>"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date</span> <span class="token variable">$name</span> <span class="token variable">$url</span>"</span>
-<span class="token keyword">done</span>
+                <blockquote>
+<p><span class="github-emoji"><span>⚠</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/26a0.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 如果公式不正常显示可以使用Chrome浏览器或者重新刷新试试</p>
+</blockquote>
+<p>一般分为两种显著性目标检测（salient object detection）和眼注视点显著性（eye fixation saliency），虽然两者都能展现吸引用户注意力的物体或者区域，但是侧重点不同。<strong>物体的显著性</strong>主要在于图像中各个物体轮廓的检测，例如目标检测，语义分割等等都涉及到物体的显著性；<strong>眼注视点的显著性</strong>更多是关注用户观看的区域，和用户的观看行为有联系。由于用户在观看全景视频时，往往会关注视频中比较突出的部分，所以两者也有交集。</p>
+<img src="https://img-blog.csdnimg.cn/20181219165952369.jpg" alt="Saliency" style="zoom:80%;">
 
-<span class="token builtin class-name">echo</span> <span class="token string">"888888 <span class="token variable">$date1</span> 777 <span class="token variable">$name1</span> 666  <span class="token variable">$url</span>"</span></code></pre></li>
-<li>结果输出<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token number">2020</span>-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force<span class="token operator">=</span>download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州
-<span class="token number">2020</span>-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force<span class="token operator">=</span>download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州
-<span class="token number">888888</span> <span class="token number">2020</span>-05-08 <span class="token number">777</span> xiaowang <span class="token number">666</span></code></pre></li>
+<ul>
+<li>参考1：<a target="_blank" rel="noopener" href="https://blog.csdn.net/stupidautofan/category_7507356.html">显著性目标检测</a></li>
+<li>参考2：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u010736662/article/details/85099853">图像显著性检测算法的评价指标介绍</a></li>
 </ul>
-<p><strong>我想的是使用while read line读取文件之后赋值给name1和date1，结果并没赋值。刚开始很疑惑，明明在while循环中的name1和date1都赋值了为啥退出之后没了呢，结果发现是管道的机制，这个使用管道之后while read line是在子shell中进行的，所以在退出while之后其中的操作都是无效的</strong></p>
-<p>另外，参考一片博客中说的：cat test会一次性将test文件所有数据装入内存，如果test文件足够大，会直接占用巨量内存</p>
-<h3 id="2-形如-while-read-line-lt-test-do-echo-line-done"><a href="#2-形如-while-read-line-lt-test-do-echo-line-done" class="headerlink" title="2.形如 while read line <test;do echo $line;done"></a>2.形如 while read line &lt;test;do echo $line;done</h3><ul>
-<li><p>代码如下</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"xiaowang"</span>
-<span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"2020-05-08"</span>
-<span class="token keyword">while</span> <span class="token builtin class-name">read</span> <span class="token function">date</span> <span class="token operator">&lt;</span> <span class="token builtin class-name">test</span>
-<span class="token keyword">do</span>
-    <span class="token builtin class-name">read</span> url
-    <span class="token builtin class-name">read</span> name
-    <span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$name</span>"</span>
-    <span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$date</span>"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date1</span> <span class="token variable">$name1</span> <span class="token variable">$url</span>"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date</span> <span class="token variable">$name</span> <span class="token variable">$url</span>"</span>
-<span class="token keyword">done</span>
-
-<span class="token builtin class-name">echo</span> <span class="token string">"888888 <span class="token variable">$date1</span> 777 <span class="token variable">$name1</span> 666  <span class="token variable">$url</span>"</span></code></pre></li>
-<li><p>结果如下</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash">   
-
-<span class="token number">2020</span>-05-07  
-<span class="token number">2020</span>-05-07  
-
-
-<span class="token number">2020</span>-05-07  
-<span class="token number">2020</span>-05-07  
-
-
-<span class="token number">2020</span>-05-07  
-<span class="token number">2020</span>-05-07  
-<span class="token punctuation">..</span>.</code></pre></li>
-</ul>
-<p><strong>首先我看不懂这个输出结果（其中的空行全是我自己按的回车，也就是按了两次回车之后才出现结果，然后这个while循环一直不结束…）查说法就是：它会在每次循环的时候都重新打开test文件，使得每次都从头开始读数据，而不是每次从上一次标记的地方继续读数据。</strong></p>
-<h3 id="3-【最佳】形如while-read-line-do-echo-line-done-lt-test"><a href="#3-【最佳】形如while-read-line-do-echo-line-done-lt-test" class="headerlink" title="3.【最佳】形如while read line;do echo $line;done <test"></a>3.【最佳】形如while read line;do echo $line;done &lt;test</h3><ul>
-<li><p>代码如下</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"xiaowang"</span>
-<span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"2020-05-08"</span>
-<span class="token keyword">while</span> <span class="token builtin class-name">read</span> <span class="token function">date</span>
-<span class="token keyword">do</span>
-    <span class="token builtin class-name">read</span> url
-    <span class="token builtin class-name">read</span> name
-    <span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$name</span>"</span>
-    <span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$date</span>"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date1</span> <span class="token variable">$name1</span> <span class="token variable">$url</span>"</span>
-    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date</span> <span class="token variable">$name</span> <span class="token variable">$url</span>"</span>
-<span class="token keyword">done</span> <span class="token operator">&lt;</span> <span class="token builtin class-name">test</span>
-
-<span class="token builtin class-name">echo</span> <span class="token string">"888888 <span class="token variable">$date1</span> 777 <span class="token variable">$name1</span> 666  <span class="token variable">$url</span>"</span></code></pre></li>
-<li><p>结果如下（正常了耶）</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token number">2020</span>-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force<span class="token operator">=</span>download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州
-<span class="token number">2020</span>-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force<span class="token operator">=</span>download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州
-<span class="token number">888888</span> <span class="token number">2020</span>-05-07 <span class="token number">777</span> https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force<span class="token operator">=</span>download <span class="token number">666</span>  印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州</code></pre>
-
-
+<h2 id="1-眼注视点显著性"><a href="#1-眼注视点显著性" class="headerlink" title="1. 眼注视点显著性"></a>1. 眼注视点显著性</h2><h3 id="Receiver-Operating-Characteristic-curve（ROC）"><a href="#Receiver-Operating-Characteristic-curve（ROC）" class="headerlink" title="Receiver Operating Characteristic curve（ROC）"></a>Receiver Operating Characteristic curve（ROC）</h3><h3 id="Area-Under-Curve（AUC）"><a href="#Area-Under-Curve（AUC）" class="headerlink" title="Area Under Curve（AUC）"></a>Area Under Curve（AUC）</h3><p>Viewport-based Saliency Prediction提到这个不太好？</p>
+<h3 id="shuffled-AUC（sAUC）"><a href="#shuffled-AUC（sAUC）" class="headerlink" title="shuffled AUC（sAUC）"></a>shuffled AUC（sAUC）</h3><p>ROC 曲线又称受试者受试者工做特征曲线，以假正例率（False Positive Rate, FPR）为横轴，真正例率（True Positive Rate, TPR）为纵轴所组成的坐标图，以0~255不一样的阈值对预测的眼注视点显著图分类描点，从而绘制成曲线图。从直观上看，曲线越接近左上角，说明该算法检测性能越好；曲线下面积称之为AUC, AUC越大说明算法检测性能越好。因为AUC会受中心误差（center bias）的影响，研究者又提出更加鲁棒的sAUC评价指标。</p>
+<h3 id="Pearsons-Linear-Correlation-Coefficient（CC）"><a href="#Pearsons-Linear-Correlation-Coefficient（CC）" class="headerlink" title="Pearsons Linear Correlation Coefficient（CC）"></a>Pearsons Linear Correlation Coefficient（CC）</h3><p><strong>CC$\uparrow$是指皮尔逊相关系数，也是线性相关系数，用来评价预测的眼关注点显著图和参考图ground truth之间的线性相关性，CC越大说明该模型性能越好</strong></p>
+<p>协方差：$Cov(X,Y)=\frac{\Sigma_{i=1}^n(x_i-E(X))(y_i-E(Y))}{n}$</p>
+<blockquote>
+<p>感性的理解，如果数据杂乱，正负抵消，那么这个协方差就很小，就谈不上二者相关；如果数据很一致，想么协方差就负的比较多（负相关），要么就是正的比较多（正相关）</p>
+</blockquote>
+<p>消除x和y的量差，引用皮尔逊相关系数：$\sigma_{X,Y}=\frac{Cov(X,Y)}{\sigma_X·\sigma_Y}$</p>
+<ul>
+<li><p>具体对于显著性而言，P和D分别代表saliency map和fixation map，被视为随机变量</p>
+<p>$CC(P,Q)=\frac{Cov(P,Q)}{\sigma(P)\times\sigma(Q)}$</p>
 </li>
 </ul>
-<p><strong>这个不就是我想要的结果吗，使用输入重定向的方式则每次只占用一行数据的内存，而且是在当前shell环境下执行的，while内的变量赋值、数组赋值在退出while后仍然有效。</strong></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
-<li>以上三种方法中，大家在选取的时候最好选择第三那种方法，别问为什么问。</li>
-<li>其实读取文件内容的方法有很多，比如使用形如：for line in $(&lt;file); do echo ​$line; done的方法，据说这种方法效率最高，具体可以参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/u014650722/article/details/51563823">这篇博客</a>，这个说了几种while read和for的比较。</li>
-<li>另外如果想要了解我那个下载图片的脚本程序可以访问<a target="_blank" rel="noopener" href="https://github.com/EricPengShuai/Linux-Shell-netstat--s-And-download-photos">我的github</a></li>
-</ol>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xl-892694298/p/11017168.html">https://www.cnblogs.com/xl-892694298/p/11017168.html</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014650722/article/details/51563823">https://blog.csdn.net/u014650722/article/details/51563823</a></p>
+<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/limiyudianzi/article/details/103437093">https://blog.csdn.net/limiyudianzi/article/details/103437093</a></p>
+<h3 id="Normalized-Scanpath-Saliency（NSS）"><a href="#Normalized-Scanpath-Saliency（NSS）" class="headerlink" title="Normalized Scanpath Saliency（NSS）"></a>Normalized Scanpath Saliency（NSS）</h3><p><strong>NSS$\uparrow$是指标准化扫描路径显着性，用来评价二者之间的差别值，NSS越大说明模型性能越好；</strong></p>
+<p>$NSS(P，Q)=\frac{1}{N}·\Sigma_i({\overline P_i}\times Q_i)$</p>
+<p>其中P是saliency map，Q是fixation map的二值图，其中i是像素的下标，N是所有的像素值总数，<em>N is the total number of ﬁxated pixels</em>，$\overline P=\frac{P-\mu(P)}{\sigma(P)}$</p>
+<blockquote>
+<p>这里说明一下，一般论文中NSS指标都是5.0+左右，很显然如果我们将预测saliency map归一化在0-1之间，我们得到的NSS只能在0-1之间，因此我觉得论文中计算NSS值可能是将saliency map归一化至0-10之后再计算的</p>
+</blockquote>
+<h3 id="Kullback-Leibler-Divergence-（KLDiv）"><a href="#Kullback-Leibler-Divergence-（KLDiv）" class="headerlink" title="Kullback-Leibler Divergence （KLDiv）"></a>Kullback-Leibler Divergence （KLDiv）</h3><p><strong>KLDiv$\downarrow$是指KL散度，Kullback-Leibler (KL) 是一种广泛使用的信息论度量，用于衡量两个概率分布之间的差异。KLDiv越小说明该模型检测性能越好。</strong></p>
+<p>$KL(P,Q)=\Sigma_iQ_ilog(\epsilon+\frac{Q_i}{\epsilon+P_i})$</p>
+<p>其中$\epsilon$表示正则化常数，KL是非对称差异度量</p>
+<p>具体再参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/matrix_space/article/details/80550561">https://blog.csdn.net/matrix_space/article/details/80550561</a></p>
+<ul>
+<li><p>参考1：What Do Different Evaluation Metrics Tell Us About Saliency Models? IEEE TPAMI 2019</p>
+</li>
+<li><p>参考2：Deep Visual Attention Prediction IEEE TIP 2018</p>
+</li>
+</ul>
+<h2 id="2-显著性目标检测"><a href="#2-显著性目标检测" class="headerlink" title="2. 显著性目标检测"></a>2. 显著性目标检测</h2><h3 id="Mean-Absolute-Error"><a href="#Mean-Absolute-Error" class="headerlink" title="Mean Absolute Error"></a>Mean Absolute Error</h3><p>MAE是指平均绝对值偏差，用于评价预测的显著图和参考图之间的差别，MAE越小说明该算法性能越好；</p>
+<p>$ MAE \downarrow =\dfrac{1}{W\times H}\sum{W}<em>{x=1}\sum{H}</em>{y=1}| \overline{S}(x,y)-\overline{G}(x,y) | $</p>
+<h3 id="PR曲线"><a href="#PR曲线" class="headerlink" title="PR曲线"></a>PR曲线</h3><p>Precise是差准率，Recall是查全率，将图像二值化之后计算：</p>
+<p><img src="https://i.loli.net/2021/07/23/HUswzIFu9We3b7N.png" alt="TP"></p>
+<p>$Precision=\frac{TP}{TP+FP}$ 以及 $Recall=\frac{TP}{TP+FN}$</p>
+<p>将输出图片S进行二值化时，阈值选择为从0到255，每取一个阈值，即可对所有输出图S算得一组相对应的Precision值与Recall值。最后将所有图像在该阈值下的Precision值与Recall值分别求平均，最后将会得到256对P,R值，以Recall为横坐标，Precision为纵坐标绘制曲线图即可得到precision-recall (PR)曲线。</p>
+<h3 id="F-measure"><a href="#F-measure" class="headerlink" title="F-measure"></a>F-measure</h3><p><strong>查全率</strong>和<strong>查准率</strong>在非负权重β下的加权调和平均值(Weighted Harmonic Mean) ，计算公式如下：</p>
+<p>$F_\beta \uparrow =\frac{(1+\beta^2)Precision*Recall}{\beta^2Precision+Recall}$</p>
+<p>$\beta^2$一般取值为0.3，即增加了Precision的权重值，<strong>认为查准率比查全率要重要些</strong>。因为当模型将输出图全部标为目标区域时，查全率Recall将等于100%，但是查准率Precision却很低。</p>
+<ul>
+<li>ROC (Receiver Operating Characteristic curve)</li>
+<li>AUC (Area Under Curve)</li>
+<li>MAP (Mean Average Precision)</li>
+<li>MAR (Mean Average Recall)</li>
+</ul>
+<p>上述评价指标中，ROC与AUC相似于眼注视点任务，都是用不一样的阈值来肯定描点位置，而后将全部点链接起构成ROC曲线；</p>
+<p>MAP是指平均精度率，MAR是指平均召回率，MAR和MAP越大说明算法性能越好。</p>
+<h2 id="3-如何得到fixation-map"><a href="#3-如何得到fixation-map" class="headerlink" title="3. 如何得到fixation map"></a>3. 如何得到fixation map</h2><p>根据用户实际的注视点，统计得到（可能需要去除那些saccade场景的注视点）</p>
+<p>可以参考：A Saliency Dataset for 360-Degree Videos</p>
 
                 
             </div>
@@ -606,7 +583,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ericpengshuai.github.io/yi-cuo-zhi-shi/4f911a623550.html">https://ericpengshuai.github.io/yi-cuo-zhi-shi/4f911a623550.html</a>
+                    <a href="https://ericpengshuai.github.io/shen-du-xue-xi/507732ac59dc.html">https://ericpengshuai.github.io/shen-du-xue-xi/507732ac59dc.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -644,8 +621,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/linux/">
-                                    <span class="chip bg-color">linux</span>
+                                <a href="/tags/saliency/">
+                                    <span class="chip bg-color">saliency</span>
                                 </a>
                             
                         </div>
@@ -1082,13 +1059,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/xiao-ji-qiao/331ed029fe5c.html">
+                <a href="/sheng-huo-sui-bi/0410ac902f84.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="更新github指定文件以及git创建分支操作">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="毕业了？">
                         
-                        <span class="card-title">更新github指定文件以及git创建分支操作</span>
+                        <span class="card-title">毕业了？</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1099,14 +1076,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-18
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-23
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="post-category">
-                                    小技巧
+                            <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    生活随笔
                                 </a>
                             
                             
@@ -1116,12 +1093,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/git/">
-                        <span class="chip bg-color">git</span>
-                    </a>
-                    
-                    <a href="/tags/github/">
-                        <span class="chip bg-color">github</span>
+                    <a href="/tags/%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">总结</span>
                     </a>
                     
                 </div>
@@ -1135,13 +1108,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/chang-jian-bao-cuo/8ca096bed1df.html">
+                <a href="/suan-fa/2de3bef2abb4.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="【成功解决】WireShark没有发现端口，Win10pcap和Npcap安装失败">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="【LeetCode】背包问题">
                         
-                        <span class="card-title">【成功解决】WireShark没有发现端口，Win10pcap和Npcap安装失败</span>
+                        <span class="card-title">【LeetCode】背包问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1152,14 +1125,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-24
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/" class="post-category">
-                                    常见报错
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -1169,8 +1142,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/WireShark/">
-                        <span class="chip bg-color">WireShark</span>
+                    <a href="/tags/LeetCode/">
+                        <span class="chip bg-color">LeetCode</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/">
+                        <span class="chip bg-color">背包问题</span>
                     </a>
                     
                 </div>
@@ -1302,6 +1279,13 @@
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -1364,7 +1348,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2020-2022</span>
+                <span id="year">2020-2023</span>
             
             <!-- <span id="year">2020</span> -->
             <a href="/about" target="_blank">PengShuai</a>
@@ -1373,7 +1357,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">27.8k</span>&nbsp;字
+                class="white-color">31.3k</span>&nbsp;字
             
             
             

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C++中lambda表达式, PengShuai,Programmer,Myblog">
+    <meta name="keywords" content="【Qt】运行qt生成的exe文件报“无法找到Qt5network.dll等组件”“无法找到入口”的问题, PengShuai,Programmer,Myblog">
     <meta name="description" content="A lyinger，a someone like me.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>C++中lambda表达式 | 像我这样的人</title>
+    <title>【Qt】运行qt生成的exe文件报“无法找到Qt5network.dll等组件”“无法找到入口”的问题 | 像我这样的人</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C++中lambda表达式</h1>
+                    <h1 class="description center-align post-title">【Qt】运行qt生成的exe文件报“无法找到Qt5network.dll等组件”“无法找到入口”的问题</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C-C/">
-                                <span class="chip bg-color">C/C++</span>
+                            <a href="/tags/Qt/">
+                                <span class="chip bg-color">Qt</span>
                             </a>
                         
                     </div>
@@ -446,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/" class="post-category">
-                                编程备忘
+                            <a href="/categories/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/" class="post-category">
+                                常见报错
                             </a>
                         
                     </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-06-26
+                    2019-05-02
                 </div>
                 
 
@@ -468,14 +468,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    831
+                    168
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -498,160 +498,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="C-中-lambda-表达式"><a href="#C-中-lambda-表达式" class="headerlink" title="C++中 lambda 表达式"></a>C++中 lambda 表达式</h2><blockquote>
-<p>源代码：<a target="_blank" rel="noopener" href="https://github.com/EricPengShuai/Interview/blob/main/c%2B%2B2.0/lambda.cpp">https://github.com/EricPengShuai/Interview/blob/main/c%2B%2B2.0/lambda.cpp</a></p>
-</blockquote>
-<p>lambda 表达式C++11引入的，可以编写内嵌的匿名函数，代替独立函数等。在C++14中添加新特性，又加以强化。</p>
-<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// 完整语法</span>
-<span class="token punctuation">[</span> capture<span class="token operator">-</span>list <span class="token punctuation">]</span> <span class="token punctuation">(</span> params <span class="token punctuation">)</span> <span class="token keyword">mutable</span><span class="token punctuation">(</span>optional<span class="token punctuation">)</span> <span class="token keyword">constexpr</span><span class="token punctuation">(</span>optional<span class="token punctuation">)</span><span class="token punctuation">(</span>c<span class="token operator">++</span><span class="token number">17</span><span class="token punctuation">)</span> exception attribute <span class="token operator">-&gt;</span> ret <span class="token punctuation">{</span> body <span class="token punctuation">}</span> 
-
-<span class="token comment">// 可选的简化语法</span>
-<span class="token punctuation">[</span> capture<span class="token operator">-</span>list <span class="token punctuation">]</span> <span class="token punctuation">(</span> params <span class="token punctuation">)</span> <span class="token operator">-&gt;</span> ret <span class="token punctuation">{</span> body <span class="token punctuation">}</span>     
-<span class="token punctuation">[</span> capture<span class="token operator">-</span>list <span class="token punctuation">]</span> <span class="token punctuation">(</span> params <span class="token punctuation">)</span> <span class="token punctuation">{</span> body <span class="token punctuation">}</span>    
-<span class="token punctuation">[</span> capture<span class="token operator">-</span>list <span class="token punctuation">]</span> <span class="token punctuation">{</span> body <span class="token punctuation">}</span> </code></pre>
-<p><strong>参数说明：</strong></p>
-<ul>
-<li><p><strong>capture-list</strong>：捕捉列表，这个不用多说，前面已经讲过，记住它不能省略；</p>
-</li>
-<li><p><strong>params</strong>：参数列表，可以省略（但是后面必须紧跟函数体）；</p>
-</li>
-<li><p><strong>mutable</strong>：可选，将<code>lambda</code>表达式标记为<code>mutable</code>后，函数体就可以修改传值方式捕获的变量；</p>
-</li>
-<li><p><strong>constexpr</strong>：可选，C++17，可以指定<code>lambda</code>表达式是一个常量函数；</p>
-</li>
-<li><p><strong>exception</strong>：可选，指定<code>lambda</code>表达式可以抛出的异常；</p>
-</li>
-<li><p><strong>attribute</strong>：可选，指定<code>lambda</code>表达式的特性；</p>
-</li>
-<li><p><strong>ret</strong>：可选，返回值类型；</p>
-</li>
-<li><p><strong>body</strong>：函数执行体</p>
-</li>
-</ul>
-<h3 id="常见写法"><a href="#常见写法" class="headerlink" title="常见写法"></a>常见写法</h3><ol>
-<li><p>基本表达式</p>
-<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">auto</span> basicLambda <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
-    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Basic Lambda Express!"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token function">basicLambda</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-
-
-</li>
-</ol>
-<ol start="2">
-<li><p>带参数</p>
-<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">auto</span> add <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token keyword">int</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-cout <span class="token operator">&lt;&lt;</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-
-
-</li>
-</ol>
-<ol start="3">
-<li><p>捕获变量</p>
-<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// [] 其实就是一个闭包，用来定义捕捉模式以及变量，表示的是lambda捕捉块</span>
-<span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
-<span class="token keyword">auto</span> add_x <span class="token operator">=</span> <span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span> <span class="token punctuation">{</span>       <span class="token comment">// 复制捕捉x，不可以修改x</span>
-    <span class="token keyword">return</span> a <span class="token operator">+</span> x<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">auto</span> multiply_x <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span>x<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 引用捕捉x，可以修改x</span>
-    <span class="token keyword">return</span> a <span class="token operator">*</span> x<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-cout <span class="token operator">&lt;&lt;</span> <span class="token function">add_x</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">' '</span> <span class="token operator">&lt;&lt;</span> <span class="token function">multiply_x</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-
-<span class="token comment">// mutbale 关键字可以让复制捕捉方式的表示修改参数</span>
-<span class="token keyword">auto</span> add_x_mutable <span class="token operator">=</span> <span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span> <span class="token keyword">mutable</span> <span class="token punctuation">{</span>
-    x <span class="token operator">*=</span> <span class="token number">2</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> a <span class="token operator">+</span> x<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-cout <span class="token operator">&lt;&lt;</span> <span class="token function">add_x_mutable</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">' '</span> <span class="token operator">&lt;&lt;</span> x <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span></code></pre>
-
-
-</li>
-</ol>
-<ol start="4">
-<li><p>lambda 表达式禁用了辅助操作符，但是没有禁用复制构造函数</p>
-<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// add_x_mutable 是上面定义的</span>
-<span class="token keyword">auto</span> add_copy <span class="token operator">=</span> add_x_mutable<span class="token punctuation">;</span>
-cout <span class="token operator">&lt;&lt;</span> <span class="token function">add_copy</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">' '</span> <span class="token operator">&lt;&lt;</span> x <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span></code></pre>
-
-
-</li>
-</ol>
-<ol start="5">
-<li><p>lambda 表达式作为传递的参数</p>
-<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> value <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
-vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> v <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token function">count_if</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> v<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>value<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">return</span> x <span class="token operator">&gt;</span> value<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-cout <span class="token operator">&lt;&lt;</span> count <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-
-vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token function">vt</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> b <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token function">generate</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> v<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span>a<span class="token punctuation">,</span> <span class="token operator">&amp;</span>b<span class="token punctuation">]</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> value <span class="token operator">=</span> b<span class="token punctuation">;</span>
-    b <span class="token operator">=</span> b <span class="token operator">+</span> a<span class="token punctuation">;</span>
-    a <span class="token operator">=</span> value<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">auto</span> element<span class="token operator">:</span> vt<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    cout <span class="token operator">&lt;&lt;</span> element <span class="token operator">&lt;&lt;</span> <span class="token string">' '</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span></code></pre>
-
-
-</li>
-</ol>
-<ol start="6">
-<li><p>常见捕获形式</p>
-<ul>
-<li><p><code>[]</code>：默认不捕获任何变量；</p>
-</li>
-<li><p><code>[=]</code>：默认以值捕获所有变量；</p>
-</li>
-<li><p><code>[&amp;]</code>：默认以引用捕获所有变量；</p>
-</li>
-<li><p><code>[x]</code>：仅以值捕获x，其它变量不捕获；</p>
-</li>
-<li><p><code>[&amp;x]</code>：仅以引用捕获x，其它变量不捕获；</p>
-</li>
-<li><p><code>[=, &amp;x]</code>：默认以值捕获所有变量，但是x是例外，通过引用捕获；</p>
-</li>
-<li><p><code>[&amp;, x]</code>：默认以引用捕获所有变量，但是x是例外，通过值捕获；</p>
-</li>
-<li><p><code>[this]</code>：通过引用捕获当前对象（其实是复制指针）；</p>
-</li>
-<li><p><code>[*this]</code>：通过传值方式捕获当前对象；</p>
-</li>
-</ul>
-<blockquote>
-<p>最好不要使用 [=] [&amp;] 捕获所有变量，可能会出现悬挂引用</p>
-</blockquote>
-</li>
-</ol>
-<h3 id="新特性"><a href="#新特性" class="headerlink" title="新特性"></a>新特性</h3><h4 id="捕捉表达式"><a href="#捕捉表达式" class="headerlink" title="捕捉表达式"></a>捕捉表达式</h4><pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> x1 <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
-<span class="token keyword">auto</span> y <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span>r <span class="token operator">=</span> x1<span class="token punctuation">,</span> x1 <span class="token operator">=</span> x1 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
-    r <span class="token operator">+=</span> <span class="token number">2</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> x1 <span class="token operator">*</span> x1<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-cout <span class="token operator">&lt;&lt;</span> x1 <span class="token operator">&lt;&lt;</span> <span class="token string">' '</span> <span class="token operator">&lt;&lt;</span> <span class="token function">y</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
-
-<span class="token keyword">auto</span> z <span class="token operator">=</span> <span class="token punctuation">[</span>str <span class="token operator">=</span> <span class="token string">"string"</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> str<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-cout <span class="token operator">&lt;&lt;</span> <span class="token function">z</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span></code></pre>
-
-
-<h4 id="泛型表达式"><a href="#泛型表达式" class="headerlink" title="泛型表达式"></a>泛型表达式</h4><pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">auto</span>  add1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">auto</span> x<span class="token punctuation">,</span> <span class="token keyword">auto</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> x <span class="token operator">+</span> y<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
-cout <span class="token operator">&lt;&lt;</span>  <span class="token function">add1</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">' '</span> <span class="token operator">&lt;&lt;</span> <span class="token function">add1</span><span class="token punctuation">(</span><span class="token number">2.3</span><span class="token punctuation">,</span> <span class="token number">2.3</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span></code></pre>
-
-
-<h4 id="函数对象"><a href="#函数对象" class="headerlink" title="函数对象"></a>函数对象</h4><pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">for_each</span><span class="token punctuation">(</span>vt<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> vt<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span> cout <span class="token operator">&lt;&lt;</span> x <span class="token operator">&lt;&lt;</span> <span class="token string">' '</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span></code></pre>
-
-
-
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/d686ad9de817">https://www.jianshu.com/p/d686ad9de817</a></p>
+                <h2 id="问题重现"><a href="#问题重现" class="headerlink" title="问题重现"></a>问题重现</h2><p>我在Qt creator上面构建好项目之后生成了exe文件（在debug中），我想直接在qt creator之外运行时候就报“什么缺少一些插件的错误”，我查了一些资料，说是要设置什么环境变量path，然后我也设置了好了，如下：<br><img src="https://img-blog.csdnimg.cn/20190502175006195.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="添加环境变量path"><br> 然后我就运行，也是报错什么“无法找到入口”：如下（有几个错误，弄一个）<br> <img src="https://img-blog.csdnimg.cn/20190502175307908.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="无法找到入口"><br>然后查了一些资料之后说是要把那个环境变量放到上面几个（为了一次成功，<strong>我直接把那个环境变量置顶</strong>）<br><img src="https://img-blog.csdnimg.cn/20190502175634356.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="🔝环境变量"><br>然后保存好设置之后就可以运行了。</p>
 
                 
             </div>
@@ -678,7 +525,7 @@ cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctua
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ericpengshuai.github.io/bian-cheng-bei-wang/eedf7c85da84.html">https://ericpengshuai.github.io/bian-cheng-bei-wang/eedf7c85da84.html</a>
+                    <a href="https://ericpengshuai.github.io/chang-jian-bao-cuo/d47d18d8b526.html">https://ericpengshuai.github.io/chang-jian-bao-cuo/d47d18d8b526.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -716,8 +563,8 @@ cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctua
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C-C/">
-                                    <span class="chip bg-color">C/C++</span>
+                                <a href="/tags/Qt/">
+                                    <span class="chip bg-color">Qt</span>
                                 </a>
                             
                         </div>
@@ -1154,13 +1001,13 @@ cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctua
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/suan-fa/431694e75801.html">
+                <a href="/suan-fa/1741f76a1a4e.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="二分查找深入浅出，一文吃透！">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="【分治法】解决循环赛问题（n分为奇数和偶数）">
                         
-                        <span class="card-title">二分查找深入浅出，一文吃透！</span>
+                        <span class="card-title">【分治法】解决循环赛问题（n分为奇数和偶数）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1171,7 +1018,7 @@ cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctua
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-08-14
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-04
                         </span>
                         <span class="publish-author">
                             
@@ -1188,12 +1035,12 @@ cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctua
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/LeetCode/">
-                        <span class="chip bg-color">LeetCode</span>
+                    <a href="/tags/C-C/">
+                        <span class="chip bg-color">C/C++</span>
                     </a>
                     
-                    <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
-                        <span class="chip bg-color">二分查找</span>
+                    <a href="/tags/%E5%88%86%E6%B2%BB%E6%B3%95/">
+                        <span class="chip bg-color">分治法</span>
                     </a>
                     
                 </div>
@@ -1204,16 +1051,16 @@ cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctua
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/sheng-huo-sui-bi/3ed2242071f5.html">
+                <a href="/chang-jian-bao-cuo/d47d18d8b526.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="2021总结">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="【Qt】运行qt生成的exe文件报“无法找到Qt5network.dll等组件”“无法找到入口”的问题">
                         
-                        <span class="card-title">2021总结</span>
+                        <span class="card-title">【Qt】运行qt生成的exe文件报“无法找到Qt5network.dll等组件”“无法找到入口”的问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1224,25 +1071,26 @@ cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctua
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-05-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    生活随笔
+                            <a href="/categories/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/" class="post-category">
+                                    常见报错
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%80%BB%E7%BB%93/">
-                        <span class="chip bg-color">总结</span>
+                    <a href="/tags/Qt/">
+                        <span class="chip bg-color">Qt</span>
                     </a>
                     
                 </div>
@@ -1436,7 +1284,7 @@ cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctua
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2020-2022</span>
+                <span id="year">2020-2023</span>
             
             <!-- <span id="year">2020</span> -->
             <a href="/about" target="_blank">PengShuai</a>
@@ -1445,7 +1293,7 @@ cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctua
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">27.8k</span>&nbsp;字
+                class="white-color">31.3k</span>&nbsp;字
             
             
             

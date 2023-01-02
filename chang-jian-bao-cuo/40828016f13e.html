@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="一个主机上Git同时配置两个GitHub账号, PengShuai,Programmer,Myblog">
+    <meta name="keywords" content="【WireShark】成功解决WireShark没有发现端口，Win10pcap和Npcap安装失败, PengShuai,Programmer,Myblog">
     <meta name="description" content="A lyinger，a someone like me.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>一个主机上Git同时配置两个GitHub账号 | 像我这样的人</title>
+    <title>【WireShark】成功解决WireShark没有发现端口，Win10pcap和Npcap安装失败 | 像我这样的人</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">一个主机上Git同时配置两个GitHub账号</h1>
+                    <h1 class="description center-align post-title">【WireShark】成功解决WireShark没有发现端口，Win10pcap和Npcap安装失败</h1>
                 </div>
             </div>
         </div>
@@ -434,12 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/git/">
-                                <span class="chip bg-color">git</span>
-                            </a>
-                        
-                            <a href="/tags/github/">
-                                <span class="chip bg-color">github</span>
+                            <a href="/tags/WireShark/">
+                                <span class="chip bg-color">WireShark</span>
                             </a>
                         
                     </div>
@@ -450,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="post-category">
-                                小技巧
+                            <a href="/categories/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/" class="post-category">
+                                常见报错
                             </a>
                         
                     </div>
@@ -463,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-10
+                    2020-04-03
                 </div>
                 
 
@@ -472,14 +468,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    980
+                    538
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -502,43 +498,21 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一个主机配置多个GitHub账号（Windows，MacOS，Linux都适用）"><a href="#一个主机配置多个GitHub账号（Windows，MacOS，Linux都适用）" class="headerlink" title="一个主机配置多个GitHub账号（Windows，MacOS，Linux都适用）"></a>一个主机配置多个GitHub账号（Windows，MacOS，Linux都适用）</h2><h3 id="1-引言"><a href="#1-引言" class="headerlink" title="1. 引言"></a>1. 引言</h3><blockquote>
-<p>我开始的需要求是投稿论文的时候由于是<strong>匿名审稿</strong>，而我又需要上传源代码，所以打算把代码提交到GitHub上，匿名审稿不能用暴露自己个人信息的账号，所以就新建了一个账号，但是当我commit的时候发现提交人依然是自己之前的账号信息，而当我push的时候出现no permission，所以就需要配置一下新账号的信息</p>
-</blockquote>
-<p>我的环境是 windows 10，之前已经有了github账号，该账号的ssh已经配置，之前使用https和ssh都可以push，但是新账号没有配置所以没办法提交</p>
-<p>下面我的方法<strong>使用ssh方式提交代码</strong>，需要配置新账号的公钥和私钥</p>
-<h3 id="2-配置-ssh文件"><a href="#2-配置-ssh文件" class="headerlink" title="2. 配置.ssh文件"></a>2. 配置<code>.ssh</code>文件</h3><h4 id="2-1-在-ssh文件夹目录下面生成公钥和私钥"><a href="#2-1-在-ssh文件夹目录下面生成公钥和私钥" class="headerlink" title="2.1 在.ssh文件夹目录下面生成公钥和私钥"></a>2.1 在.ssh文件夹目录下面生成公钥和私钥</h4><p>windows中<code>.ssh</code>文件的路径为：<code>C:\Users\用户名\.ssh</code><br>生成公钥和私钥的命令为：<code>ssh-keygen -t rsa -f id_rsa_new</code>，然后一直按回车就可以了，这个时候会在ssh文件夹目录下面生两个文件（公钥和私钥文件），如下图（<font color="red">其中以.pub结尾的文件是公钥，没有后缀的是私钥，config是自己创建的配置文件，know_hosts好像没用？</font>）：<br><img src="https://img-blog.csdnimg.cn/img_convert/49b953ba27c07738d9e3278460cfca1e.png" alt=".ssh dir"></p>
-<h4 id="2-2-将公钥复制粘贴到github的SSH-and-GPG-keys中"><a href="#2-2-将公钥复制粘贴到github的SSH-and-GPG-keys中" class="headerlink" title="2.2 将公钥复制粘贴到github的SSH and GPG keys中"></a>2.2 将公钥复制粘贴到github的SSH and GPG keys中</h4><ul>
-<li>首先创建进入github的<strong>setting</strong>页面，然后点击<strong>SSH and GPG keys</strong>，新建一个<strong>SSH keys</strong><br><img src="https://img-blog.csdnimg.cn/img_convert/3eecd5b323620612ee2847748e6e050d.png" alt="SSH"></li>
-<li>然后随便去一个名字，将生成的**.pub公钥**粘贴到下面：<br><img src="https://img-blog.csdnimg.cn/img_convert/761d16b0f24592aeb2eb40602f0f0fb4.png" alt="SSH Add"><h3 id="3-将私钥添加到本地的git账户中"><a href="#3-将私钥添加到本地的git账户中" class="headerlink" title="3. 将私钥添加到本地的git账户中"></a>3. 将私钥添加到本地的git账户中</h3><h4 id="3-1-添加两个私钥到本地git账户"><a href="#3-1-添加两个私钥到本地git账户" class="headerlink" title="3.1 添加两个私钥到本地git账户"></a>3.1 添加两个私钥到本地git账户</h4><pre class="language-bash" data-language="bash"><code class="language-bash">ssh-agent <span class="token function">bash</span>
-ssh-add id_rsa_github	<span class="token comment"># 之前已有的github账号信息</span>
-ssh-add id_rsa_new		<span class="token comment"># 新生成的账号信息</span></code></pre>
-<blockquote>
-<p>其中<code>ssh-agent bash</code>（或<code>eval $(ssh-agent)</code>）会启动一个进程在内存里管理这些私钥，可以把它理解成一个私钥管理中心<br>添加之后可以使用<code>ssh-add -l</code>命令查看一下是否添加成功</p>
-</blockquote>
+                <h2 id="问题重现"><a href="#问题重现" class="headerlink" title="问题重现"></a>问题重现</h2><h3 id="引言："><a href="#引言：" class="headerlink" title="引言："></a><strong>引言</strong>：</h3><p>wireshark是去年安装的，大约一年没用了，现在一打开发现<strong>“没有发现接口”</strong>，本来是要通过抓包了解IPV6分组机制（分片扩展首部），结果蒙了…下面说一下整个解决过程</p>
+<h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a><strong>原因</strong>：</h3><p>没有<a target="_blank" rel="noopener" href="https://www.cnblogs.com/cc1840/p/10074686.html">Npcap或者Winpcap</a>，这里大家可能想知道这两个有啥区别，总体上是Npcap是现在的新型Windows网络数据包截获软件，替代了Winpcap，现在安装wireshark的时候一般都会安装Npcap的，具体区别<a target="_blank" rel="noopener" href="https://blog.csdn.net/hsluoyc/article/details/46483151">传送门</a></p>
+<ol>
+<li><p>首先<strong>卸载你电脑中的Npcap或者Winpcap</strong>（这个已经不完整了），具体清理过程<a target="_blank" rel="noopener" href="https://blog.csdn.net/hs_err_log/article/details/79646455">传送门</a></p>
 </li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/7487963d1a4b1c3c027c44afce8879a6.png" alt="ssh-add"></p>
-<h4 id="3-2-创建config文件"><a href="#3-2-创建config文件" class="headerlink" title="3.2 创建config文件"></a>3.2 创建config文件</h4><p>自己在ssh文件夹新建一个txt文件，然后重命名为config，具体内容如下：<br><img src="https://img-blog.csdnimg.cn/img_convert/b9bfadd1cbeb6c7ac0c15d734a4c4838.png" alt="config"><br>config文件中部分参数含义：</p>
-<pre class="language-none"><code class="language-none"># Host: 主机别名
-# HostName: 托管平台域名地址，如github.com
-# IdentityFile : 指明上面User对应的identityFile路径
-# User: 托管平台用户名
-# Port: 端口号，可不填（如果不是默认22号端口则需要指定）
-# PreferredAuthentications publickey</code></pre>
-<h3 id="4-测试是否连通"><a href="#4-测试是否连通" class="headerlink" title="4. 测试是否连通"></a>4. 测试是否连通</h3><p>使用ssh -T测试一下：记住前面设置的<strong>hostname</strong><br><img src="https://img-blog.csdnimg.cn/img_convert/d3fa0b1d31efb4fbf04ce40171009021.png" alt="ssh -T"><br>出现 <font color="red">“Hi ……”</font> 就说明新账号的公钥和私钥都配置成功了</p>
-<h3 id="5-使用新账号提交代码"><a href="#5-使用新账号提交代码" class="headerlink" title="5. 使用新账号提交代码"></a>5. 使用新账号提交代码</h3><h4 id="5-1-新建仓库"><a href="#5-1-新建仓库" class="headerlink" title="5.1 新建仓库"></a>5.1 新建仓库</h4><p>首先在新建的文件夹中初始化仓库: <code>git init .</code></p>
-<h4 id="5-2-设置新仓库的用户信息"><a href="#5-2-设置新仓库的用户信息" class="headerlink" title="5.2 设置新仓库的用户信息"></a>5.2 设置新仓库的用户信息</h4><p>设置新账号的用户信息，因为你的电脑中git账号信息都是之前的，所有的仓库建立之后的账户信息都是默认之前的，所以需要在新仓库中设置新的用户名和邮箱，具体命令如下：</p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config user.name <span class="token string">"userName"</span>       <span class="token comment"># 你的用户名</span>
-<span class="token function">git</span> config user.email <span class="token string">"email address"</span> <span class="token comment"># 你的邮箱地址</span></code></pre>
-<h4 id="5-3-设置新仓库的地址"><a href="#5-3-设置新仓库的地址" class="headerlink" title="5.3 设置新仓库的地址"></a>5.3 设置新仓库的地址</h4><p>之前都是配置ssh，所以这里添加仓库的ssh地址就可以（当然https地址也可以），<font color="red"><strong>修改ssh地址的hostname为config文件中设置host就可以了</strong></font></p>
-<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> remote <span class="token function">add</span> <span class="token function">ssh</span> <span class="token punctuation">[</span>URL<span class="token punctuation">]</span></code></pre>
-<p>对于你的新账号，这里的URL比如可以是：<code>git@host:username/repository_name.git</code> (<strong>就是将下图中的github.com改成config文件中你新账号的hostname</strong>)<br><img src="https://img-blog.csdnimg.cn/img_convert/0dbec0f78500c542e8dcfd02f597f526.png" alt="SSH url"></p>
-<h4 id="5-4-提交代码"><a href="#5-4-提交代码" class="headerlink" title="5.4 提交代码"></a>5.4 提交代码</h4><p>最后就可以使用新账号的信息提交代码了，什么git add，git commit 都可以，最后<code>git push ssh master</code>即可</p>
-<hr>
-<p>参考：<a target="_blank" rel="noopener" href="https://blog.51cto.com/u_4160094/2912836">https://blog.51cto.com/u_4160094/2912836</a></p>
-<hr>
-<p><font face="黑体" color="black" size="5"><span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 码字不易，如果对你有帮助，求三连支持！<span class="github-emoji"><span>⭐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2b50.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></font></p>
+<li><p>开始我查CSDN上面的说法是<strong>下载Win10pcap</strong>，这里<a target="_blank" rel="noopener" href="http://www.win10pcap.org/download/">附链接</a>，不知道为什么我总是安装失败（可能自己环境确实有点问题，不过你们可以试试）</p>
+</li>
+<li><p>然后我又尝试<strong>安装Npcap</strong>（一般的wireshark文件夹中都会有这个的安装程序）<br><img src="https://img-blog.csdnimg.cn/20200403185450956.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="wireshark安装目录"><br>如果你安装成功，那么恭喜你，你欧气爆棚，但是我是没有安装上的，总是提示<br><img src="https://img-blog.csdnimg.cn/20200403185619214.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="安装Npcap失败"></p>
+</li>
+</ol>
+<p> <strong>关于这个错误网上说法很多：有可能是自己的Npcap没有卸载干净、还有可能你改变了路径、另外就是他自己说的版本太低……</strong><br> 前两个我试了还是不行<br> 然后我又<strong>下载了最新版本的Npcap</strong>，这里附上<a target="_blank" rel="noopener" href="https://nmap.org/download.html">官网</a>，然后重新安装，结果还是报错，气得我…..直接把wireshark卸载了（以为我去年这个版本已经不行了，然后去<a target="_blank" rel="noopener" href="https://www.wireshark.org/download.html">官网</a>下载最新的版本），然后把之前的工作又重新做了一遍，所以结果还是一样不行！！！！心态崩了</p>
+<ol start="4">
+<li>将之前安装的Npcap重新卸载之后，<strong>百度了一下WinPcap，结果发现了新大陆</strong>，在<a target="_blank" rel="noopener" href="https://www.winpcap.org/install/default.htm">WinPcap官网下载</a>了WinPcap，傻瓜式下载安装竟然ok了，然后打开<strong>wireshark竟然看到了接口</strong>，我人没了【具体为什么之前的Win10Pcap不行而这个可以我也不知道，注意这个我用的是WinPcap】<br><img src="https://img-blog.csdnimg.cn/20200403191932344.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="WinPcap主页"></li>
+</ol>
+<h3 id="结束："><a href="#结束：" class="headerlink" title="结束："></a><strong>结束</strong>：</h3><p>然后我又可以快乐的用wireshark抓包了</p>
 
                 
             </div>
@@ -565,7 +539,7 @@ ssh-add id_rsa_new		<span class="token comment"># 新生成的账号信息</span
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ericpengshuai.github.io/xiao-ji-qiao/3aa05632913f.html">https://ericpengshuai.github.io/xiao-ji-qiao/3aa05632913f.html</a>
+                    <a href="https://ericpengshuai.github.io/chang-jian-bao-cuo/40828016f13e.html">https://ericpengshuai.github.io/chang-jian-bao-cuo/40828016f13e.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -603,12 +577,8 @@ ssh-add id_rsa_new		<span class="token comment"># 新生成的账号信息</span
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/git/">
-                                    <span class="chip bg-color">git</span>
-                                </a>
-                            
-                                <a href="/tags/github/">
-                                    <span class="chip bg-color">github</span>
+                                <a href="/tags/WireShark/">
+                                    <span class="chip bg-color">WireShark</span>
                                 </a>
                             
                         </div>
@@ -1045,13 +1015,13 @@ ssh-add id_rsa_new		<span class="token comment"># 新生成的账号信息</span
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/sheng-huo-sui-bi/3ed2242071f5.html">
+                <a href="/yi-cuo-zhi-shi/fbae3676e54e.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="2021总结">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="【linux shell】while read line几种方法以及区别">
                         
-                        <span class="card-title">2021总结</span>
+                        <span class="card-title">【linux shell】while read line几种方法以及区别</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1062,14 +1032,14 @@ ssh-add id_rsa_new		<span class="token comment"># 新生成的账号信息</span
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-14
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    生活随笔
+                            <a href="/categories/%E6%98%93%E9%94%99%E7%9F%A5%E8%AF%86/" class="post-category">
+                                    易错知识
                                 </a>
                             
                             
@@ -1079,8 +1049,8 @@ ssh-add id_rsa_new		<span class="token comment"># 新生成的账号信息</span
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%80%BB%E7%BB%93/">
-                        <span class="chip bg-color">总结</span>
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
                     </a>
                     
                 </div>
@@ -1094,13 +1064,13 @@ ssh-add id_rsa_new		<span class="token comment"># 新生成的账号信息</span
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/sheng-huo-sui-bi/0410ac902f84.html">
+                <a href="/suan-fa/aa9cbe7520ab.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="毕业了？">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="【WXG后端实习面试题】去除驼峰字符串">
                         
-                        <span class="card-title">毕业了？</span>
+                        <span class="card-title">【WXG后端实习面试题】去除驼峰字符串</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1111,14 +1081,14 @@ ssh-add id_rsa_new		<span class="token comment"># 新生成的账号信息</span
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-31
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    生活随笔
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -1128,8 +1098,12 @@ ssh-add id_rsa_new		<span class="token comment"># 新生成的账号信息</span
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%80%BB%E7%BB%93/">
-                        <span class="chip bg-color">总结</span>
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                        <span class="chip bg-color">字符串</span>
                     </a>
                     
                 </div>
@@ -1323,7 +1297,7 @@ ssh-add id_rsa_new		<span class="token comment"># 新生成的账号信息</span
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2020-2022</span>
+                <span id="year">2020-2023</span>
             
             <!-- <span id="year">2020</span> -->
             <a href="/about" target="_blank">PengShuai</a>
@@ -1332,7 +1306,7 @@ ssh-add id_rsa_new		<span class="token comment"># 新生成的账号信息</span
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">27.8k</span>&nbsp;字
+                class="white-color">31.3k</span>&nbsp;字
             
             
             

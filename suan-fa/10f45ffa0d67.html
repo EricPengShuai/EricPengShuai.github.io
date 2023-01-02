@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Python类中函数相互调用方法, PengShuai,Programmer,Myblog">
+    <meta name="keywords" content="【LeetCode】字典树深入浅出，一文吃透！, PengShuai,Programmer,Myblog">
     <meta name="description" content="A lyinger，a someone like me.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Python类中函数相互调用方法 | 像我这样的人</title>
+    <title>【LeetCode】字典树深入浅出，一文吃透！ | 像我这样的人</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Python类中函数相互调用方法</h1>
+                    <h1 class="description center-align post-title">【LeetCode】字典树深入浅出，一文吃透！</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
+                            <a href="/tags/LeetCode/">
+                                <span class="chip bg-color">LeetCode</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%AD%97%E5%85%B8%E6%A0%91/">
+                                <span class="chip bg-color">字典树</span>
                             </a>
                         
                     </div>
@@ -446,8 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/" class="post-category">
-                                编程备忘
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -459,7 +463,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-30
+                    2022-08-18
                 </div>
                 
 
@@ -468,14 +472,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    212
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    7 分
                 </div>
                 
 
@@ -498,28 +502,255 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="方法一：self-方法（参数列表），注意参数列表不需要self"><a href="#方法一：self-方法（参数列表），注意参数列表不需要self" class="headerlink" title="方法一：self.方法（参数列表），注意参数列表不需要self"></a><strong>方法一：self.方法（参数列表），注意参数列表不需要self</strong></h4><h4 id="方法二：类名-方法（self，参数列表）"><a href="#方法二：类名-方法（self，参数列表）" class="headerlink" title="方法二：类名.方法（self，参数列表）"></a><strong>方法二：类名.方法（self，参数列表）</strong></h4><p>具体代码例子如下：</p>
-<pre class="language-python" data-language="python"><code class="language-python"><span class="token comment"># 利用测试次数和鸡蛋个数的关系变化带来的确定的楼层数来解题</span>
-<span class="token keyword">class</span> <span class="token class-name">dropeggs</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">superEggDrop</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> K<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> N<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">int</span><span class="token punctuation">:</span>
-        remainTestCount <span class="token operator">=</span> <span class="token number">1</span>
-        <span class="token comment"># 方法一</span>
-        <span class="token comment"># while self.getConfirmFloors(remainTestCount, K) &lt; N:</span>
-        <span class="token comment">#     remainTestCount += 1</span>
-        <span class="token comment"># return remainTestCount</span>
-        
-        <span class="token comment"># 方法二</span>
-        <span class="token keyword">while</span> dropeggs<span class="token punctuation">.</span>getConfirmFloors<span class="token punctuation">(</span>self<span class="token punctuation">,</span> remainTestCount<span class="token punctuation">,</span> K<span class="token punctuation">)</span> <span class="token operator">&lt;</span> N<span class="token punctuation">:</span>
-            remainTestCount <span class="token operator">+=</span> <span class="token number">1</span>
-        <span class="token keyword">return</span> remainTestCount
+                <h2 id="【LeetCode】字典树"><a href="#【LeetCode】字典树" class="headerlink" title="【LeetCode】字典树"></a>【LeetCode】字典树</h2><p>原文地址：<a target="_blank" rel="noopener" href="https://github.com/EricPengShuai/Interview/blob/main/algorithm/%E5%AD%97%E5%85%B8%E6%A0%91.md">https://github.com/EricPengShuai/Interview/blob/main/algorithm/字典树.md</a></p>
+<h3 id="0-定义"><a href="#0-定义" class="headerlink" title="0. 定义"></a>0. 定义</h3><p>字典树又称单词查找数、前缀树、Trie [trai] 树，是一种哈希树的变种，常用于统计、排序和保存大量的字符串（也不限于字符串），所以经常被搜索引擎用于文本词频统计，很直观的用处就在我们在百度和google搜索某个词汇时往往会有“联想提示”。<strong>字典树可以利用字符串的公共前缀减少查询时间，最大限度地减小无用的字符串比较，所以查询效率比哈希树高。</strong></p>
+<p>基本操作有：<strong>查找</strong>、<strong>插入</strong>和删除（比较少）</p>
+<p>Trie 是一颗非典型的多叉树模型，多叉就是每个结点的分支数量可以为多个，为什么说非典型呢？因为它和一般的多叉树不一样，尤其在结点的数据结构设计上，比如一般的多叉树的结点是这样的</p>
+<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">TreeNode</span> <span class="token punctuation">{</span>
+	<span class="token keyword">char</span> value<span class="token punctuation">;</span>	<span class="token comment">// 结点值</span>
+	TreeNode<span class="token operator">*</span> children<span class="token punctuation">[</span>num<span class="token punctuation">]</span><span class="token punctuation">;</span>	<span class="token comment">// 指向孩子结点</span>
+<span class="token punctuation">}</span></code></pre>
 
-    <span class="token comment"># 在remainTestCount个测试机会、eggsCount个鸡蛋可以确定的楼层数量</span>
-    <span class="token keyword">def</span> <span class="token function">getConfirmFloors</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> remainTestCount<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> eggsCount<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token builtin">int</span><span class="token punctuation">:</span>
-        <span class="token comment"># 如果remainTestCount=1，只能移动一次可以确定楼层0（在一楼扔鸡蛋碎了）</span>
-        <span class="token comment"># 如果eggsCount=1，只能从一楼开始往上面测试扔鸡蛋最多确定remainTestCount个楼层</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>remainTestCount <span class="token operator">==</span> <span class="token number">1</span> <span class="token keyword">or</span> eggsCount <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">return</span> remainTestCount
-        <span class="token keyword">return</span> self<span class="token punctuation">.</span>getConfirmFloors<span class="token punctuation">(</span>remainTestCount<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> eggsCount<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>getConfirmFloors<span class="token punctuation">(</span>remainTestCount<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> eggsCount<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span></code></pre>
+
+<p>Trie 的结点为</p>
+<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">TrieNode</span> <span class="token punctuation">{</span>
+	<span class="token keyword">bool</span> isEnd<span class="token punctuation">;</span>	<span class="token comment">// 该结点是否是一个串的结束</span>
+	TrieNoe<span class="token operator">*</span> next<span class="token punctuation">[</span><span class="token number">26</span><span class="token punctuation">]</span><span class="token punctuation">;</span>	<span class="token comment">// 字母映射表</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+<p>其中**字符映射表<code>next</code>**的用处在于TrieNode结点中不用直接保存字符值，通过包含 a-z 26个字符的字母映射表标识当前结点下一个可能出现的所有字符的链接，因此我们可以通过一个父节点来预知它所有子结点的值</p>
+<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">26</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">char</span> ch <span class="token operator">=</span> <span class="token string">'a'</span> <span class="token operator">+</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>parentNode<span class="token operator">-&gt;</span>next<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        说明父结点的后一个字母不可为 ch
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        说明父结点的后一个字母可以是 ch
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+<p>我们来看一个例子：对于包含三个单词 “sea”,”sells”,”she” 的字典树可以是如下的结构：</p>
+<p><img src="https://img-blog.csdnimg.cn/3e72b1ea6ce14653962f26cf2e875836.png#pic_center" alt="Trie"></p>
+<p>字典树中一般还有大量的空链接，因此在绘制一颗单词查找树时一般会忽略空链接，同时为了方便理解我们通常将字典树简化如下：</p>
+<p><img src="https://img-blog.csdnimg.cn/d99f350f7378455d98c45617eb442a53.png#pic_center" alt="SimpledTrie"></p>
+<h3 id="1-常见操作"><a href="#1-常见操作" class="headerlink" title="1. 常见操作"></a>1. 常见操作</h3><p><strong>定义类</strong></p>
+<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">Trie</span> <span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+	vector<span class="token operator">&lt;</span>TrieNode<span class="token operator">*</span><span class="token operator">&gt;</span> next<span class="token punctuation">;</span>
+    <span class="token keyword">bool</span> isEnd<span class="token punctuation">;</span>
+    <span class="token function">Trie</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">isWord</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">children</span><span class="token punctuation">(</span><span class="token number">26</span><span class="token punctuation">,</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+  	<span class="token comment">// 手动释放内存</span>
+    <span class="token operator">~</span><span class="token function">Trie</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span><span class="token operator">&amp;</span> n <span class="token operator">:</span> next<span class="token punctuation">)</span>
+            <span class="token keyword">delete</span> n<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token comment">// 插入和查询操作</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+<p><strong>插入</strong></p>
+<p>目的：向 Trie 中插入一个单词 word</p>
+<p>实现：和链表类似，首先从根结点的子结点开始与 word 第一个字符进行匹配，一直匹配到前缀链上没有对应的字符，此时开始<strong>不断开辟新的结点</strong>，直到插入完 word 的最后一个字符，同时还要**将最后一个结点 <code>isEnd = true</code>**，表示它是一个单词的末尾</p>
+<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">insert</span><span class="token punctuation">(</span>string word<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  	Trie<span class="token operator">*</span> node <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+  	<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">char</span> c<span class="token operator">:</span> word<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      	<span class="token keyword">if</span> <span class="token punctuation">(</span>node<span class="token operator">-&gt;</span>next<span class="token punctuation">[</span>c<span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          	node<span class="token operator">-&gt;</span>next<span class="token punctuation">[</span>c<span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token keyword">new</span> <span class="token function">Trie</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      	node <span class="token operator">=</span> node<span class="token operator">-&gt;</span>next<span class="token punctuation">[</span>c<span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  	node<span class="token operator">-&gt;</span>isEnd <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+<p><strong>查找</strong></p>
+<p>目的：在 Trie 中查找某个单词 word</p>
+<p>实现：从根结点的子结点开始，一直向下匹配即可，<strong>如果没有匹配完就出现结点值为空，返回 <code>false</code>；如果匹配到最后一个字符，直接判断结点 <code>node-&gt;isEnd</code></strong></p>
+<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">bool</span> <span class="token function">search</span> <span class="token punctuation">(</span>string word<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Trie<span class="token operator">*</span> node <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">char</span> c<span class="token operator">:</span> word<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        node <span class="token operator">=</span> node<span class="token operator">-&gt;</span>next<span class="token punctuation">[</span>c<span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> node<span class="token operator">-&gt;</span>isEnd<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+<p><strong>前缀匹配</strong></p>
+<p>目的：判断 Trie 中是否有以 prefix 为前缀的单词</p>
+<p>实现：和 <code>search</code> 操作类似，只是不需要判断最后一个字符结点的 <code>isEnd</code>，因为既然能匹配到最后一个字符，那后面一定有单词是以它为前缀的</p>
+<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">bool</span> <span class="token function">startsWith</span><span class="token punctuation">(</span>string prefix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    Trie<span class="token operator">*</span> node <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">char</span> c <span class="token operator">:</span> prefix<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        node <span class="token operator">=</span> node<span class="token operator">-&gt;</span>next<span class="token punctuation">[</span>c<span class="token operator">-</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">==</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+<p><strong>总结</strong></p>
+<p>Trie树 的宗旨是 <strong>一次建树，多次查询</strong>，具有如下特点</p>
+<ul>
+<li><strong>形状唯一</strong>： Trie 的形状和单词的插入或删除顺序无关，也就说对于任意给定的一组单词，Trie 的形状都是唯一的</li>
+<li><strong>查询次数与单词长度相关</strong>：查找或插入一个长度为 <code>L</code> 的单词，访问 next 数组的次数最多为 <code>L+1</code>，和 Trie 中包含多少单词无关</li>
+<li><strong>空间复杂度高</strong>：Trie 的每个结点中都保留一个字母表，这是很耗费空间的。如果 Trie 的高度为 n，字母表大小为 m，最坏的情况是 Trie 中还不存在前缀相同的单词，那么空间复杂度就位 $O(m^n)$</li>
+</ul>
+<h3 id="2-扩展延生"><a href="#2-扩展延生" class="headerlink" title="2. 扩展延生"></a>2. 扩展延生</h3><p>前面说到使用字典树空间复杂度较高，因为用到了 next 数组，每个数组包含 m 个字母 （一般 <code>m=26</code>），另外 m 很大时复杂度就更大。因此可以使用哈希表来存储元素，使用哈希表代替数组进行基本操作时就需要判断是否存在对应的 key，一个很典型的题目如下：</p>
+<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// 648.单词替换</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Trie</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    unordered_map<span class="token operator">&lt;</span><span class="token keyword">char</span><span class="token punctuation">,</span> Trie <span class="token operator">*</span><span class="token operator">&gt;</span> children<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">Trie</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token comment">// 插入单词建立前缀树</span>
+    <span class="token keyword">void</span> <span class="token function">insert</span><span class="token punctuation">(</span>string word<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Trie <span class="token operator">*</span>cur <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">&amp;</span>c <span class="token operator">:</span> word<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>cur<span class="token operator">-&gt;</span>children<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                cur<span class="token operator">-&gt;</span>children<span class="token punctuation">[</span>c<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Trie</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            cur <span class="token operator">=</span> cur<span class="token operator">-&gt;</span>children<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        cur<span class="token operator">-&gt;</span>children<span class="token punctuation">[</span><span class="token string">'#'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Trie</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 设置结束标志</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 查询前缀树</span>
+    string <span class="token function">findRoot</span><span class="token punctuation">(</span>string <span class="token operator">&amp;</span>word<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        string root<span class="token punctuation">;</span>
+        Trie <span class="token operator">*</span>cur <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">char</span> <span class="token operator">&amp;</span>c <span class="token operator">:</span> word<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>cur<span class="token operator">-&gt;</span>children<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token string">'#'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> root<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>cur<span class="token operator">-&gt;</span>children<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> word<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            root<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            cur <span class="token operator">=</span> cur<span class="token operator">-&gt;</span>children<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> root<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    string <span class="token function">replaceWords</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span>string<span class="token operator">&gt;</span> <span class="token operator">&amp;</span>dictionary<span class="token punctuation">,</span> string sentence<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        Trie <span class="token operator">*</span>trie <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">Trie</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 建立前缀树</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token operator">&amp;</span>word <span class="token operator">:</span> dictionary<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            trie<span class="token operator">-&gt;</span><span class="token function">insert</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        vector<span class="token operator">&lt;</span>string<span class="token operator">&gt;</span> words <span class="token operator">=</span> <span class="token function">split</span><span class="token punctuation">(</span>sentence<span class="token punctuation">,</span> <span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        string ans<span class="token punctuation">;</span>
+        <span class="token comment">// 对于 sentence 中的每个单词查询前缀</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token operator">&amp;</span>word <span class="token operator">:</span> words<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            ans <span class="token operator">+=</span> trie<span class="token operator">-&gt;</span><span class="token function">findRoot</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            ans <span class="token operator">+=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> ans<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> ans<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// C++ split 函数</span>
+    vector<span class="token operator">&lt;</span>string<span class="token operator">&gt;</span> <span class="token function">split</span><span class="token punctuation">(</span>string <span class="token operator">&amp;</span>str<span class="token punctuation">,</span> <span class="token keyword">char</span> ch<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> pos <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> start <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        vector<span class="token operator">&lt;</span>string<span class="token operator">&gt;</span> ret<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>pos <span class="token operator">&lt;</span> str<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>pos <span class="token operator">&lt;</span> str<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> str<span class="token punctuation">[</span>pos<span class="token punctuation">]</span> <span class="token operator">==</span> ch<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                pos<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            start <span class="token operator">=</span> pos<span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>pos <span class="token operator">&lt;</span> str<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> str<span class="token punctuation">[</span>pos<span class="token punctuation">]</span> <span class="token operator">!=</span> ch<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                pos<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>start <span class="token operator">&lt;</span> str<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                ret<span class="token punctuation">.</span><span class="token function">emplace_back</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span>start<span class="token punctuation">,</span> pos <span class="token operator">-</span> start<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> ret<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<p>参考：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/replace-words/solution/dan-ci-ti-huan-by-leetcode-solution-pl6v/">单词替换官方题解</a></p>
+<p><strong>另外为了方便管理内存，可以只用<a target="_blank" rel="noopener" href="https://github.com/EricPengShuai/Interview/tree/main/c%2B%2B2.0#5-%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88%E4%B8%8E%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86">智能指针</a>加以优化，例如<a target="_blank" rel="noopener" href="https://leetcode.cn/submissions/detail/351429060/">211.添加与搜索单词</a></strong></p>
+<h3 id="3-常见题型"><a href="#3-常见题型" class="headerlink" title="3. 常见题型"></a>3. 常见题型</h3><table>
+<thead>
+<tr>
+<th>题目</th>
+<th>说明</th>
+<th>题解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/implement-trie-prefix-tree/">208. 实现 Trie (前缀树)</a></td>
+<td>最基础的构建前缀树题目：通过插入建树，查询操作</td>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/implement-trie-prefix-tree/solution/trie-tree-de-shi-xian-gua-he-chu-xue-zhe-by-huwt/">解</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/replace-words/">648. 单词替换</a></td>
+<td>暴力法可以，C++需要自己写split函数，通过dictionary建树，对每个单词使用查询前缀操作</td>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/submissions/detail/351319378/">解</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/design-add-and-search-words-data-structure/">211. 添加与搜索单词 - 数据结构设计</a></td>
+<td>注意对于通配符<code>.</code>的判断最好使用<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/design-add-and-search-words-data-structure/comments/31808"><strong>递归回溯</strong></a></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/design-add-and-search-words-data-structure/solution/fu-xue-ming-zhu-qian-zhui-shu-xiang-xi-r-rty2/">解</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/map-sum-pairs/">677. 键值映射</a></td>
+<td>前缀树叶子结点增加 val 属性记录，其实暴力哈希表更简单</td>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/map-sum-pairs/solution/jian-zhi-ying-she-by-leetcode-solution-j4xy/">解</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/implement-magic-dictionary/">676. 实现一个魔法字典</a></td>
+<td>暴力法，前缀树在查询必须修改一个字母时很绕</td>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/implement-magic-dictionary/comments/70533">解</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/prefix-and-suffix-search/">745. 前缀和后缀搜索</a></td>
+<td>注意题目是返回具有前缀和后缀的<strong>单词在字典中的最大下标</strong></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/prefix-and-suffix-search/solution/qian-zhui-he-hou-zhui-sou-suo-by-jiang-h-whm9/">解</a></td>
+</tr>
+</tbody></table>
+<p><strong>说明</strong>：</p>
+<ul>
+<li>「211.添加与搜索单词」这题如果考虑“优化内存”时，可以手动写析构函数，注释如果使用智能指针需要独占的智能指针 <code>unique_ptr</code>，而不能使用共享内存的智能指针 <code>shared_ptr</code>，另外<strong>注意，一般传参的时候用裸指针，尤其是只读情况下，很少直接传智能指针。但也非绝对，也有传智能指针的场景。</strong>传裸指针比智能指针耗时少，参考：<a target="_blank" rel="noopener" href="https://github.com/LeetCode-Feedback/LeetCode-Feedback/issues/8693">https://github.com/LeetCode-Feedback/LeetCode-Feedback/issues/8693</a></li>
+<li>对于『745.前缀和后缀搜索』需要构建一个前缀树和一个后缀树，然后另外需要维护一个<strong>下标数组</strong>用户标识具有指定前缀和后缀的单词下标，具体可以参考：<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/prefix-and-suffix-search/solution/qian-zhui-he-hou-zhui-sou-suo-by-jiang-h-whm9/1652146">C++ 前缀后缀树</a></li>
+</ul>
+<h3 id="4-参考"><a href="#4-参考" class="headerlink" title="4. 参考"></a>4. 参考</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/implement-trie-prefix-tree/solution/trie-tree-de-shi-xian-gua-he-chu-xue-zhe-by-huwt/">[路漫漫我不畏] Trie Tree 的实现 (适合初学者)🌳</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/implement-trie-prefix-tree/solution/by-lfool-k6hb/">详解前缀树「TrieTree 汇总级别整理 🔥🔥🔥」</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/design-add-and-search-words-data-structure/solution/fu-xue-ming-zhu-qian-zhui-shu-xiang-xi-r-rty2/">【负雪明烛】「前缀树」详细入门教程</a></li>
+</ol>
+
                 
             </div>
             <hr/>
@@ -545,7 +776,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ericpengshuai.github.io/bian-cheng-bei-wang/dbafef0e5f51.html">https://ericpengshuai.github.io/bian-cheng-bei-wang/dbafef0e5f51.html</a>
+                    <a href="https://ericpengshuai.github.io/suan-fa/10f45ffa0d67.html">https://ericpengshuai.github.io/suan-fa/10f45ffa0d67.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -583,8 +814,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
+                                <a href="/tags/LeetCode/">
+                                    <span class="chip bg-color">LeetCode</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%AD%97%E5%85%B8%E6%A0%91/">
+                                    <span class="chip bg-color">字典树</span>
                                 </a>
                             
                         </div>
@@ -1021,13 +1256,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/bian-cheng-bei-wang/0effa8492d6b.html">
+                <a href="/suan-fa/7f2e4d9cef89.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Python将列表转字符串">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="【LeetCode】线段树深入浅出，一文吃透！">
                         
-                        <span class="card-title">Python将列表转字符串</span>
+                        <span class="card-title">【LeetCode】线段树深入浅出，一文吃透！</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1038,14 +1273,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-08-27
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/" class="post-category">
-                                    编程备忘
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -1055,8 +1290,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/LeetCode/">
+                        <span class="chip bg-color">LeetCode</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">
+                        <span class="chip bg-color">线段树</span>
                     </a>
                     
                 </div>
@@ -1070,31 +1309,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/sheng-huo-sui-bi/6c249f289724.html">
+                <a href="/suan-fa/da4545859690.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="2020总结">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="【LeetCode】二分查找深入浅出，一文吃透！">
                         
-                        <span class="card-title">2020总结</span>
+                        <span class="card-title">【LeetCode】二分查找深入浅出，一文吃透！</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            作者的小隐私
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-14
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    生活随笔
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                    算法
                                 </a>
                             
                             
@@ -1104,8 +1343,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%80%BB%E7%BB%93/">
-                        <span class="chip bg-color">总结</span>
+                    <a href="/tags/LeetCode/">
+                        <span class="chip bg-color">LeetCode</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+                        <span class="chip bg-color">二分查找</span>
                     </a>
                     
                 </div>
@@ -1299,7 +1542,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2020-2022</span>
+                <span id="year">2020-2023</span>
             
             <!-- <span id="year">2020</span> -->
             <a href="/about" target="_blank">PengShuai</a>
@@ -1308,7 +1551,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">27.8k</span>&nbsp;字
+                class="white-color">31.3k</span>&nbsp;字
             
             
             

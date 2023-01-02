@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="差分数组深入浅出，一文吃透！, PengShuai,Programmer,Myblog">
+    <meta name="keywords" content="【Python】将列表转字符串, PengShuai,Programmer,Myblog">
     <meta name="description" content="A lyinger，a someone like me.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>差分数组深入浅出，一文吃透！ | 像我这样的人</title>
+    <title>【Python】将列表转字符串 | 像我这样的人</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">差分数组深入浅出，一文吃透！</h1>
+                    <h1 class="description center-align post-title">【Python】将列表转字符串</h1>
                 </div>
             </div>
         </div>
@@ -434,12 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/LeetCode/">
-                                <span class="chip bg-color">LeetCode</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84/">
-                                <span class="chip bg-color">差分数组</span>
+                            <a href="/tags/Python/">
+                                <span class="chip bg-color">Python</span>
                             </a>
                         
                     </div>
@@ -450,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                算法
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/" class="post-category">
+                                编程备忘
                             </a>
                         
                     </div>
@@ -463,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-08-28
+                    2021-01-05
                 </div>
                 
 
@@ -472,14 +468,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    621
+                    92
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -502,80 +498,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="差分数组"><a href="#差分数组" class="headerlink" title="差分数组"></a>差分数组</h2><blockquote>
-<p>原文同步在：<a target="_blank" rel="noopener" href="https://github.com/EricPengShuai/Interview/blob/main/algorithm/%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84.md">https://github.com/EricPengShuai/Interview/blob/main/algorithm/差分数组.md</a></p>
-</blockquote>
-<h3 id="0-概念"><a href="#0-概念" class="headerlink" title="0. 概念"></a>0. 概念</h3><p>区间更新问题除了最适用的线段树维护之后，还可以使用差分数组维护，顾名思义，差分数组元素就是原数组中两个元素之差，例如假设原数组为 <code>arr=[7, 1, 5, 6, 3, 2, 4, 8]</code>，那么查分数组就是 <code>arr1=[0, -6, 4, 1, -3, -1, 2, 4]</code>，arr1[0] 默认为 0，如下图：</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/dbd3d9bfe45c8187213c84cd081b0125.png" alt="差分数组"></p>
-<p>差分数组是把原数组中后一个元素减前一个元素的差构成一个新的数组，作为辅助数组使用。具体来说：</p>
-<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// nums 是原数组，diff 是差分数组</span>
-diff<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-diff<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-diff<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">-</span> nums<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+                <p><strong>前提条件：列表中的元素全部是字符串</strong></p>
+<pre class="language-python" data-language="python"><code class="language-python"><span class="token builtin">list</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token comment"># 首先需要将列表的元素全部转换为str，以下两种方法</span>
 
-nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> diff<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-nums<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> diff<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span>  diff<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> diff<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-nums<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> diff<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span>  diff<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> diff<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> diff<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
+<span class="token comment"># 使用for循环</span>
+list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">list</span><span class="token punctuation">]</span>
 
+<span class="token comment"># 使用map函数</span>
+list2 <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">,</span> <span class="token builtin">list</span><span class="token punctuation">)</span>
 
-<h3 id="1-应用"><a href="#1-应用" class="headerlink" title="1. 应用"></a>1. 应用</h3><p>一般来说，将原数组 nums 中 [0, 3] 的值都加2，我们需要遍历对应区间：</p>
-<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">;</span> <span class="token operator">++</span> i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-	nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">2</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-
-
-<p>但是使用差分数组我们就只需要更新端点就可以了：</p>
-<pre class="language-cpp" data-language="cpp"><code class="language-cpp">diff<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">2</span><span class="token punctuation">;</span>	<span class="token comment">// 0 往后的所有值都加 2</span>
-diff<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">-=</span> <span class="token number">2</span><span class="token punctuation">;</span>	<span class="token comment">// 4 往后的所有值都减 2</span></code></pre>
-
-
-<p>这样就省去了遍历操作，因为原数组的值可以通过差分数组两端的数求得。</p>
-<h3 id="2-代码"><a href="#2-代码" class="headerlink" title="2. 代码"></a>2. 代码</h3><p>以 <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/my-calendar-iii/">732. 我的日程安排表 III</a> 为例，我们维护<strong>有序的STL map</strong>，因为我们还原数组时候需要从头开始，是有顺序的，也就是使用 map 代替了数组，注意初始数组都为0，每次 book 都需要将区间内元素加1表示预定次数，然后求得区间元素最大值即为所求</p>
-<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">MyCalendarThree</span>
-<span class="token punctuation">{</span>
-<span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token function">MyCalendarThree</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">int</span> <span class="token function">book</span><span class="token punctuation">(</span><span class="token keyword">int</span> start<span class="token punctuation">,</span> <span class="token keyword">int</span> end<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token comment">// 注意题目中是前开后闭区间</span>
-        diff<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span> <span class="token comment">// start 开始的值都加 1</span>
-        diff<span class="token punctuation">[</span>end<span class="token punctuation">]</span><span class="token operator">--</span><span class="token punctuation">;</span>   <span class="token comment">// end 开始的值都减 1</span>
-        <span class="token keyword">int</span> res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> cur <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token operator">&amp;</span>kv <span class="token operator">:</span> diff<span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            cur <span class="token operator">+=</span> kv<span class="token punctuation">.</span>second<span class="token punctuation">;</span>    <span class="token comment">// 还原原数组，由于初始值都是0所以这里就只是加差分值</span>
-            res <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> cur<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 求预定次数的最大值</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-<span class="token keyword">private</span><span class="token operator">:</span>
-    map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&gt;</span> diff<span class="token punctuation">;</span> <span class="token comment">//差分数组</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-<span class="token comment">/**
- * Your MyCalendarThree object will be instantiated and called as such:
- * MyCalendarThree* obj = new MyCalendarThree();
- * int param_1 = obj-&gt;book(start,end);
- */</span></code></pre>
-
-
-<p>另外类似题还有：</p>
-<ul>
-<li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/my-calendar-i/">729. 我的日程安排表 I</a></p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/my-calendar-ii/">731. 我的日程安排表 II</a></p>
-</li>
-</ul>
-<h3 id="3-参考"><a href="#3-参考" class="headerlink" title="3. 参考"></a>3. 参考</h3><ul>
-<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/my-calendar-iii/solution/c-by-li-zhi-chao-4-k89h/">C++ 差分数组，注释详细</a></li>
-<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/my-calendar-iii/solution/wo-de-ri-cheng-an-pai-biao-by-jiang-hui-yac60/">我的日程安排表 III【差分数组+线段树动态开点(带lazy)】</a></li>
-</ul>
+<span class="token comment"># 使用join将列表中的元素串起来</span>
+res1 <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>list1<span class="token punctuation">)</span>
+res2 <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>list2<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>res1<span class="token punctuation">,</span> res2<span class="token punctuation">)</span></code></pre>
+<p>输出如下：</p>
+<p><img src="https://img-blog.csdnimg.cn/20200403182820156.png" alt="res1和res2结果如下"></p>
 
                 
             </div>
@@ -602,7 +540,7 @@ diff<span class="token punctuation">[</span><span class="token number">4</span><
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ericpengshuai.github.io/suan-fa/09ee0060365b.html">https://ericpengshuai.github.io/suan-fa/09ee0060365b.html</a>
+                    <a href="https://ericpengshuai.github.io/bian-cheng-bei-wang/4d78f241e58d.html">https://ericpengshuai.github.io/bian-cheng-bei-wang/4d78f241e58d.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -640,12 +578,8 @@ diff<span class="token punctuation">[</span><span class="token number">4</span><
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/LeetCode/">
-                                    <span class="chip bg-color">LeetCode</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84/">
-                                    <span class="chip bg-color">差分数组</span>
+                                <a href="/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
                                 </a>
                             
                         </div>
@@ -1082,13 +1016,13 @@ diff<span class="token punctuation">[</span><span class="token number">4</span><
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/suan-fa/82d2c753db92.html">
+                <a href="/suan-fa/47fefd104e9e.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="二叉树路径问题深入浅出，一文吃透！">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="【LeetCode】并查集深入浅出，一文吃透！">
                         
-                        <span class="card-title">二叉树路径问题深入浅出，一文吃透！</span>
+                        <span class="card-title">【LeetCode】并查集深入浅出，一文吃透！</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1099,7 +1033,7 @@ diff<span class="token punctuation">[</span><span class="token number">4</span><
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-04
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-26
                         </span>
                         <span class="publish-author">
                             
@@ -1120,8 +1054,8 @@ diff<span class="token punctuation">[</span><span class="token number">4</span><
                         <span class="chip bg-color">LeetCode</span>
                     </a>
                     
-                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
-                        <span class="chip bg-color">二叉树</span>
+                    <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">
+                        <span class="chip bg-color">并查集</span>
                     </a>
                     
                 </div>
@@ -1135,13 +1069,13 @@ diff<span class="token punctuation">[</span><span class="token number">4</span><
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/suan-fa/4b7803f8dd04.html">
+                <a href="/bian-cheng-bei-wang/7d7b20d80e52.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="线段树深入浅出，一文吃透！">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="【Python】类中函数相互调用方法">
                         
-                        <span class="card-title">线段树深入浅出，一文吃透！</span>
+                        <span class="card-title">【Python】类中函数相互调用方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1152,14 +1086,14 @@ diff<span class="token punctuation">[</span><span class="token number">4</span><
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-30
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/" class="post-category">
+                                    编程备忘
                                 </a>
                             
                             
@@ -1169,12 +1103,8 @@ diff<span class="token punctuation">[</span><span class="token number">4</span><
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/LeetCode/">
-                        <span class="chip bg-color">LeetCode</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%BA%BF%E6%AE%B5%E6%A0%91/">
-                        <span class="chip bg-color">线段树</span>
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
@@ -1368,7 +1298,7 @@ diff<span class="token punctuation">[</span><span class="token number">4</span><
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2020-2022</span>
+                <span id="year">2020-2023</span>
             
             <!-- <span id="year">2020</span> -->
             <a href="/about" target="_blank">PengShuai</a>
@@ -1377,7 +1307,7 @@ diff<span class="token punctuation">[</span><span class="token number">4</span><
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">27.8k</span>&nbsp;字
+                class="white-color">31.3k</span>&nbsp;字
             
             
             

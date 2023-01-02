@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【成功解决】WireShark没有发现端口，Win10pcap和Npcap安装失败, PengShuai,Programmer,Myblog">
+    <meta name="keywords" content="【LeetCode】并查集深入浅出，一文吃透！, PengShuai,Programmer,Myblog">
     <meta name="description" content="A lyinger，a someone like me.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>【成功解决】WireShark没有发现端口，Win10pcap和Npcap安装失败 | 像我这样的人</title>
+    <title>【LeetCode】并查集深入浅出，一文吃透！ | 像我这样的人</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【成功解决】WireShark没有发现端口，Win10pcap和Npcap安装失败</h1>
+                    <h1 class="description center-align post-title">【LeetCode】并查集深入浅出，一文吃透！</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/WireShark/">
-                                <span class="chip bg-color">WireShark</span>
+                            <a href="/tags/LeetCode/">
+                                <span class="chip bg-color">LeetCode</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">
+                                <span class="chip bg-color">并查集</span>
                             </a>
                         
                     </div>
@@ -446,8 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/" class="post-category">
-                                常见报错
+                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
+                                算法
                             </a>
                         
                     </div>
@@ -459,7 +463,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-03
+                    2021-01-26
                 </div>
                 
 
@@ -468,14 +472,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    538
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 
@@ -498,21 +502,258 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="问题重现"><a href="#问题重现" class="headerlink" title="问题重现"></a>问题重现</h2><h3 id="引言："><a href="#引言：" class="headerlink" title="引言："></a><strong>引言</strong>：</h3><p>wireshark是去年安装的，大约一年没用了，现在一打开发现<strong>“没有发现接口”</strong>，本来是要通过抓包了解IPV6分组机制（分片扩展首部），结果蒙了…下面说一下整个解决过程</p>
-<h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a><strong>原因</strong>：</h3><p>没有<a target="_blank" rel="noopener" href="https://www.cnblogs.com/cc1840/p/10074686.html">Npcap或者Winpcap</a>，这里大家可能想知道这两个有啥区别，总体上是Npcap是现在的新型Windows网络数据包截获软件，替代了Winpcap，现在安装wireshark的时候一般都会安装Npcap的，具体区别<a target="_blank" rel="noopener" href="https://blog.csdn.net/hsluoyc/article/details/46483151">传送门</a></p>
+                <h2 id="【LeetCode】并查集"><a href="#【LeetCode】并查集" class="headerlink" title="【LeetCode】并查集"></a>【LeetCode】并查集</h2><blockquote>
+<p>原文同步在：<a target="_blank" rel="noopener" href="https://github.com/EricPengShuai/Interview/blob/main/algorithm/%E5%B9%B6%E6%9F%A5%E9%9B%86.md">https://github.com/EricPengShuai/Interview/blob/main/algorithm/并查集.md</a></p>
+</blockquote>
+<h3 id="0-概念"><a href="#0-概念" class="headerlink" title="0. 概念"></a>0. 概念</h3><p>并查集主要用于解决一些 <strong>元素分组</strong> 问题，通过以下操作管理一系列不相交的集合：</p>
+<ul>
+<li>合并（Union）：把两个不相交的集合合并成一个集合</li>
+<li>查询（Find）：查询两个元素是否在同一个集合中</li>
+</ul>
+<p>具体实现方面，使用一个数组 <code>parent</code> 存储每个变量的 <strong>父节点信息（每个节点的连通分量信息）</strong>，其中的每个元素表示当前变量所在的连通分量的父节点信息，如果父节点是自身，说明该变量为所在连通分量的根节点。初始化时所有变量的父节点都是它们自身。</p>
 <ol>
-<li><p>首先<strong>卸载你电脑中的Npcap或者Winpcap</strong>（这个已经不完整了），具体清理过程<a target="_blank" rel="noopener" href="https://blog.csdn.net/hs_err_log/article/details/79646455">传送门</a></p>
-</li>
-<li><p>开始我查CSDN上面的说法是<strong>下载Win10pcap</strong>，这里<a target="_blank" rel="noopener" href="http://www.win10pcap.org/download/">附链接</a>，不知道为什么我总是安装失败（可能自己环境确实有点问题，不过你们可以试试）</p>
-</li>
-<li><p>然后我又尝试<strong>安装Npcap</strong>（一般的wireshark文件夹中都会有这个的安装程序）<br><img src="https://img-blog.csdnimg.cn/20200403185450956.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="wireshark安装目录"><br>如果你安装成功，那么恭喜你，你欧气爆棚，但是我是没有安装上的，总是提示<br><img src="https://img-blog.csdnimg.cn/20200403185619214.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="安装Npcap失败"></p>
+<li><p>初始化：将每个节点的父节点指向自己。表示每个每个节点最开始都是自己一个集合，也就是节点的父节点都是自己</p>
+<pre class="language-cpp" data-language="cpp"><code class="language-cpp">vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token function">parent</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">iota</span><span class="token punctuation">(</span>parent<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> parent<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+
 </li>
 </ol>
-<p> <strong>关于这个错误网上说法很多：有可能是自己的Npcap没有卸载干净、还有可能你改变了路径、另外就是他自己说的版本太低……</strong><br> 前两个我试了还是不行<br> 然后我又<strong>下载了最新版本的Npcap</strong>，这里附上<a target="_blank" rel="noopener" href="https://nmap.org/download.html">官网</a>，然后重新安装，结果还是报错，气得我…..直接把wireshark卸载了（以为我去年这个版本已经不行了，然后去<a target="_blank" rel="noopener" href="https://www.wireshark.org/download.html">官网</a>下载最新的版本），然后把之前的工作又重新做了一遍，所以结果还是一样不行！！！！心态崩了</p>
-<ol start="4">
-<li>将之前安装的Npcap重新卸载之后，<strong>百度了一下WinPcap，结果发现了新大陆</strong>，在<a target="_blank" rel="noopener" href="https://www.winpcap.org/install/default.htm">WinPcap官网下载</a>了WinPcap，傻瓜式下载安装竟然ok了，然后打开<strong>wireshark竟然看到了接口</strong>，我人没了【具体为什么之前的Win10Pcap不行而这个可以我也不知道，注意这个我用的是WinPcap】<br><img src="https://img-blog.csdnimg.cn/20200403191932344.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01pcmFjbGVfcHM=,size_16,color_FFFFFF,t_70" alt="WinPcap主页"></li>
+<ol start="2">
+<li><p>查找时，沿着当前分量的父节点一路向上查找，直到找到根节点，这个过程也叫 <strong>路径压缩</strong>，具体来说有两种方法</p>
+<ul>
+<li><strong>隔代压缩</strong>：性能比较高，虽然压缩不完全，不过多次执行隔代压缩也能达到完全压缩的效果，这个方法也叫迭代查找</li>
+</ul>
+<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>x <span class="token operator">!=</span> parent<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        parent<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">=</span> parent<span class="token punctuation">[</span>parent<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        x <span class="token operator">=</span> parent<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> x<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<ul>
+<li><strong>完全压缩</strong>：需要借助系统栈，使用递归的写法。或者先找到当前节点的根节点，然后把沿途上所有的节点都指向根节点，得遍历两次，这个方法也叫递归查找</li>
+</ul>
+<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>parent<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">!=</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        parent<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>parent<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> parent<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+</li>
 </ol>
-<h3 id="结束："><a href="#结束：" class="headerlink" title="结束："></a><strong>结束</strong>：</h3><p>然后我又可以快乐的用wireshark抓包了</p>
+<ol start="3">
+<li><p>合并时，将属于同一类的节点合并到一个树中，设计 <code>union(x, y)</code> 将 x 的根节点指向 y 的根节点</p>
+<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// 最好不要申明为 union，这是一个关键字</span>
+<span class="token keyword">void</span> <span class="token function">Union</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    parent<span class="token punctuation">[</span><span class="token function">find</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>在合并时还可以 <strong>按秩合并</strong>，秩没有明确的定义，一般可以指以节点为根节点的子树的深度，也可以表示以根节点的子树的节点个数，考虑按秩合并之后可以让查找的效率更高</p>
+<ul>
+<li><p>以秩比较大的节点为根合并：最大深度没有增加</p>
+<img src="https://img-blog.csdnimg.cn/img_convert/c8a1efe9b35e7d432f8a11df4cb9a82c.png#pic_center" style="zoom:30%;" align="left">
+</li>
+<li><p>以秩比较小的节点为根合并：最大深度有增加</p>
+<img src="https://img-blog.csdnimg.cn/img_convert/e6708ec5ce7c00dbbcd9989104add532.png#pic_center" style="zoom:30%;" align="left">
+
+
+
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="1-模板"><a href="#1-模板" class="headerlink" title="1. 模板"></a>1. 模板</h3><h4 id="1-1-维护深度——秩"><a href="#1-1-维护深度——秩" class="headerlink" title="1.1 维护深度——秩"></a>1.1 维护深度——秩</h4><pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">UnionFind</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> parent<span class="token punctuation">;</span>
+    vecotr<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> rank<span class="token punctuation">;</span>	<span class="token comment">// 维护以节点为根节点的子树的深度——秩</span>
+    
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">UnionFind</span><span class="token punctuation">(</span><span class="token keyword">int</span> size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        parent<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span>size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">iota</span><span class="token punctuation">(</span>parent<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> parent<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        rank <span class="token operator">=</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>size<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">// 隔代压缩，迭代查找</span>
+    <span class="token keyword">int</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>x <span class="token operator">!=</span> parent<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            parent<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">=</span> parent<span class="token punctuation">[</span>parent<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            x <span class="token operator">=</span> parent<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> x<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">// 按秩合并</span>
+    <span class="token keyword">void</span> <span class="token function">Union</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> x_root <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> y_root <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>x_root <span class="token operator">==</span> y_root<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>	<span class="token comment">// 如果已经处于一个集合了直接返回</span>
+        
+        <span class="token comment">// 注意这里只要最大的深度不变就不需要修改根节点的秩</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>rank<span class="token punctuation">[</span>x_root<span class="token punctuation">]</span> <span class="token operator">&lt;</span> rank<span class="token punctuation">[</span>y_root<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 以深度大的节点为根</span>
+            parent<span class="token punctuation">[</span>x_root<span class="token punctuation">]</span> <span class="token operator">=</span> y_root<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>rank<span class="token punctuation">[</span>x_root<span class="token punctuation">]</span> <span class="token operator">&gt;</span> rank<span class="token punctuation">[</span>y_root<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            parent<span class="token punctuation">[</span>y_root<span class="token punctuation">]</span> <span class="token operator">=</span> x_root<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>	<span class="token comment">// 深度一样，谁作为根节点都可以</span>
+         	parent<span class="token punctuation">[</span>y_root<span class="token punctuation">]</span> <span class="token operator">=</span> x_root<span class="token punctuation">;</span>
+            rank<span class="token punctuation">[</span>x_root<span class="token punctuation">]</span> <span class="token operator">++</span><span class="token punctuation">;</span>	<span class="token comment">// 作为根节点的高度会+1</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+<h4 id="1-2-维护连通分量个数"><a href="#1-2-维护连通分量个数" class="headerlink" title="1.2 维护连通分量个数"></a>1.2 维护连通分量个数</h4><pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">UnionFind</span>
+<span class="token punctuation">{</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> parent<span class="token punctuation">;</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> size<span class="token punctuation">;</span>	<span class="token comment">// 当前节点为根节点的子树节点总数</span>
+    <span class="token keyword">int</span> count<span class="token punctuation">;</span>	<span class="token comment">// 连通分量个数</span>
+   
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">UnionFind</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        count <span class="token operator">=</span> n<span class="token punctuation">;</span>	<span class="token comment">// 初始是每个节点都是一个连通分量</span>
+        parent<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">,</span> size<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">iota</span><span class="token punctuation">(</span>parent<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> parent<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">iota</span><span class="token punctuation">(</span>size<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> size<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">// 完全压缩，递归查找</span>
+    <span class="token keyword">int</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">!=</span> parent<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            parent<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>parent<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> parent<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">// 按照连通分量个数合并</span>
+    <span class="token keyword">void</span> <span class="token function">Union</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> x_root <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> y_root <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>x_root <span class="token operator">==</span> y_root<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>	<span class="token comment">// 如果已经处于一个集合了直接返回</span>
+        
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>size<span class="token punctuation">[</span>x_root<span class="token punctuation">]</span> <span class="token operator">&gt;</span> size<span class="token punctuation">[</span>y_root<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>	<span class="token comment">// 节点少分量合并到节点多的分量上</span>
+            parent<span class="token punctuation">[</span>y_root<span class="token punctuation">]</span> <span class="token operator">=</span> x_root<span class="token punctuation">;</span>
+            size<span class="token punctuation">[</span>x_root<span class="token punctuation">]</span> <span class="token operator">+=</span> size<span class="token punctuation">[</span>y_root<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            parent<span class="token punctuation">[</span>x_root<span class="token punctuation">]</span> <span class="token operator">=</span> y_root<span class="token punctuation">;</span>
+            size<span class="token punctuation">[</span>y_root<span class="token punctuation">]</span> <span class="token operator">+=</span> size<span class="token punctuation">[</span>x_root<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token operator">--</span> count<span class="token punctuation">;</span> <span class="token comment">// 合并时候连通分量个数减1</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">int</span> <span class="token function">getSize</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> root <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> size<span class="token punctuation">[</span>root<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">int</span> <span class="token function">getCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token operator">-&gt;</span>count<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+
+
+<p><strong>初始不知道节点个数的写法：维护哈希表</strong></p>
+<pre class="language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">UnionFind</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    unordered_map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&gt;</span> parent<span class="token punctuation">;</span>
+    <span class="token comment">// 连通分量个数</span>
+    <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">int</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>parent<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token operator">==</span> parent<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            parent<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> index<span class="token punctuation">;</span>
+            <span class="token comment">// 这里最初不知道节点个数需要在哈希表加入元素时候初始化</span>
+            count <span class="token operator">++</span><span class="token punctuation">;</span>  
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>parent<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">!=</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            parent<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>parent<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> parent<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">void</span> <span class="token function">Union</span><span class="token punctuation">(</span><span class="token keyword">int</span> index1<span class="token punctuation">,</span> <span class="token keyword">int</span> index2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> parent1 <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>index1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> parent2 <span class="token operator">=</span> <span class="token function">find</span><span class="token punctuation">(</span>index2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// *这步骤很重要，直接把两节点首领一样的结果返回过滤，否则会让count多减1*</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>parent1 <span class="token operator">==</span> parent2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        parent<span class="token punctuation">[</span>parent1<span class="token punctuation">]</span> <span class="token operator">=</span> parent2<span class="token punctuation">;</span>
+        count <span class="token operator">--</span><span class="token punctuation">;</span>  <span class="token comment">// 也是合并时候连通分量减1</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+
+
+
+
+<h3 id="2-例题"><a href="#2-例题" class="headerlink" title="2. 例题"></a>2. 例题</h3><p><strong>基础</strong></p>
+<table>
+<thead>
+<tr>
+<th>题目</th>
+<th>说明</th>
+<th>答案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/satisfiability-of-equality-equations/">990. 等式方程的可满足性</a></td>
+<td>先将==全部合并，其次找出!=的根节点，如果一样则不行</td>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/submissions/detail/136424817/">通过</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/number-of-provinces/">547. 省份数量</a></td>
+<td>简单的并查集，维护连通分量个数，也可以 DFS 和 BFS</td>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/submissions/detail/375522024/">通过</a></td>
+</tr>
+</tbody></table>
+<p><strong>进阶</strong></p>
+<table>
+<thead>
+<tr>
+<th>题目</th>
+<th>说明</th>
+<th>答案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/regions-cut-by-slashes/">959. 由斜杠划分区域</a></td>
+<td>重点在将斜杠怎样拆分成单元格，外部添加成3*3（还可以DFS），内部分解成4*4</td>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/submissions/detail/141243167/">通过</a>   <a target="_blank" rel="noopener" href="https://leetcode.cn/submissions/detail/375476296/">DFS</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/accounts-merge/">721. 账户合并</a></td>
+<td>维护账户到id的哈希表，合并含有相同账户的id</td>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/submissions/detail/375528105/">通过</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/min-cost-to-connect-all-points/">1584. 连接所有点的最小费用</a></td>
+<td>Kruskal 算法：构造边，排序之后合并连通分量，维护分量长度和节点个数</td>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/submissions/detail/389340427/">通过</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/checking-existence-of-edge-length-limited-paths/">1697. 检查边长度限制的路径是否存在</a></td>
+<td>离线查询（询问全部给出，但是没必要按照<strong>询问的顺序</strong>处理，可以排序之后离线处理），注意自定义 sort 排序时最好加上引用<code>&amp;</code></td>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/submissions/detail/389035257/">通过</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-number-of-points-from-grid-queries/">2503. 矩阵查询可获得的最大分数</a></td>
+<td>可以考虑<code>点权</code>或者<code>边权</code>（边权就考虑较大边），排序之后然后<strong>离线查询</strong>，询问排序下标就可以，可以看看灵神视频题解</td>
+<td><a target="_blank" rel="noopener" href="https://leetcode.cn/submissions/detail/389036925/">边权</a>   <a target="_blank" rel="noopener" href="https://leetcode.cn/submissions/detail/389025813/">点权</a></td>
+</tr>
+</tbody></table>
+<ul>
+<li><input disabled="" type="checkbox"> <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/evaluate-division/">399. 除法求值</a> </li>
+<li><input disabled="" type="checkbox"> <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/bricks-falling-when-hit/">803. 打砖块</a> </li>
+<li><input disabled="" type="checkbox"> <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/smallest-string-with-swaps/">1202. 交换字符串中的元素</a></li>
+</ul>
+<h3 id="3-参考"><a href="#3-参考" class="headerlink" title="3. 参考"></a>3. 参考</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/satisfiability-of-equality-equations/solution/shi-yong-bing-cha-ji-chu-li-bu-xiang-jiao-ji-he-we/">使用并查集处理不相交集合问题（Java、Python）</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/satisfiability-of-equality-equations/solution/shou-hui-tu-jie-shou-xie-unionfind-bing-cha-ji-bu-/">「手画图解」手写UnionFind，并查集 不再畏惧</a></li>
+<li><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-number-of-points-from-grid-queries/solution/by-endlesscheng-qeei/">LC2503：两种写法：离线询问 + 并查集 / 最小堆（Python/Java/C++/Go）</a></li>
+</ul>
 
                 
             </div>
@@ -539,7 +780,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ericpengshuai.github.io/chang-jian-bao-cuo/8ca096bed1df.html">https://ericpengshuai.github.io/chang-jian-bao-cuo/8ca096bed1df.html</a>
+                    <a href="https://ericpengshuai.github.io/suan-fa/47fefd104e9e.html">https://ericpengshuai.github.io/suan-fa/47fefd104e9e.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -577,8 +818,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/WireShark/">
-                                    <span class="chip bg-color">WireShark</span>
+                                <a href="/tags/LeetCode/">
+                                    <span class="chip bg-color">LeetCode</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/">
+                                    <span class="chip bg-color">并查集</span>
                                 </a>
                             
                         </div>
@@ -1015,13 +1260,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/yi-cuo-zhi-shi/4f911a623550.html">
+                <a href="/shen-du-xue-xi/791cc4c6eb51.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="【linux shell】while read line几种方法以及区别">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="【PyTorch】RNN">
                         
-                        <span class="card-title">【linux shell】while read line几种方法以及区别</span>
+                        <span class="card-title">【PyTorch】RNN</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1032,14 +1277,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-08
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-07
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%98%93%E9%94%99%E7%9F%A5%E8%AF%86/" class="post-category">
-                                    易错知识
+                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    深度学习
                                 </a>
                             
                             
@@ -1049,8 +1294,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/linux/">
-                        <span class="chip bg-color">linux</span>
+                    <a href="/tags/PyTorch/">
+                        <span class="chip bg-color">PyTorch</span>
+                    </a>
+                    
+                    <a href="/tags/RNN/">
+                        <span class="chip bg-color">RNN</span>
                     </a>
                     
                 </div>
@@ -1064,13 +1313,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/suan-fa/cd89a9df8760.html">
+                <a href="/bian-cheng-bei-wang/4d78f241e58d.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="【腾讯微信后端实习面试题】去除驼峰字符串">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="【Python】将列表转字符串">
                         
-                        <span class="card-title">【腾讯微信后端实习面试题】去除驼峰字符串</span>
+                        <span class="card-title">【Python】将列表转字符串</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1081,14 +1330,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
+                            <a href="/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/" class="post-category">
+                                    编程备忘
                                 </a>
                             
                             
@@ -1100,10 +1349,6 @@
                     
                     <a href="/tags/Python/">
                         <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                        <span class="chip bg-color">字符串</span>
                     </a>
                     
                 </div>
@@ -1297,7 +1542,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2020-2022</span>
+                <span id="year">2020-2023</span>
             
             <!-- <span id="year">2020</span> -->
             <a href="/about" target="_blank">PengShuai</a>
@@ -1306,7 +1551,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">27.8k</span>&nbsp;字
+                class="white-color">31.3k</span>&nbsp;字
             
             
             

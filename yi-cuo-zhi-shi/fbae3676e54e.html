@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="毕业了？, PengShuai,Programmer,Myblog">
+    <meta name="keywords" content="【linux shell】while read line几种方法以及区别, PengShuai,Programmer,Myblog">
     <meta name="description" content="A lyinger，a someone like me.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>毕业了？ | 像我这样的人</title>
+    <title>【linux shell】while read line几种方法以及区别 | 像我这样的人</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">毕业了？</h1>
+                    <h1 class="description center-align post-title">【linux shell】while read line几种方法以及区别</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%80%BB%E7%BB%93/">
-                                <span class="chip bg-color">总结</span>
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
                             </a>
                         
                     </div>
@@ -446,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" class="post-category">
-                                生活随笔
+                            <a href="/categories/%E6%98%93%E9%94%99%E7%9F%A5%E8%AF%86/" class="post-category">
+                                易错知识
                             </a>
                         
                     </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-23
+                    2020-05-08
                 </div>
                 
 
@@ -468,14 +468,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    847
+                    967
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -498,35 +498,88 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>现在是2021年7月底，本科毕业已经一个多月了，“距离开学还有一个多月时间”，现在想总结一下我的本科生活以及现在的一些所闻所感。</p>
-<img src="https://i.loli.net/2021/07/23/eHlv1xKTptXNShf.jpg" alt="微信图片_20210723142115.jpg" style="zoom:50%;">
+                <p><strong>引言</strong>：开始时自己的写的一个下载<a target="_blank" rel="noopener" href="https://bing.ioliu.cn/?p=">某个bing网站</a>上面的图片的脚本程序中需要使用while read line读取自己提取出来的图片信息，刚开始没有用临时文件存放信息，而是直接使用管道机制重定向，结果……坑了我一个小时<br>==然后自己查了一些资料，比较一下三种while read line方法的区别==<br>首先自己的test文件如下：（就简单是三行数据）<br><img src="https://img-blog.csdnimg.cn/20200508145856694.png" alt="test文件内容"></p>
+<h2 id="while-read-line三种方法"><a href="#while-read-line三种方法" class="headerlink" title="while-read-line三种方法"></a>while-read-line三种方法</h2><h3 id="1-形如cat-test-while-read-line-do-echo-line-done"><a href="#1-形如cat-test-while-read-line-do-echo-line-done" class="headerlink" title="1. 形如cat test | while read line;do echo $line;done"></a>1. 形如cat test | while read line;do echo $line;done</h3><ul>
+<li>代码如下<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"xiaowang"</span>
+<span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"2020-05-08"</span>
+<span class="token function">cat</span> <span class="token builtin class-name">test</span> <span class="token operator">|</span> <span class="token keyword">while</span> <span class="token builtin class-name">read</span> <span class="token function">date</span>
+<span class="token keyword">do</span>
+    <span class="token builtin class-name">read</span> url
+    <span class="token builtin class-name">read</span> name
+    <span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$name</span>"</span>
+    <span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$date</span>"</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date1</span> <span class="token variable">$name1</span> <span class="token variable">$url</span>"</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date</span> <span class="token variable">$name</span> <span class="token variable">$url</span>"</span>
+<span class="token keyword">done</span>
 
-<h2 id="本科四年"><a href="#本科四年" class="headerlink" title="本科四年"></a>本科四年</h2><p>总的来说大一懵懵懂懂，大二继续探索，大三干劲十足，大四有些落寞…</p>
-<p>2017年9月来到北邮，以为大学生活是多姿多彩、十分轻松的，结果没过几个月就感觉有点压力：生活上有点不适应、学习上感觉跟不上、朋友之间相处的不是那么融洽……（也许也和自己的性格相关）。很是感谢当时的高中同学兼大学同学，谢谢她在我刚刚来到北邮的照顾。</p>
-<p>2018年下半年到了大二，相应的专业课也比较多，这学年参加了较多的志愿活动，和大奔、英杰一起的夕阳再晨志愿活动很是充实（这也想我们的志愿德育分直接拿满）。这一年自己也在不断探索大学生活，由于自己处理不了学习和学生工作之间的关系，辞去了班长的职务。年底学校发了大一学年的二等奖学金3000。</p>
-<p>2019年下半年到了大三，为了最后的保研努力冲刺专业课，提升绩点。这一年的相应的课外活动就减少了许多，年底拿到了学校发的大二学年励志奖学金5000。2020年初疫情爆发，开启了在家的学习生活，当时还想着找一个线上实习，想借此能帮助自己保研。</p>
-<p>2020年下半年开学到了学校，也就是保研的9推活动开始，当时自己的心路历程十分复杂（具体记录在2020年底的那一晚）。</p>
-<img src="https://i.loli.net/2021/07/23/BP1Yl8RX2buvaCo.jpg" alt="微信图片_20210723142125.jpg" style="zoom:50%;">
-
-<img src="https://i.loli.net/2021/07/23/dlhcZW51jrtQ2AU.jpg" alt="微信图片_20210723142130.jpg" style="zoom:50%;">
-
-<p>2021年6月毕业季，是的，我也毕业了，很快乐也很不安（自己究竟要不要读这个研究生，但是总感觉自己没有底气也没有勇气不读，不知道读三年之后会不会有提升，是不是还不如现在就业的同学们，说不定到时候我找工作的时候人接直接成为我的leader，心理想直接工作，但是实际上有需要完成实验室的搬砖工作，所以左右为难，而且随着实验室任务的增多会逐渐消磨直接的工作的想法，也许这就是生活吧：生活总是会在你不经意的时候消磨你生活的意志）</p>
-<p>我不知道这四年我到底学到了多少有用的知识，也不知道未来的我能否达到预期的目标。但是我很喜欢一句话：你只管努力，剩下的交给时间！</p>
-<p>不管未来怎样好吧，毕业快乐🎓，朋友们👩‍🎓，希望“苟富贵，勿相忘”。</p>
-<img src="https://i.loli.net/2021/07/23/li9bwxXa2JUkIKE.jpg" alt="d0d5a39674b93bcd67111b254579ba1.jpg" style="zoom:50%;">
-
-
-
-<h2 id="未来三年？"><a href="#未来三年？" class="headerlink" title="未来三年？"></a>未来三年？</h2><p>目前我想的是：应该还是会在小破邮待上三年吧。</p>
-<p>想有自己的规划：</p>
-<ul>
-<li><input disabled="" type="checkbox"> 希望自己GitHub项目逐渐丰富🤯</li>
-<li><input disabled="" type="checkbox"> 希望自己入门的C++到“精通”🧑‍🦲</li>
-<li><input disabled="" type="checkbox"> 希望自己学点机器学习深度学习发个小论文😶‍🌫️</li>
-<li><input disabled="" type="checkbox"> 希望自己找个女朋友🤗</li>
-<li><input disabled="" type="checkbox"> 希望自己希望的都实现（🈲套娃）</li>
+<span class="token builtin class-name">echo</span> <span class="token string">"888888 <span class="token variable">$date1</span> 777 <span class="token variable">$name1</span> 666  <span class="token variable">$url</span>"</span></code></pre></li>
+<li>结果输出<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token number">2020</span>-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force<span class="token operator">=</span>download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州
+<span class="token number">2020</span>-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force<span class="token operator">=</span>download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州
+<span class="token number">888888</span> <span class="token number">2020</span>-05-08 <span class="token number">777</span> xiaowang <span class="token number">666</span></code></pre></li>
 </ul>
-<p>先这样吧，心里还有许多想说但没说的话</p>
+<p><strong>我想的是使用while read line读取文件之后赋值给name1和date1，结果并没赋值。刚开始很疑惑，明明在while循环中的name1和date1都赋值了为啥退出之后没了呢，结果发现是管道的机制，这个使用管道之后while read line是在子shell中进行的，所以在退出while之后其中的操作都是无效的</strong></p>
+<p>另外，参考一片博客中说的：cat test会一次性将test文件所有数据装入内存，如果test文件足够大，会直接占用巨量内存</p>
+<h3 id="2-形如-while-read-line-lt-test-do-echo-line-done"><a href="#2-形如-while-read-line-lt-test-do-echo-line-done" class="headerlink" title="2.形如 while read line <test;do echo $line;done"></a>2.形如 while read line &lt;test;do echo $line;done</h3><ul>
+<li><p>代码如下</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"xiaowang"</span>
+<span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"2020-05-08"</span>
+<span class="token keyword">while</span> <span class="token builtin class-name">read</span> <span class="token function">date</span> <span class="token operator">&lt;</span> <span class="token builtin class-name">test</span>
+<span class="token keyword">do</span>
+    <span class="token builtin class-name">read</span> url
+    <span class="token builtin class-name">read</span> name
+    <span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$name</span>"</span>
+    <span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$date</span>"</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date1</span> <span class="token variable">$name1</span> <span class="token variable">$url</span>"</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date</span> <span class="token variable">$name</span> <span class="token variable">$url</span>"</span>
+<span class="token keyword">done</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">"888888 <span class="token variable">$date1</span> 777 <span class="token variable">$name1</span> 666  <span class="token variable">$url</span>"</span></code></pre></li>
+<li><p>结果如下</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash">   
+
+<span class="token number">2020</span>-05-07  
+<span class="token number">2020</span>-05-07  
+
+
+<span class="token number">2020</span>-05-07  
+<span class="token number">2020</span>-05-07  
+
+
+<span class="token number">2020</span>-05-07  
+<span class="token number">2020</span>-05-07  
+<span class="token punctuation">..</span>.</code></pre></li>
+</ul>
+<p><strong>首先我看不懂这个输出结果（其中的空行全是我自己按的回车，也就是按了两次回车之后才出现结果，然后这个while循环一直不结束…）查说法就是：它会在每次循环的时候都重新打开test文件，使得每次都从头开始读数据，而不是每次从上一次标记的地方继续读数据。</strong></p>
+<h3 id="3-【最佳】形如while-read-line-do-echo-line-done-lt-test"><a href="#3-【最佳】形如while-read-line-do-echo-line-done-lt-test" class="headerlink" title="3.【最佳】形如while read line;do echo $line;done <test"></a>3.【最佳】形如while read line;do echo $line;done &lt;test</h3><ul>
+<li><p>代码如下</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"xiaowang"</span>
+<span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"2020-05-08"</span>
+<span class="token keyword">while</span> <span class="token builtin class-name">read</span> <span class="token function">date</span>
+<span class="token keyword">do</span>
+    <span class="token builtin class-name">read</span> url
+    <span class="token builtin class-name">read</span> name
+    <span class="token assign-left variable">name1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$name</span>"</span>
+    <span class="token assign-left variable">date1</span><span class="token operator">=</span><span class="token string">"<span class="token variable">$date</span>"</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date1</span> <span class="token variable">$name1</span> <span class="token variable">$url</span>"</span>
+    <span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$date</span> <span class="token variable">$name</span> <span class="token variable">$url</span>"</span>
+<span class="token keyword">done</span> <span class="token operator">&lt;</span> <span class="token builtin class-name">test</span>
+
+<span class="token builtin class-name">echo</span> <span class="token string">"888888 <span class="token variable">$date1</span> 777 <span class="token variable">$name1</span> 666  <span class="token variable">$url</span>"</span></code></pre></li>
+<li><p>结果如下（正常了耶）</p>
+<pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token number">2020</span>-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force<span class="token operator">=</span>download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州
+<span class="token number">2020</span>-05-07 https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force<span class="token operator">=</span>download 印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州
+<span class="token number">888888</span> <span class="token number">2020</span>-05-07 <span class="token number">777</span> https://bing.ioliu.cn/photo/WildflowerWeek_ZH-CN4593499387?force<span class="token operator">=</span>download <span class="token number">666</span>  印克斯湖国家公园中的德克萨斯矢车菊，德克萨斯州</code></pre>
+
+
+</li>
+</ul>
+<p><strong>这个不就是我想要的结果吗，使用输入重定向的方式则每次只占用一行数据的内存，而且是在当前shell环境下执行的，while内的变量赋值、数组赋值在退出while后仍然有效。</strong></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ol>
+<li>以上三种方法中，大家在选取的时候最好选择第三那种方法，别问为什么问。</li>
+<li>其实读取文件内容的方法有很多，比如使用形如：for line in $(&lt;file); do echo ​$line; done的方法，据说这种方法效率最高，具体可以参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/u014650722/article/details/51563823">这篇博客</a>，这个说了几种while read和for的比较。</li>
+<li>另外如果想要了解我那个下载图片的脚本程序可以访问<a target="_blank" rel="noopener" href="https://github.com/EricPengShuai/Linux-Shell-netstat--s-And-download-photos">我的github</a></li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xl-892694298/p/11017168.html">https://www.cnblogs.com/xl-892694298/p/11017168.html</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014650722/article/details/51563823">https://blog.csdn.net/u014650722/article/details/51563823</a></p>
 
                 
             </div>
@@ -553,7 +606,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ericpengshuai.github.io/sheng-huo-sui-bi/0410ac902f84.html">https://ericpengshuai.github.io/sheng-huo-sui-bi/0410ac902f84.html</a>
+                    <a href="https://ericpengshuai.github.io/yi-cuo-zhi-shi/fbae3676e54e.html">https://ericpengshuai.github.io/yi-cuo-zhi-shi/fbae3676e54e.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -591,8 +644,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%80%BB%E7%BB%93/">
-                                    <span class="chip bg-color">总结</span>
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
                                 </a>
                             
                         </div>
@@ -1029,13 +1082,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/xiao-ji-qiao/adc772553d7d.html">
+                <a href="/xiao-ji-qiao/5c784c3b9232.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="【Git】一个主机上Git同时配置两个GitHub账号">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="【Git】更新github指定文件以及git创建分支操作">
                         
-                        <span class="card-title">【Git】一个主机上Git同时配置两个GitHub账号</span>
+                        <span class="card-title">【Git】更新github指定文件以及git创建分支操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1046,7 +1099,7 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-10
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-18
                         </span>
                         <span class="publish-author">
                             
@@ -1082,13 +1135,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/shen-du-xue-xi/507732ac59dc.html">
+                <a href="/chang-jian-bao-cuo/40828016f13e.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="【Saliency】显著性评价指标">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="【WireShark】成功解决WireShark没有发现端口，Win10pcap和Npcap安装失败">
                         
-                        <span class="card-title">【Saliency】显著性评价指标</span>
+                        <span class="card-title">【WireShark】成功解决WireShark没有发现端口，Win10pcap和Npcap安装失败</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1099,14 +1152,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    深度学习
+                            <a href="/categories/%E5%B8%B8%E8%A7%81%E6%8A%A5%E9%94%99/" class="post-category">
+                                    常见报错
                                 </a>
                             
                             
@@ -1116,8 +1169,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/saliency/">
-                        <span class="chip bg-color">saliency</span>
+                    <a href="/tags/WireShark/">
+                        <span class="chip bg-color">WireShark</span>
                     </a>
                     
                 </div>
