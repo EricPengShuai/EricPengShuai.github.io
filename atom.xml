@@ -6,7 +6,7 @@
   <link href="https://ericpengshuai.github.io/atom.xml" rel="self"/>
   
   <link href="https://ericpengshuai.github.io/"/>
-  <updated>2023-01-02T13:26:30.831Z</updated>
+  <updated>2023-01-07T14:59:45.391Z</updated>
   <id>https://ericpengshuai.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>【C++】HTTP Server 开源库（汇总级别整理）&#39;</title>
+    <link href="https://ericpengshuai.github.io/c-c/039eca2b3cfe.html"/>
+    <id>https://ericpengshuai.github.io/c-c/039eca2b3cfe.html</id>
+    <published>2023-01-07T14:38:11.000Z</published>
+    <updated>2023-01-07T14:59:45.391Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;【C-】HTTP-Server-开源库整理&quot;&gt;&lt;a href=&quot;#【C-】HTTP-Server-开源库整理&quot; class=&quot;headerlink&quot; title=&quot;【C++】HTTP Server 开源库整理&quot;&gt;&lt;/a&gt;【C++】HTTP Server</summary>
+        
+      
+    
+    
+    
+    <category term="C/C++" scheme="https://ericpengshuai.github.io/categories/C-C/"/>
+    
+    
+    <category term="C/C++" scheme="https://ericpengshuai.github.io/tags/C-C/"/>
+    
+    <category term="HTTP Server" scheme="https://ericpengshuai.github.io/tags/HTTP-Server/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2022总结</title>
     <link href="https://ericpengshuai.github.io/sheng-huo-sui-bi/7c47771eecff.html"/>
     <id>https://ericpengshuai.github.io/sheng-huo-sui-bi/7c47771eecff.html</id>
     <published>2022-12-30T11:35:54.000Z</published>
-    <updated>2023-01-02T13:26:30.831Z</updated>
+    <updated>2023-01-07T14:33:24.301Z</updated>
     
     
       
@@ -512,31 +539,6 @@
     <category term="git" scheme="https://ericpengshuai.github.io/tags/git/"/>
     
     <category term="github" scheme="https://ericpengshuai.github.io/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【linux shell】while read line几种方法以及区别</title>
-    <link href="https://ericpengshuai.github.io/yi-cuo-zhi-shi/fbae3676e54e.html"/>
-    <id>https://ericpengshuai.github.io/yi-cuo-zhi-shi/fbae3676e54e.html</id>
-    <published>2020-05-08T09:26:15.000Z</published>
-    <updated>2021-01-26T04:43:42.633Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;引言&lt;/strong&gt;：开始时自己的写的一个下载&lt;a href=&quot;https://bing.ioliu.cn/?p=&quot;&gt;某个bing网站&lt;/a&gt;上面的图片的脚本程序中需要使用while read</summary>
-        
-      
-    
-    
-    
-    <category term="易错知识" scheme="https://ericpengshuai.github.io/categories/%E6%98%93%E9%94%99%E7%9F%A5%E8%AF%86/"/>
-    
-    
-    <category term="linux" scheme="https://ericpengshuai.github.io/tags/linux/"/>
     
   </entry>
   
