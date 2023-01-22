@@ -6,7 +6,7 @@
   <link href="https://ericpengshuai.github.io/atom.xml" rel="self"/>
   
   <link href="https://ericpengshuai.github.io/"/>
-  <updated>2023-01-07T14:59:45.391Z</updated>
+  <updated>2023-01-22T14:17:50.703Z</updated>
   <id>https://ericpengshuai.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【LeetCode】回溯算法深入浅出，一文吃透！</title>
+    <link href="https://ericpengshuai.github.io/suan-fa/5ca860e38b76.html"/>
+    <id>https://ericpengshuai.github.io/suan-fa/5ca860e38b76.html</id>
+    <published>2023-01-22T14:14:24.000Z</published>
+    <updated>2023-01-22T14:17:50.703Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;【LeetCode】回溯算法&quot;&gt;&lt;a href=&quot;#【LeetCode】回溯算法&quot; class=&quot;headerlink&quot; title=&quot;【LeetCode】回溯算法&quot;&gt;&lt;/a&gt;【LeetCode】回溯算法&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="LeetCode" scheme="https://ericpengshuai.github.io/tags/LeetCode/"/>
+    
+    <category term="回溯" scheme="https://ericpengshuai.github.io/tags/%E5%9B%9E%E6%BA%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>【C++】HTTP Server 开源库（汇总级别整理）&#39;</title>
@@ -512,33 +540,6 @@
     
     
     <category term="总结" scheme="https://ericpengshuai.github.io/tags/%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【Git】更新github指定文件以及git创建分支操作</title>
-    <link href="https://ericpengshuai.github.io/xiao-ji-qiao/5c784c3b9232.html"/>
-    <id>https://ericpengshuai.github.io/xiao-ji-qiao/5c784c3b9232.html</id>
-    <published>2020-12-18T09:36:02.000Z</published>
-    <updated>2023-01-02T13:52:23.922Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;更新github指定文件&quot;&gt;&lt;a href=&quot;#更新github指定文件&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="小技巧" scheme="https://ericpengshuai.github.io/categories/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
-    
-    
-    <category term="git" scheme="https://ericpengshuai.github.io/tags/git/"/>
-    
-    <category term="github" scheme="https://ericpengshuai.github.io/tags/github/"/>
     
   </entry>
   
