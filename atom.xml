@@ -6,7 +6,7 @@
   <link href="https://ericpengshuai.github.io/atom.xml" rel="self"/>
   
   <link href="https://ericpengshuai.github.io/"/>
-  <updated>2023-06-24T11:11:34.824Z</updated>
+  <updated>2023-10-16T05:14:05.234Z</updated>
   <id>https://ericpengshuai.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>\[C++] C++11互斥锁和条件变量实现生产者消费者模型</title>
+    <link href="https://ericpengshuai.github.io/c-c/6de66f302b55.html"/>
+    <id>https://ericpengshuai.github.io/c-c/6de66f302b55.html</id>
+    <published>2023-10-16T05:09:25.000Z</published>
+    <updated>2023-10-16T05:14:05.234Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;【C-】C-11互斥锁和条件变量实现生产者消费者模型&quot;&gt;&lt;a href=&quot;#【C-】C-11互斥锁和条件变量实现生产者消费者模型&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="C/C++" scheme="https://ericpengshuai.github.io/categories/C-C/"/>
+    
+    
+    <category term="条件变量" scheme="https://ericpengshuai.github.io/tags/%E6%9D%A1%E4%BB%B6%E5%8F%98%E9%87%8F/"/>
+    
+    <category term="互斥锁" scheme="https://ericpengshuai.github.io/tags/%E4%BA%92%E6%96%A5%E9%94%81/"/>
+    
+    <category term="线程互斥和同步" scheme="https://ericpengshuai.github.io/tags/%E7%BA%BF%E7%A8%8B%E4%BA%92%E6%96%A5%E5%92%8C%E5%90%8C%E6%AD%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>\[Mac M2 Pro] multipass 尝鲜</title>
+    <link href="https://ericpengshuai.github.io/ruan-jian-an-zhuang/xiao-ji-qiao/db393d8e9a3e.html"/>
+    <id>https://ericpengshuai.github.io/ruan-jian-an-zhuang/xiao-ji-qiao/db393d8e9a3e.html</id>
+    <published>2023-10-16T05:07:35.000Z</published>
+    <updated>2023-10-16T05:17:13.672Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Mac-M2-Pro-multipass-尝鲜&quot;&gt;&lt;a href=&quot;#Mac-M2-Pro-multipass-尝鲜&quot; class=&quot;headerlink&quot; title=&quot;[Mac M2 Pro] multipass 尝鲜&quot;&gt;&lt;/a&gt;[Mac M2 Pro]</summary>
+        
+      
+    
+    
+    
+    <category term="软件安装" scheme="https://ericpengshuai.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+    <category term="小技巧" scheme="https://ericpengshuai.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    
+    
+    <category term="Mac" scheme="https://ericpengshuai.github.io/tags/Mac/"/>
+    
+    <category term="multipass 虚拟机" scheme="https://ericpengshuai.github.io/tags/multipass-%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>【CS144-2021】计算机网络</title>
@@ -498,60 +556,6 @@
     <category term="PyTorch" scheme="https://ericpengshuai.github.io/tags/PyTorch/"/>
     
     <category term="RNN" scheme="https://ericpengshuai.github.io/tags/RNN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【LeetCode】并查集深入浅出，一文吃透！</title>
-    <link href="https://ericpengshuai.github.io/suan-fa/47fefd104e9e.html"/>
-    <id>https://ericpengshuai.github.io/suan-fa/47fefd104e9e.html</id>
-    <published>2021-01-26T04:39:20.000Z</published>
-    <updated>2023-01-02T14:09:24.099Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;【LeetCode】并查集&quot;&gt;&lt;a href=&quot;#【LeetCode】并查集&quot; class=&quot;headerlink&quot; title=&quot;【LeetCode】并查集&quot;&gt;&lt;/a&gt;【LeetCode】并查集&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;原文同步在：&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="算法" scheme="https://ericpengshuai.github.io/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="LeetCode" scheme="https://ericpengshuai.github.io/tags/LeetCode/"/>
-    
-    <category term="并查集" scheme="https://ericpengshuai.github.io/tags/%E5%B9%B6%E6%9F%A5%E9%9B%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【Python】将列表转字符串</title>
-    <link href="https://ericpengshuai.github.io/bian-cheng-bei-wang/4d78f241e58d.html"/>
-    <id>https://ericpengshuai.github.io/bian-cheng-bei-wang/4d78f241e58d.html</id>
-    <published>2021-01-05T06:47:24.000Z</published>
-    <updated>2023-01-02T14:00:42.931Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;前提条件：列表中的元素全部是字符串&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&quot;language-python&quot; data-language=&quot;python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="编程备忘" scheme="https://ericpengshuai.github.io/categories/%E7%BC%96%E7%A8%8B%E5%A4%87%E5%BF%98/"/>
-    
-    
-    <category term="Python" scheme="https://ericpengshuai.github.io/tags/Python/"/>
     
   </entry>
   
