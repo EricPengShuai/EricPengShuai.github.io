@@ -6,7 +6,7 @@
   <link href="https://ericpengshuai.github.io/atom.xml" rel="self"/>
   
   <link href="https://ericpengshuai.github.io/"/>
-  <updated>2023-10-16T05:21:06.653Z</updated>
+  <updated>2024-01-28T05:20:48.896Z</updated>
   <id>https://ericpengshuai.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【2023总结】选择困难者的一年</title>
+    <link href="https://ericpengshuai.github.io/sheng-huo-sui-bi/d4c27c74252d.html"/>
+    <id>https://ericpengshuai.github.io/sheng-huo-sui-bi/d4c27c74252d.html</id>
+    <published>2024-01-27T12:40:11.000Z</published>
+    <updated>2024-01-28T05:20:48.896Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;【2023总结】选择困难者的一年&quot;&gt;&lt;a href=&quot;#【2023总结】选择困难者的一年&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="生活随笔" scheme="https://ericpengshuai.github.io/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="总结" scheme="https://ericpengshuai.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>【C++】C++11互斥锁和条件变量实现生产者消费者模型</title>
@@ -50,14 +75,14 @@
     <link href="https://ericpengshuai.github.io/ruan-jian-an-zhuang/xiao-ji-qiao/db393d8e9a3e.html"/>
     <id>https://ericpengshuai.github.io/ruan-jian-an-zhuang/xiao-ji-qiao/db393d8e9a3e.html</id>
     <published>2023-10-16T05:07:35.000Z</published>
-    <updated>2023-10-16T05:20:48.457Z</updated>
+    <updated>2023-10-16T13:05:52.612Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Mac-M2-Pro-multipass-尝鲜&quot;&gt;&lt;a href=&quot;#Mac-M2-Pro-multipass-尝鲜&quot; class=&quot;headerlink&quot; title=&quot;[Mac M2 Pro] multipass 尝鲜&quot;&gt;&lt;/a&gt;[Mac M2 Pro]</summary>
+    <summary type="html">&lt;h2 id=&quot;【Mac-M2-Pro】multipass-尝鲜&quot;&gt;&lt;a href=&quot;#【Mac-M2-Pro】multipass-尝鲜&quot; class=&quot;headerlink&quot; title=&quot;【Mac M2 Pro】multipass 尝鲜&quot;&gt;&lt;/a&gt;【Mac M2</summary>
         
       
     
@@ -190,7 +215,7 @@
     <link href="https://ericpengshuai.github.io/sheng-huo-sui-bi/7c47771eecff.html"/>
     <id>https://ericpengshuai.github.io/sheng-huo-sui-bi/7c47771eecff.html</id>
     <published>2022-12-30T11:35:54.000Z</published>
-    <updated>2023-01-07T14:33:24.301Z</updated>
+    <updated>2024-01-28T05:20:53.288Z</updated>
     
     
       
@@ -518,33 +543,6 @@
         
         
     <summary type="html">&lt;p&gt;&lt;strong&gt;来源：&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="深度学习" scheme="https://ericpengshuai.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="PyTorch" scheme="https://ericpengshuai.github.io/tags/PyTorch/"/>
-    
-    <category term="RNN" scheme="https://ericpengshuai.github.io/tags/RNN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【PyTorch】RNN</title>
-    <link href="https://ericpengshuai.github.io/shen-du-xue-xi/791cc4c6eb51.html"/>
-    <id>https://ericpengshuai.github.io/shen-du-xue-xi/791cc4c6eb51.html</id>
-    <published>2021-03-07T05:05:05.000Z</published>
-    <updated>2023-01-02T14:03:48.007Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Pytorch-for-RNN&quot;&gt;&lt;a href=&quot;#Pytorch-for-RNN&quot; class=&quot;headerlink&quot; title=&quot;Pytorch for RNN&quot;&gt;&lt;/a&gt;Pytorch for RNN&lt;/h1&gt;&lt;p&gt;来源：&lt;a</summary>
         
       
     
